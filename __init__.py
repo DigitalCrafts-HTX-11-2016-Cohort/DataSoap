@@ -255,13 +255,15 @@ def submit_login():
     users = Users(id)
     users.username = request.form.get('username')
     users.password = request.form.get('password')
-    query = "select * from users where username = '%s' and password = '%s'" % (users.username, users.password)
+    query = "select id from users where username = '%s' and password = '%s'" % (users.username, users.password)
     print query
-    foo = Database.getResult(query)
+    foo = Database.getResult(query,True)
     if len(foo) > 0:
         print "This User exists and password true"
         session['username'] = users.username
         session['logged in'] = True
+        sessions['userid'] = foo(1)
+        debug(session.get('userid'))
         print session.get('username')
         return render_template("dashboard.html",firstname=users.firstname,username=users.username)
     else:
