@@ -111,6 +111,7 @@ class Users:
         self.email= ""
         self.username= ""
         self.password= ""
+        self.id=id
 
     def save(self):
         if self.id>0:
@@ -123,11 +124,12 @@ class Users:
         debug(type(self.lastname))
         debug(type(self.company))
         query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
+        Database.doQuery(query)
         # self.userid = Database.doQuery(query)
         return True
 
     def update(self):
-        query = ("update dnc.users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
+        query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', username= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
         Database.doQuery(query)
         return True
     #
@@ -338,26 +340,26 @@ def profile():
         if 'username' in session:
             query = "select * from dnc.users where username = '%s'" % username
             prof = Database.getResult(query,True)
+            id = int(prof[0])
             firstname = prof[1]
             lastname = prof[2]
             company = prof[3]
             email = prof[4]
-            username = prof[5]
             password = prof[6]
-        return render_template("profile.html")
+        return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email, username=username, password=password, id=id)
 
 @app.route("/submit_profile_update", methods = ['GET', 'POST'])
 def update_profile():
     session.get('username')
+    users = Users(id)
     if 'username' in session:
-        id=request.form.get('id')
-        users = Users(id)
         users.firstname=request.form.get('firstname')
         users.lastname=request.form.get('lastname')
         users.company=request.form.get('company')
         users.email=request.form.get('email')
         users.username=request.form.get('username')
         users.password=request.form.get('password')
+        users.id=session.get('userid')
         users.update()
     return redirect('/dashboard')
 

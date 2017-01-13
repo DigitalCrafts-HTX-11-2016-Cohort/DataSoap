@@ -38,7 +38,7 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="/static/assets/img/soapbar.jpg" class="user-image img-responsive"/>
+                    <img src="/static/assets/img/soapbar.png" class="user-image img-responsive"/>
 					</li>
 
 
@@ -82,37 +82,34 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
                 <div class="row">
                     <div class="col-md-12">
                      <h2>View and Edit your profile</h2>
-                     <form action="/update_user" method="POST" form class="form-login">
+                     <form action="/submit_profile_update" method="POST" form class="form-login">
                        <h2 class="form-login-heading">Registration</h2>
                        <div class="login-wrap">
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                         <input type="text" name="firstname" class="form-control" placeholder="First Name" />
+                         <input type="text" name="firstname" class="form-control" value={{firstname}} />
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                         <input type="text" name="lastname" class="form-control" placeholder="Last Name" />
+                         <input type="text" name="lastname" class="form-control" value={{lastname}} />
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-building-o"  ></i></span>
-                         <input type="text" name="company" class="form-control" placeholder="Company Name" />
+                         <input type="text" name="company" class="form-control" value={{company}} />
                      </div>
                       <div class="form-group input-group">
                          <span class="input-group-addon">@</span>
-                         <input type="text" name="email" class="form-control" placeholder="Your Email" />
+                         <input type="text" name="email" class="form-control" value={{email}} />
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                         <input type="text" name="username" class="form-control" placeholder="Enter Username" />
+                         <input type="text" name="username" class="form-control" placeholder={{username}} />
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-                         <input type="password" name="password" class="form-control" placeholder="Enter Password" />
+                         <input type="password" name="password" class="form-control" value={{password}} />
                      </div>
-                     <div class="form-group input-group">
-                         <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
-                         <input type="password" name="password1" class="form-control" placeholder="Retype Password" />
-                     </div>
+                     <input type="hidden" name="id" value="{{id}}">
                  </span>
              </label>
              <button class="btn btn-theme btn-block" href="index.html" type="submit"> SUBMIT</button>
