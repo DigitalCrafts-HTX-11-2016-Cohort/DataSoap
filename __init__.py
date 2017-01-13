@@ -137,7 +137,7 @@ class Users:
         return True
 
     def update(self):
-        query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', username= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
+        query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.password,self.id))
         Database.doQuery(query)
         return True
     #
@@ -369,7 +369,6 @@ def update_profile():
         users.lastname=request.form.get('lastname')
         users.company=request.form.get('company')
         users.email=request.form.get('email')
-        users.username=request.form.get('username')
         users.password=request.form.get('password')
         users.id=session.get('userid')
         users.update()
