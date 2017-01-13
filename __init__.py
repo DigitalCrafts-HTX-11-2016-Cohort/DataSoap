@@ -26,7 +26,7 @@ def debug(line):
     import time
     target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
     ip=request.remote_addr
-    timestamp =  time.strftime("%Y%m%d%g%i%s", time.gmtime())
+    timestamp =  time.strftime("%Y%m%d%H%S", time.gmtime())
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
 
@@ -139,7 +139,7 @@ class Users:
     #     return True
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%g%i%s")):
+    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%H%S")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
@@ -395,7 +395,7 @@ def upload_file():
       userfile.importTable()
     #   debug("File uploaded successfully with %d records" % userfile.record_count)
       userfile.cleanup()
-      userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%g%i%s")
+      userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
       debug("About to post to logs")
       userfile.postToLog()
       debug("successfully posted to logs")
