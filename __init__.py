@@ -401,7 +401,7 @@ def upload_file():
        else:
            session['success_message']="<h3>Only txt and csv files are supported at this time - Please try again.</h3>"
            return redirect ("/dashboard")
-       userfile=Userfile(secure_filename(f.filename))
+       userfile=Userfile(secure_filename(f.filename).lower())
        f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
        session['time_in']=userfile.time_in
        session['filename']=userfile.filename
