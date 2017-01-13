@@ -66,7 +66,7 @@ class Database:
         conn.commit()
         lastId = cur.lastrowid
         cur.close()
-        return lastId
+        # return lastId
 
     @staticmethod
     def scrub(data):
@@ -109,7 +109,7 @@ class Users:
         debug(type(self.lastname))
         debug(type(self.company))
         query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
-        self.userid = Database.doQuery(query)
+        # self.userid = Database.doQuery(query)
         return True
 
     def update(self):
@@ -134,12 +134,12 @@ class Userfile:
     def findPhoneCols(self):
         os.rename(self.path_in,("%s.prc" % self.path_in))
         prc_file = open("%s.prc" % self.path_in)
-        debug("changed original to .prc")
+        # debug("changed original to .prc")
         dReader = csv.DictReader(prc_file)
         cleanfile = open(self.path_in, "w")
         self.headers = dReader.fieldnames
         self.record_count = sum(1 for row in dReader)
-        debug("headers from old file are: %s" % self.headers)
+        # debug("headers from old file are: %s" % self.headers)
         self.phoneColList = []
         with open("%s.prc" % self.path_in) as prc_file:
             reader = csv.reader(prc_file)
@@ -147,12 +147,12 @@ class Userfile:
                 row = reader.next()
                 for col in row:
                     if len(Database.scrub(col)) == 10 and Database.is_int(col):
-                        debug("This col index should be added %d" % row.index(col))
+                        # debug("This col index should be added %d" % row.index(col))
                         if row.index(col) not in self.phoneColList:
                             self.phoneColList.append(row.index(col))
                 # debug(self.phoneColList)
             prc_file.seek(0)
-            debug(self.record_count)
+            # debug(self.record_count)
             for line in reader:
                 newrow = []
                 # debug(line)
@@ -166,7 +166,7 @@ class Userfile:
                     newrow.append(str(col))
                     # if colPos == len(self.headers)-1:
                     #     newrow.append('\n')
-                debug("This should be 1 row: %s" % newrow)
+                # debug("This should be 1 row: %s" % newrow)
                 cleanfile.write(','.join(newrow)+ '\n')
             cleanfile.close()
         return True
@@ -209,7 +209,8 @@ class Userfile:
         return True
 
     def postToLog(self):
-        query="insert into dnc.`%s` (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,%s,%d,%s,%s,%d,%s)" % (self.time_in,session.get('userid'),self.filename,self.record_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
+        query="insert into dnc.logs (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,'%s',%d,'%s','%s',%d,'%s')" % (session.get('userid'),self.filename,self.record_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
+        debug(query)
         Database.doQuery(query)
         debug("posted to log!")
         return True
@@ -255,16 +256,16 @@ def submit_login():
     users = Users(id)
     users.username = request.form.get('username')
     users.password = request.form.get('password')
-    query = "select id from users where username = '%s' and password = '%s'" % (users.username, users.password)
-    print query
+    query = "select id from dnc.users where username = '%s' and password = '%s'" % (users.username, users.password)
+    debug(query)
     foo = Database.getResult(query,True)
     if len(foo) > 0:
-        print "This User exists and password true"
+        debug("This User exists and password true")
         session['username'] = users.username
         session['logged in'] = True
-        sessions['userid'] = foo(1)
+        session['userid'] = foo[0]
         debug(session.get('userid'))
-        print session.get('username')
+        debug(session.get('username'))
         return render_template("dashboard.html",firstname=users.firstname,username=users.username)
     else:
         print "failed condition"
@@ -294,14 +295,18 @@ def upload_file():
       userfile.findPhoneCols()
       userfile.createTable()
       userfile.importTable()
-      debug("File uploaded successfully with %d records" % userfile.record_count)
+    #   debug("File uploaded successfully with %d records" % userfile.record_count)
       userfile.cleanup()
       userfile.time_out = datetime.datetime.now().strftime("%B%d%Y%I%M%S%p")
+      debug("About to post to logs")
       userfile.postToLog()
+      debug("successfully posted to logs")
       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
       session['success_message']=success_message
+      debug("about to delete")
       userfile.delete()
-      return redirect('/')
+      debug("delete function complete")
+      return render_template("dashboard.html", firstname="", username=session.get('username'))
 
 
 @app.route('/<file_name>.txt')
