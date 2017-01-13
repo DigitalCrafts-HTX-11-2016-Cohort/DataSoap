@@ -167,6 +167,10 @@ class Userfile:
                         if row.index(col) not in self.phoneColList:
                             self.phoneColList.append(row.index(col))
                 # debug(self.phoneColList)
+            if not self.phoneColList:
+                session['success_message']="There were no recognized phone numbers in you file<br />If you have extensions or country codes, please remove those and try again"
+                return redirect('/dashboard')
+
             prc_file.seek(0)
             # debug(self.record_count)
             for line in reader:
@@ -391,6 +395,7 @@ def upload_file():
     #   debug(type(session.get('time_in')))
     #   debug(userfile.filename)
       userfile.findPhoneCols()
+
       userfile.createTable()
       userfile.importTable()
     #   debug("File uploaded successfully with %d records" % userfile.record_count)
