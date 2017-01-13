@@ -285,6 +285,25 @@ def submit_login():
         print "failed condition"
         return redirect('/')
 
+# @app.route("/update_user",methods=["POST","GET"])
+# def update_profile():
+#     id=request.args.get('id')
+#     users = Users(id)
+#     username = session.get('username')
+#     if 'username' in session:
+#         query = "select * from dnc.users where username = '%s'" % username
+#         prof = Database.getResult(query,True)
+#         firstname = prof[1]
+#         lastname = prof[2]
+#         company = prof[3]
+#         email = prof[4]
+#         username = prof[5]
+#         password = prof[6]
+#
+#
+#     return  render_template("update_student.html",student=student)
+
+
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
     username = session.get('username')
@@ -313,7 +332,34 @@ def history():
 def profile():
     session.get('username')
     if 'username' in session:
+        id=request.args.get('id')
+        users = Users(id)
+        username = session.get('username')
+        if 'username' in session:
+            query = "select * from dnc.users where username = '%s'" % username
+            prof = Database.getResult(query,True)
+            firstname = prof[1]
+            lastname = prof[2]
+            company = prof[3]
+            email = prof[4]
+            username = prof[5]
+            password = prof[6]
         return render_template("profile.html")
+
+@app.route("/submit_profile_update", methods = ['GET', 'POST'])
+def update_profile():
+    session.get('username')
+    if 'username' in session:
+        id=request.form.get('id')
+        users = Users(id)
+        users.firstname=request.form.get('firstname')
+        users.lastname=request.form.get('lastname')
+        users.company=request.form.get('company')
+        users.email=request.form.get('email')
+        users.username=request.form.get('username')
+        users.password=request.form.get('password')
+        users.update()
+    return redirect('/dashboard')
 
 @app.route("/gopro", methods = ['GET', 'POST'])
 def reports():
