@@ -104,12 +104,12 @@ class Users:
             return self.insert()
 
     def insert(self):
-        query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
+        query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
         Database.doQuery(query)
         return True
 
     def update(self):
-        query = ("update dnc.users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
+        query = ("update dnc.users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
         Database.doQuery(query)
         return True
     #
@@ -125,7 +125,7 @@ class Userfile:
         self.time_in =time_in
         self.time_out =""
         self.filename_out =self.time_in+self.filename
-        self.path_out=app.config['DOWNLOAD_FOLDER']+"/"+session.get('userid')+"/"+self.filename_out
+        self.path_out=app.config['DOWNLOAD_FOLDER']+"/"+session.get('username')+"/"+self.filename_out
 
     def findPhoneCols(self):
         os.rename(self.path_in,("%s.prc" % self.path_in))

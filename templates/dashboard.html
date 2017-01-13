@@ -203,15 +203,14 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3> <i class="fa fa-cloud-upload fa-lg"></i></i> Import your CSV File</a></h3>
 
-                        <form action="/process" method="POST" enctype="multipart/form-data">
-                            <input type="file" name="myFile" />
+                        <form action="/process" method="POST" enctype="multipart/form-data"><input type="file" name="Select csv" />
+                            <!-- <input type="file" name="myFile" /> -->
                             <!-- <input type="submit" name="btnImport"class="btn btn-primary btn" value="Submit File"/> -->
-                        </form>
                     </div></div>
 
                     <div class="row options">
                         <div class="col-md-6 col-sm-12 col-xs-12">
-                            <form action="/add_options">
+                            <!-- <form action="/add_options"> -->
                                 <h3> <i class="fa fa-check-circle fa-lg"></i></i> Options</a></h3>
 <input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>
 <input type="checkbox" name="income" value="income"> add household income<br />
@@ -221,9 +220,11 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
 <input type="checkbox" name="age_range" value="age_range"> add age ranges<br />
 <input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>
 <input type="checkbox" name="rem_dup" value="rem_dup" checked> remove duplicates (automatically checked)<br /><br />
-</form>
+
 </div></div>
-<input type="submit" name="btnImport"class="btn btn-primary btn" value="Submit File"/>
+
+
+<input type="submit" name="btnImport" class="btn btn-primary btn" value="Submit File"/>
 </form>
 
                  <!-- /. ROW  -->
