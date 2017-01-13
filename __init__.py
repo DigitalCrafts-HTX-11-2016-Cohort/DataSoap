@@ -257,7 +257,11 @@ class Userfile:
         return True
 
 @app.route('/', methods = ['GET', 'POST'])
-def home():
+def index():
+    return render_template("index.html")
+
+@app.route('/login', methods = ['GET', 'POST'])
+def login_page():
     return render_template("login.html")
 
 @app.route('/new_user', methods = ['GET', 'POST'])
