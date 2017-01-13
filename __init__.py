@@ -26,9 +26,23 @@ def debug(line):
     import time
     target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
     ip=request.remote_addr
-    timestamp =  time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+    timestamp =  time.strftime("%Y%m%d%g%i%s", time.gmtime())
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
+
+@app.route('/searchResult', methods=['POST', 'GET'])
+def searchResult():
+    debug("searchResult function initiated")
+    numberSearched = Database.scrub(request.args.get('number'))
+    query="select dncinternalid from dnc.`master` where PhoneNumber = %d" % int(numberSearched)
+    query_result = Database.getResult(query,True)
+    debug(query_result)
+    if query_result:
+        result="DO NOT CALL this number"
+    else:
+        result="This number is Squeaky Clean!"
+    return '{"result":"%s"}' % result
+
 
 class Database:
     @staticmethod
@@ -123,7 +137,7 @@ class Users:
     #     return True
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B%d%Y%I%M%S%p")):
+    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%g%i%s")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
@@ -333,7 +347,7 @@ def upload_file():
       userfile.importTable()
     #   debug("File uploaded successfully with %d records" % userfile.record_count)
       userfile.cleanup()
-      userfile.time_out = datetime.datetime.now().strftime("%B%d%Y%I%M%S%p")
+      userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%g%i%s")
       debug("About to post to logs")
       userfile.postToLog()
       debug("successfully posted to logs")
