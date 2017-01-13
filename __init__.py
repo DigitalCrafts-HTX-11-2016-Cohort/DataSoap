@@ -104,17 +104,17 @@ class Users:
             return self.insert()
 
     def insert(self):
-        query = ("insert into users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
+        query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
         Database.doQuery(query)
         return True
 
     def update(self):
-        query = ("update users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
+        query = ("update dnc.users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%d','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
         Database.doQuery(query)
         return True
     #
     # def delete(self):
-    #     query = ("delete from users where id=%d"% self.id
+    #     query = ("delete from dnc.users where id=%d"% self.id
     #     Database.doQuery(query)
     #     return True
 
