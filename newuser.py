@@ -125,10 +125,15 @@ def submit_login():
         session['username'] = users.username
         session['logged in'] = True
         print session.get('username')
-        return render_template("dashboard.html",firstname=users.firstname, username=users.username)
+        return render_template("dashboard.html",firstname=users.firstname,username=users.username)
     else:
         print "failed condition"
         return redirect('/')
+
+@app.route("/logout", methods= ['GET', 'POST'])
+def logout():
+    del session['username']
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
