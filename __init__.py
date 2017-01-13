@@ -266,10 +266,46 @@ def submit_login():
         session['userid'] = foo[0]
         debug(session.get('userid'))
         debug(session.get('username'))
-        return render_template("dashboard.html",firstname=users.firstname,username=users.username)
+        return redirect("/dashboard")
     else:
         print "failed condition"
         return redirect('/')
+
+@app.route("/dashboard", methods = ['GET', 'POST'])
+def dashboard():
+    username = session.get('username')
+    if 'username' in session:
+        return render_template("dashboard.html", username=username)
+
+@app.route("/reports", methods = ['GET', 'POST'])
+def report():
+    session.get('username')
+    if 'username' in session:
+        return render_template("reports.html")
+
+@app.route("/archives", methods = ['GET', 'POST'])
+def archive():
+    session.get('username')
+    if 'username' in session:
+        return render_template("archives.html")
+
+@app.route("/history", methods = ['GET', 'POST'])
+def history():
+    session.get('username')
+    if 'username' in session:
+        return render_template("history.html")
+
+@app.route("/profile", methods = ['GET', 'POST'])
+def profile():
+    session.get('username')
+    if 'username' in session:
+        return render_template("profile.html")
+
+@app.route("/gopro", methods = ['GET', 'POST'])
+def reports():
+    session.get('username')
+    if 'username' in session:
+        return render_template("gopro.html")
 
 @app.route("/logout", methods= ['GET', 'POST'])
 def logout():
