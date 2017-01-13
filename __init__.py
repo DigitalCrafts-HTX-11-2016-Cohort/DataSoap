@@ -404,7 +404,7 @@ def upload_file():
       debug("about to delete")
       userfile.delete()
       debug("delete function complete")
-      return render_template("dashboard.html", firstname="", username=session.get('username'))
+      return redirect ("/dashboard")
 
 
 @app.route('/<file_name>.txt')

@@ -122,6 +122,11 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
+                <div class="row" id="success">
+                    {% if session.get('success_message') %}
+                    {{session.get('success_message') | safe}}
+                    {% endif %}
+                </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <h2>Welcome back {{username}}! </h2>

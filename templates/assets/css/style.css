@@ -18,7 +18,11 @@ body {
     margin: 0px !important;
     font-size:13px;
 }
-
+#success {
+    background-color: red;
+    padding: 15px;
+    text-align: center;
+}
 ul li {
     list-style: none;
 }
