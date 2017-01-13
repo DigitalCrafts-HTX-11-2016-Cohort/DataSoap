@@ -16,11 +16,11 @@ app = Flask(__name__)
 app.secret_key = 'wnaptihtr'
 #for local testing
 # app.config['UPLOAD_FOLDER'] = "static/files_in/"
-app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
+app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 #for live
 app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
 app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-home_dir = os.path.join(app.config['UPLOAD_FOLDER'],"")
+# home_dir = os.path.join(app.config['UPLOAD_FOLDER'],"")
 
 def debug(line):
     import time
@@ -89,13 +89,13 @@ class Database:
 #         id=int(id)
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B-%d-%Y-%I:%M%p")):
+    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B-%d-%Y-%I:%M:%S%p")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
-        # print self.path_in
-        self.path_out=app.config['DOWNLOAD_FOLDER']+self.filename
-
+        self.time_out =""
+        self.filename_out =self.time_in+self.filename
+        self.path_out=app.config['DOWNLOAD_FOLDER']+"/"+session.get('userid')+"/"+self.filename_out
 
     def findPhoneCols(self):
         os.rename(self.path_in,("%s.prc" % self.path_in))
@@ -168,14 +168,29 @@ class Userfile:
             else:
                 query+=" or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
         debug(query)
-        # Database.doQuery(query)
-        # return True
+        Database.doQuery(query)
+        query="select count(*) from `%s`" % self.time_in
+        self.post_record_count = int(Database.getResult(query,True)[0])
+        debug("there are %s records left in the table. %s were removed" % (self.post_record_count,self.record_count - self.post_record_count))
+        return True
+
+    def postToLog(self):
+        query="insert into dnc.`%s` (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,%s,%d,%d,%s,%d,%d)" % (self.time_in,session.get('userid'),self.filename,self.recrecord_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
+        Database.doQuery(query)
+        debug("posted to log!")
+        return True
 
     # def exportTable(self):
     def delete(self):
         # if self.time_in:
         query="DROP TABLE dnc.`%s`" % self.time_in
         Database.doQuery(query)
+        #delete mysql imported file from server.
+        if os.path.exists(self.path_in):
+            os.remove(self.path_in)
+        #I want to keep the user orignal prc files for now in case we need to debug anything
+        # if os.path.exists("%s.prc" % self.path_in):
+        #     os.remove("%s.prc" % self.path_in)
         return True
 
 @app.route('/', methods = ['GET', 'POST'])
@@ -198,15 +213,13 @@ def upload_file():
       userfile.importTable()
       debug("File uploaded successfully with %d records" % userfile.record_count)
       userfile.cleanup()
-      return "File uploaded successfully with %d records" % userfile.record_count
+      userfile.time_out = datetime.datetime.now().strftime("%B-%d-%Y-%I:%M:%S%p")
+      userfile.postToLog()
+      success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+      session['success_message']=success_message
+      userfile.delete()
+      return redirect('/')
 
-@app.route('/deleteme', methods = ['GET', 'POST'])
-def deleteme():
-    file_done=Userfile(session.get('filename'),session.get('time_in'))
-    file_done.delete()
-    # del session['time_in']
-    # del session['filename']
-    return redirect('/')
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
@@ -226,4 +239,4 @@ def add_header(response):
     return response
 
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run()
