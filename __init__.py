@@ -66,6 +66,7 @@ class Database:
         conn.commit()
         lastId = cur.lastrowid
         cur.close()
+        return lastId
 
     @staticmethod
     def scrub(data):
@@ -104,8 +105,11 @@ class Users:
             return self.insert()
 
     def insert(self):
+        debug(type(self.firstname))
+        debug(type(self.lastname))
+        debug(type(self.company))
         query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
-        Database.doQuery(query)
+        self.userid = Database.doQuery(query)
         return True
 
     def update(self):
@@ -119,7 +123,7 @@ class Users:
     #     return True
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B-%d-%Y-%I:%M:%S%p")):
+    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B%d%Y%I%M%S%p")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
@@ -205,7 +209,7 @@ class Userfile:
         return True
 
     def postToLog(self):
-        query="insert into dnc.`%s` (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,%s,%d,%d,%s,%d,%d)" % (self.time_in,session.get('userid'),self.filename,self.recrecord_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
+        query="insert into dnc.`%s` (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,%s,%d,%s,%s,%d,%s)" % (self.time_in,session.get('userid'),self.filename,self.record_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
         Database.doQuery(query)
         debug("posted to log!")
         return True
@@ -290,7 +294,7 @@ def upload_file():
       userfile.importTable()
       debug("File uploaded successfully with %d records" % userfile.record_count)
       userfile.cleanup()
-      userfile.time_out = datetime.datetime.now().strftime("%B-%d-%Y-%I:%M:%S%p")
+      userfile.time_out = datetime.datetime.now().strftime("%B%d%Y%I%M%S%p")
       userfile.postToLog()
       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
       session['success_message']=success_message

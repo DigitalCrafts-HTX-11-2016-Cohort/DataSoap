@@ -1,0 +1,15 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "hostname": "35.166.251.127",
+  "target": "/var/www/FlaskApp/DNCApp",
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**"
+  ],
+  "username": "ubuntu",
+  "keyfile": "/Users/DSS-Mac/Downloads/amazonkeyfordigitalcrafts.pem",
+  "watch": [],
+  "transport": "scp"
+}
