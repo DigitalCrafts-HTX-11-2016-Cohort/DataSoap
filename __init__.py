@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 reload(sys)
 sys.setdefaultencoding('utf8')
 
-ALLOWED_EXTENSIONS = set(['txt', 'xls', 'csv'])
+ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 
 #adding a comment to test
 
@@ -29,6 +29,14 @@ def debug(line):
     timestamp =  time.strftime("%Y%m%d%H%S", time.gmtime())
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
+
+def allowed_file(filename):
+    filename_pieces = filename.rsplit('.', 1)
+    debug(filename_pieces)
+    if len(filename_pieces)>2:
+        False
+    return '.' in filename and \
+           filename_pieces[1].lower() in ALLOWED_EXTENSIONS
 
 @app.route('/searchResult', methods=['POST', 'GET'])
 def searchResult():
@@ -386,31 +394,37 @@ def logout():
 
 @app.route('/process', methods = ['GET', 'POST'])
 def upload_file():
-   if request.method == 'POST':
-      f = request.files['Select csv']
-      userfile=Userfile(secure_filename(f.filename))
-      f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
-      session['time_in']=userfile.time_in
-      session['filename']=userfile.filename
-    #   debug(type(session.get('time_in')))
-    #   debug(userfile.filename)
-      userfile.findPhoneCols()
-
-      userfile.createTable()
-      userfile.importTable()
-    #   debug("File uploaded successfully with %d records" % userfile.record_count)
-      userfile.cleanup()
-      userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
-      debug("About to post to logs")
-      userfile.postToLog()
-      debug("successfully posted to logs")
-      success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
-      session['success_message']=success_message
-      debug("about to delete")
-      userfile.delete()
-      debug("delete function complete")
-      return redirect ("/dashboard")
-
+   if request.method == 'POST' and request.files['Select csv']:
+       f = request.files['Select csv']
+       if allowed_file(f.filename):
+           pass
+       else:
+           session['success_message']="<h3>Only txt and csv files are supported at this time - Please try again.</h3>"
+           return redirect ("/dashboard")
+       userfile=Userfile(secure_filename(f.filename))
+       f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
+       session['time_in']=userfile.time_in
+       session['filename']=userfile.filename
+     #   debug(type(session.get('time_in')))
+     #   debug(userfile.filename)
+       userfile.findPhoneCols()
+       userfile.createTable()
+       userfile.importTable()
+     #   debug("File uploaded successfully with %d records" % userfile.record_count)
+       userfile.cleanup()
+       userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
+       debug("About to post to logs")
+       userfile.postToLog()
+       debug("successfully posted to logs")
+       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+       session['success_message']=success_message
+       debug("about to delete")
+       userfile.delete()
+       debug("delete function complete")
+       return redirect ("/dashboard")
+   else:
+       session['success_message']="<h3>No File Selected - Please try again.</h3>"
+       return redirect ("/dashboard")
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):
