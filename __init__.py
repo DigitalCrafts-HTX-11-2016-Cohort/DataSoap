@@ -88,6 +88,36 @@ class Database:
 #     if(not type(id)==int):
 #         id=int(id)
 
+class Users:
+    def __init__(self,id=0):
+        self.firstname= ""
+        self.lastname= ""
+        self.company= ""
+        self.email= ""
+        self.username= ""
+        self.password= ""
+
+    def save(self):
+        if self.id>0:
+            return self.update()
+        else:
+            return self.insert()
+
+    def insert(self):
+        query = ("insert into users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
+        Database.doQuery(query)
+        return True
+
+    def update(self):
+        query = ("update users set (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s') where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password,self.id))
+        Database.doQuery(query)
+        return True
+    #
+    # def delete(self):
+    #     query = ("delete from users where id=%d"% self.id
+    #     Database.doQuery(query)
+    #     return True
+
 class Userfile:
     def __init__(self, filename, time_in=datetime.datetime.now().strftime("%B-%d-%Y-%I:%M:%S%p")):
         self.filename = filename
@@ -195,8 +225,55 @@ class Userfile:
 
 @app.route('/', methods = ['GET', 'POST'])
 def home():
-    debug("loading main page")
-    return render_template("dashboard.html", title="DNC Dashboard")
+    return render_template("login.html")
+
+@app.route('/new_user', methods = ['GET', 'POST'])
+def new_user():
+    return render_template("registration.html")
+
+@app.route("/new_user_submit", methods = ['GET', 'POST'])
+def new_user_submit():
+    id=request.form.get('id')
+    users = Users()
+    users.firstname=request.form.get('firstname')
+    users.lastname=request.form.get('lastname')
+    users.company=request.form.get('company')
+    users.email=request.form.get('email')
+    users.username=request.form.get('username')
+    users.password=request.form.get('password')
+    password1=request.form.get('password1')
+    if users.password == password1:
+        users.insert()
+    return redirect("/new_user_submit")
+
+@app.route("/submit_login", methods = ['GET', 'POST'])
+def submit_login():
+    users = Users(id)
+    users.username = request.form.get('username')
+    users.password = request.form.get('password')
+    query = "select * from users where username = '%s' and password = '%s'" % (users.username, users.password)
+    print query
+    foo = Database.getResult(query)
+    if len(foo) > 0:
+        print "This User exists and password true"
+        session['username'] = users.username
+        session['logged in'] = True
+        print session.get('username')
+        return render_template("dashboard.html",firstname=users.firstname,username=users.username)
+    else:
+        print "failed condition"
+        return redirect('/')
+
+@app.route("/logout", methods= ['GET', 'POST'])
+def logout():
+    del session['username']
+    return redirect('/')
+#
+#
+# @app.route('/', methods = ['GET', 'POST'])
+# def home():
+#     debug("loading main page")
+#     return render_template("dashboard.html", title="DNC Dashboard")
 
 @app.route('/process', methods = ['GET', 'POST'])
 def upload_file():
