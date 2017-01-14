@@ -354,7 +354,7 @@ def submit_login():
 def dashboard():
     username = session.get('username')
     if 'username' in session:
-        return render_template("dashboard.html", username=username.title(), success_message=success_message)
+        return render_template("dashboard.html", username=username.title())
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
