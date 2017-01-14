@@ -249,7 +249,10 @@ class Userfile:
         debug(result_tuple)
         writer = csv.writer(open(self.path_out,"wb"))
         debug("able to create this file")
-        writer.writerow(self.headers)
+        toprow = self.headers
+        toprow.insert(0,'id')
+        debug(toprow)
+        writer.writerow(toprow)
         debug("headers are in")
         for row in result_tuple:
             writer.writerow(row)
