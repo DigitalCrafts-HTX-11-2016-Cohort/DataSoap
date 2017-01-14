@@ -243,7 +243,15 @@ class Userfile:
         debug("posted to log!")
         return True
 
-    # def exportTable(self):
+    def exportTable(self):
+        query="SELECT * FROM dnc.`%s`" % self.time_in
+        result_tuple = Database.getResult(query)
+        writer = csv.writer(open("%s","wb")) % self.path_out
+        writer.writerow(self.headers)
+        for row in result_tuple:
+            writer.writerow(row)
+        return True
+
     def delete(self):
         # if self.time_in:
         query="DROP TABLE dnc.`%s`" % self.time_in
@@ -432,6 +440,9 @@ def upload_file():
        debug("successfully posted to logs")
        success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
        session['success_message']=success_message
+       debug("About to export clean file to files out")
+       userfile.exportTable()
+       debug("Successfully exported file!")
        debug("about to delete")
        userfile.delete()
        debug("delete function complete")
