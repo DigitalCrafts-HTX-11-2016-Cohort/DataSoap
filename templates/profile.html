@@ -48,7 +48,7 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
                      <li>
                         <a  href="/reports"><i class="fa fa-desktop fa-3x"></i> Reports</a>
                     </li>
-                
+
 						   <li>
                         <a   href="/history"><i class="fa fa-history fa-3x"></i> History</a>
                     </li>
@@ -75,13 +75,15 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
 
                             </nav>
         <!-- /. NAV SIDE  -->
+
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-5">
+                        <h2>Hello {{ session.get('username') }}!</h2>
                      <h2>View and Edit your profile</h2>
                      <form action="/submit_profile_update" method="POST" form class="form-login">
-                       <h2 class="form-login-heading">Registration</h2>
+                       <!-- <h2 class="form-login-heading">Registration</h2> -->
                        <div class="login-wrap">
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
@@ -101,7 +103,7 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-user"  ></i></span>
-                         <input type="text" name="username" class="form-control" placeholder={{username}} />
+                         <input type="text" name="username" class="form-control" readonly="readonly" value={{username}} />
                      </div>
                      <div class="form-group input-group">
                          <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>

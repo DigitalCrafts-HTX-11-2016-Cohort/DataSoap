@@ -262,7 +262,11 @@ def index():
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login_page():
-    return render_template("login.html")
+    username = session.get('username')
+    if 'username' in session:
+        return redirect('/dashboard')
+    else:
+        return render_template("login.html")
 
 @app.route('/new_user', methods = ['GET', 'POST'])
 def new_user():
