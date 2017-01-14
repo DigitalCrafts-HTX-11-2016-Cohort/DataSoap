@@ -26,7 +26,7 @@ def debug(line):
     import time
     target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
     ip=request.remote_addr
-    timestamp =  time.strftime("%Y%m%d%H%S", time.gmtime())
+    timestamp =  time.strftime("%Y%m%d%H%S%f", time.gmtime())
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
 
@@ -146,7 +146,7 @@ class Users:
     #     return True
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%H%S")):
+    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%H%S%f")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
@@ -352,22 +352,15 @@ def submit_login():
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
-    username = session.get('username')
     if 'username' in session:
         return render_template("dashboard.html", username=username.title())
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
-    session.get('userid')
     if 'userid' in session:
-        query=""
-        return render_template("reports.html")
-
-@app.route("/archives", methods = ['GET', 'POST'])
-def archive():
-    session.get('username')
-    if 'username' in session:
-        return render_template("archives.html")
+        query="select avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%Y%m%d%H%S'), str_to_date(file_out_timestamp,'%Y%m%d%H%S')),file_out_record_count,file_in_record_count) from dnc.logs where userid=%d)" % session.get('userid')
+        avg_ptime_clean= Database.getResult(query)
+        return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
 
 @app.route("/history", methods = ['GET', 'POST'])
 def history():
@@ -454,7 +447,7 @@ def upload_file():
        userfile.importTable()
      #   debug("File uploaded successfully with %d records" % userfile.record_count)
        userfile.cleanup()
-       userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
+       userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S%f")
        debug("About to post to logs")
        userfile.postToLog()
        debug("successfully posted to logs")
