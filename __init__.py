@@ -346,7 +346,7 @@ def submit_login():
 def dashboard():
     username = session.get('username')
     if 'username' in session:
-        return render_template("dashboard.html", username=username.title())
+        return render_template("dashboard.html", username=username.title(), success_message=success_message)
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
@@ -466,6 +466,11 @@ def send_text_file(file_name):
     """Send your static text file."""
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
+
+@app.route('/download', methods=['GET', 'POST'])
+def download():
+    uploads = '/Applications/XAMPP/xamppfiles/htdocs/Cap_proj/uploads/'
+    return send_from_directory(directory=uploads, filename='test2_file.csv')
 
 
 @app.after_request
