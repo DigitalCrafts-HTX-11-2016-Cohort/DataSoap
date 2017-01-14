@@ -97,19 +97,19 @@ font-size: 16px;"> Last login : 12 January 2017 &nbsp; <a href="/logout" class="
                                              <tr>
                                                  <th>File Name</th>
                                                  <th>File Date</th>
-                                                 <th>Phone Numbers Removed</th>
-                                                 <th>Clean Numbers Remaining</th>
+                                                 <th>Numbers Removed</th>
+                                                 <th>Numbers Remaining</th>
                                                  <th>Download Link</th>
 
                                              </tr>
                                          </thead>
                                          <tbody>
                                              <tr class="odd gradeX">
-                                                 <td>{{ session.get('filename') }}</td>
-                                                 <td>{{ session.get('time_in') }}</td>
-                                                 <td>{{ session.get(record_count)}}</td>
-                                                 <td>{{ session.get(post_record_count)}}</td>
-                                                 <td class="center">Link</td>
+                                                 <td>{{logHistory[0][0]}}</td>
+                                                 <td>{{logHistory[0][1]}}</td>
+                                                 <td>{{ logHistory[0][2]}}</td>
+                                                 <td>{{ logHistory[0][3]}}</td>
+                                                 <td class="center">{{logHistory[0][4]}}</td>
 
                                              </tr>
                                              <tr class="even gradeC">
