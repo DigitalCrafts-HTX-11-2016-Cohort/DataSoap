@@ -388,11 +388,17 @@ def reports():
     if 'username' in session:
         return render_template("gopro.html")
 
-@app.route("/logout", methods= ['GET', 'POST'])
+@app.route("/logout", methods = ['GET', 'POST'])
 def logout():
     del session['username']
     del session['success_message']
     return redirect('/')
+
+@app.route("/main_page", methods = ['GET', 'POST'])
+def main_page():
+    del session['success_message']
+    return redirect('/')
+
 #
 #
 # @app.route('/', methods = ['GET', 'POST'])
