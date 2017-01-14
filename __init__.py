@@ -391,6 +391,7 @@ def reports():
 @app.route("/logout", methods= ['GET', 'POST'])
 def logout():
     del session['username']
+    del session['success_message']
     return redirect('/')
 #
 #
