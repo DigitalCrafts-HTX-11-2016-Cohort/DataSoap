@@ -88,7 +88,7 @@ class Database:
         conn.commit()
         lastId = cur.lastrowid
         cur.close()
-        # return lastId
+        return lastId
 
     @staticmethod
     def scrub(data):
@@ -132,9 +132,8 @@ class Users:
         debug(type(self.lastname))
         debug(type(self.company))
         query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
-        Database.doQuery(query)
-        # self.userid = Database.doQuery(query)
-        return True
+        lastID = Database.doQuery(query)
+        return lastID
 
     def update(self):
         query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.password,self.id))
@@ -153,7 +152,8 @@ class Userfile:
         self.time_in =time_in
         self.time_out =""
         self.filename_out =self.time_in+self.filename
-        self.path_out=app.config['DOWNLOAD_FOLDER']+"/"+session.get('username')+"/"+self.filename_out
+        self.path_out=app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+self.filename_out
+
 
     def findPhoneCols(self):
         os.rename(self.path_in,("%s.prc" % self.path_in))
@@ -246,10 +246,14 @@ class Userfile:
     def exportTable(self):
         query="SELECT * FROM dnc.`%s`" % self.time_in
         result_tuple = Database.getResult(query)
-        writer = csv.writer(open("%s","wb")) % self.path_out
+        debug(result_tuple)
+        writer = csv.writer(open(self.path_out,"wb"))
+        debug("able to create this file")
         writer.writerow(self.headers)
+        debug("headers are in")
         for row in result_tuple:
             writer.writerow(row)
+        debug("rows are in")
         return True
 
     def delete(self):
@@ -292,7 +296,8 @@ def new_user_submit():
     users.password=request.form.get('password')
     password1=request.form.get('password1')
     if users.password == password1:
-        users.insert()
+        id= users.insert()
+        os.mkdir(app.config['DOWNLOAD_FOLDER']+str(id), 0777)
     return redirect("/login")
 
 @app.route("/submit_login", methods = ['GET', 'POST'])
@@ -399,12 +404,14 @@ def reports():
 @app.route("/logout", methods = ['GET', 'POST'])
 def logout():
     del session['username']
-    del session['success_message']
+    if 'success_message' in session:
+        del session['success_message']
     return redirect('/')
 
 @app.route("/main_page", methods = ['GET', 'POST'])
 def main_page():
-    del session['success_message']
+    if 'success_message' in session:
+        del session['success_message']
     return redirect('/')
 
 #
