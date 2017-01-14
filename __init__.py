@@ -358,8 +358,9 @@ def dashboard():
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
-    session.get('username')
-    if 'username' in session:
+    session.get('userid')
+    if 'userid' in session:
+        query=""
         return render_template("reports.html")
 
 @app.route("/archives", methods = ['GET', 'POST'])
@@ -371,7 +372,7 @@ def archive():
 @app.route("/history", methods = ['GET', 'POST'])
 def history():
     if 'userid' in session:
-        query = "select file_in_name,file_in_timestamp,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,file_out_name from dnc.logs where id = %d" % session.get('userid')
+        query = "select file_in_name,file_in_timestamp,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,CONCAT('%s',file_out_name) from dnc.logs where id = %d" % (app.config['DOWNLOAD_FOLDER'],session.get('userid'))
         logHistory = Database.getResult(query)
         return render_template("history.html", logHistory=logHistory)
 
