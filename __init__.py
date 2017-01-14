@@ -296,11 +296,19 @@ def new_user_submit():
     users.company=request.form.get('company')
     users.email=request.form.get('email')
     users.username=request.form.get('username')
+    query = "select username from dnc.users where username = request.form.get('username')"
+    test = Database.getResult(query,True)
+    if len(test) > 0:
+        return "Sorry username has been taken, click back and try again!"
+    else:
+        pass
     users.password=request.form.get('password')
     password1=request.form.get('password1')
     if users.password == password1:
         id= users.insert()
         os.mkdir(app.config['DOWNLOAD_FOLDER']+str(id), 0777)
+    else:
+        return ("Sorry your password does not match, click back and try again!")
     return redirect("/login")
 
 @app.route("/submit_login", methods = ['GET', 'POST'])
