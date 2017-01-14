@@ -458,7 +458,7 @@ def upload_file():
        debug("About to post to logs")
        userfile.postToLog()
        debug("successfully posted to logs")
-       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean!" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br> Click to download" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
        session['success_message']=success_message
        debug("About to export clean file to files out")
        userfile.exportTable()
