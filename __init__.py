@@ -370,9 +370,10 @@ def archive():
 
 @app.route("/history", methods = ['GET', 'POST'])
 def history():
-    session.get('username')
-    if 'username' in session:
-        return render_template("history.html")
+    if 'userid' in session:
+        query = "select file_in_name,file_in_timestamp,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,file_out_name from dnc.logs where id = %d" % session.get('userid')
+        logHistory = Database.getResult(query)
+        return render_template("history.html", logHistory=logHistory)
 
 @app.route("/profile", methods = ['GET', 'POST'])
 def profile():
