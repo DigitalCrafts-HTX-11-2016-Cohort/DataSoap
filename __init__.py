@@ -358,8 +358,9 @@ def dashboard():
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
-    session.get('username')
-    if 'username' in session:
+    session.get('userid')
+    if 'userid' in session:
+        query=""
         return render_template("reports.html")
 
 @app.route("/archives", methods = ['GET', 'POST'])
