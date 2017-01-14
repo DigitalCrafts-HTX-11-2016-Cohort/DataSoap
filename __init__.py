@@ -1,5 +1,5 @@
 import os, sys, mysql.connector, datetime, csv
-from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash
+from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash,send_file
 from werkzeug.utils import secure_filename
 
 reload(sys)
@@ -469,9 +469,8 @@ def send_text_file(file_name):
 
 @app.route('/download', methods=['GET', 'POST'])
 def download():
-    uploads = '/Applications/XAMPP/xamppfiles/htdocs/Cap_proj/uploads/'
-    return send_from_directory(directory=uploads, filename='test2_file.csv')
-
+    # return send_from_directory(directory=app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/")
+    return send_file(app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+session.get('time_in')+session.get('filename'),as_attachment=True, attachment_filename=session.get('filename'))
 
 @app.after_request
 def add_header(response):
