@@ -281,7 +281,7 @@ def new_user_submit():
     password1=request.form.get('password1')
     if users.password == password1:
         users.insert()
-    return redirect("/new_user_submit")
+    return redirect("/login")
 
 @app.route("/submit_login", methods = ['GET', 'POST'])
 def submit_login():
