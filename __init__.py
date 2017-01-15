@@ -296,12 +296,6 @@ def new_user_submit():
     users.company=request.form.get('company')
     users.email=request.form.get('email')
     users.username=request.form.get('username')
-    query = "select id from dnc.users where username = request.form.get('username')"
-    test = Database.getResult(query,True)
-    if len(test) > 0:
-        return "Sorry username has been taken, click back and try again!"
-    else:
-        pass
     users.password=request.form.get('password')
     password1=request.form.get('password1')
     if users.password == password1:
@@ -353,6 +347,7 @@ def submit_login():
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
     if 'username' in session:
+        debug(session.get('username'))
         return render_template("dashboard.html", username=username.title())
 
 @app.route("/reports", methods = ['GET', 'POST'])
@@ -402,7 +397,7 @@ def update_profile():
     return redirect('/dashboard')
 
 @app.route("/gopro", methods = ['GET', 'POST'])
-def reports():
+def go_pro():
     session.get('username')
     if 'username' in session:
         return render_template("gopro.html")
