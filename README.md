@@ -17,7 +17,7 @@ Karissa Martin and Deepak Shah 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.36.15%20PM.png)
 <br><br>3. Another challenged we faced dealt with memory and space constraints.  Our master table was fairly large but if we created and stored a new table for each upload we would quickly run out of space and it would frankly be very inefficient.  The solution we devised was to dump the data from the uploaded CSV file into a temporary table which was automatically generated upon the upload after our cleaning process.  It would only be used to make queries against the DNC master table and then delete itself upon completion. This one was tricker then it initially appeared as the path was never fixed, we allowed users to retain the file name they uploaded upon download.  We settled on using an os.path exists command as shown below.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.35.07%20PM.png)
-<b>Error handling/Troubleshooting:</b></br>
+<br><b>Error handling/Troubleshooting:</b></br>
 Given the back end intensive nature of our project, we faced our fair share of delicate troubleshooting issues which we eventually worked out and wanted to share what we learned from each issue.
 <br><br>1. Big Integer
 <br><br>2. ID conflict - picking an internal id that we would not see in any file.
