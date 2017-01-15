@@ -20,6 +20,8 @@ Karissa Martin and Deepak Shah 
 <br><b>Error handling/Troubleshooting:</b></br>
 Given the back end intensive nature of our project, we faced our fair share of delicate troubleshooting issues which we eventually worked out and wanted to share what we learned from each issue.
 <br><br>1. Big Integer
+![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.48.59%20PM.png)
 <br><br>2. ID conflict - picking an internal id that we would not see in any file.
+![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.49.14%20PM.png)
 <br><br>3. Concatenating string and tuples, passing it in as %s or %d
 <br><br>4. Error handling
