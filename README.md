@@ -34,9 +34,9 @@ Given the back end intensive nature of our project, we faced our fair share of d
 3.  UI layout that is easy to use and intuitive.  All the research we've done on sites similar to this look quite outdated and we wanted users to have a pleasant and easy to use experience with our upload and download features.
 4.  Basic dashboard where users can access history and data about their previous usage and a place where downloads could be archived for convienience.
 <br><b>Stetch Goals</b>
-![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/census_logo.jpg)
 1.  Adding a quick search feature so an individual can quickly search for one number without having to upload a file.<br>
-2.  Adding census bureau api data so we can give additional information about individuals on call lists to better aid user.
+![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/census_logo.jpg)
+<br>2.  Adding census bureau api data so we can give additional information about individuals on call lists to better aid user.
 3.  Adding stripe api to allow mobile payments for professional serivce.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Stripe_logo%2C_revised_2016.png)
 4.  Geocoding - adding latitude and longitude data to better aid users by giving them geographic location.
