@@ -355,6 +355,7 @@ def report():
     if 'userid' in session:
         query="select str_to_date(file_in_timestamp,'%Y%m%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%Y%m%d%H%S'), str_to_date(file_out_timestamp,'%Y%m%d%H%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
         avg_ptime_clean= Database.getResult(query)
+        debug(avg_ptime_clean)
         return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
 
 @app.route("/history", methods = ['GET', 'POST'])
