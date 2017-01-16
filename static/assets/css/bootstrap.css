@@ -1090,6 +1090,9 @@ h3,
 .h3 {
   font-size: 24px;
 }
+.graph {
+    padding-left: 20px;
+}
 h4,
 .h4 {
   font-size: 18px;
