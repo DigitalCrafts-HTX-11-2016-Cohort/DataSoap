@@ -33,7 +33,7 @@ Given the back end intensive nature of our project, we faced our fair share of d
 2.  Allow users to register for this service with a log in username and for us to be able to keep track of who accesses this service.<br>
 3.  UI layout that is easy to use and intuitive.  All the research we've done on sites similar to this look quite outdated and we wanted users to have a pleasant and easy to use experience with our upload and download features.<br>
 4.  Basic dashboard where users can access history and data about their previous usage and a place where downloads could be archived for convienience.
-<br><b>Stetch Goals</b>
+<br><b>Stetch Goals</b><br>
 1.  Adding a quick search feature so an individual can quickly search for one number without having to upload a file.<br>
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/census_logo.jpg)
 <br>2.  Adding census bureau api data so we can give additional information about individuals on call lists to better aid user.
