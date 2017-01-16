@@ -353,7 +353,7 @@ def dashboard():
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
     if 'userid' in session:
-        query="select avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%Y%m%d%H%S'), str_to_date(file_out_timestamp,'%Y%m%d%H%S')),file_out_record_count,file_in_record_count) from dnc.logs where userid=%d)" % session.get('userid')
+        query="select str_to_date(file_in_timestamp,'%Y%m%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%Y%m%d%H%S'), str_to_date(file_out_timestamp,'%Y%m%d%H%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
         avg_ptime_clean= Database.getResult(query)
         return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
 
