@@ -37,7 +37,7 @@ Given the back end intensive nature of our project, we faced our fair share of d
 1.  Adding a quick search feature so an individual can quickly search for one number without having to upload a file.<br>
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/census_logo.jpg)
 <br>2.  Adding census bureau api data so we can give additional information about individuals on call lists to better aid user.
-<br>3.  Adding stripe api to allow mobile payments for professional serivce.
+<br>3.  Adding stripe api to allow payments for professional serivce.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Stripe_logo%2C_revised_2016.png)
 4.  Geocoding - adding latitude and longitude data to better aid users by giving them geographic location.
 <br>
