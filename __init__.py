@@ -353,7 +353,7 @@ def dashboard():
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
     if 'userid' in session:
-        query="select str_to_date(file_in_timestamp,'%Y%m%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%Y%m%d%H%S'), str_to_date(file_out_timestamp,'%Y%m%d%H%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
+        query="select str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
         avg_ptime_clean= Database.getResult(query)
         debug(avg_ptime_clean)
 	    return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
@@ -361,8 +361,9 @@ def report():
 @app.route("/history", methods = ['GET', 'POST'])
 def history():
     if 'userid' in session:
-        query = "select file_in_name,file_in_timestamp,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,file_out_name from dnc.logs where id = %d" % session.get('userid')
+        query = "select file_in_name,str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,file_out_name from dnc.logs where userid = %d order by `Date` desc" % session.get('userid')
         logHistory = Database.getResult(query)
+        # debug(logHistory)
         return render_template("history.html", logHistory=logHistory)
 
 @app.route("/profile", methods = ['GET', 'POST'])
