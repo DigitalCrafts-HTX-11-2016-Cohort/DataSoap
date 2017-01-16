@@ -1,6 +1,6 @@
 # DataSoap
 
-Link to live site: <a href='35.166.251.127'>DataSoap</a><br>
+Link to live site: <a href='http://35.166.251.127'>DataSoap</a><br>
 <br><b>Overview of Project:</b><br>
 DataSoap started as a concept to build a more advanced data scrubbing system.  Datasoap allows users to be able to upload their own CSV files and have those files cleaned (scrubbed) against the national do not call list (DNC) resulting in a clean list downloadable at the users connivence.  
 
@@ -41,7 +41,7 @@ Given the back end intensive nature of our project, we faced our fair share of d
 <br>2.  Adding census bureau api data so we can give additional information about individuals on call lists to better aid user.
 <br>3.  Adding stripe api to allow payments for professional serivce.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Stripe_logo%2C_revised_2016.png)
-4.  Geocoding - adding latitude and longitude data to better aid users by giving them geographic location.
+<br>4.  Geocoding - adding latitude and longitude data to better aid users by giving them geographic location.
 <br>
 <b><br>Contribution we'd like to be added:</b><br>
 1.  Census data - We ended up running out of time to implement this feature but we certainly want it to be added in the future.  It is something we shall revisit soon.<br>
