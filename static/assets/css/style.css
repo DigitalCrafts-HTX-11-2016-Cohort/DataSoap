@@ -67,6 +67,7 @@ a, a:hover, a:focus {
 	background-color: #ffffff;
 	outline: none !important;
 	text-decoration: none;
+    font-size: 1.4em;
 }
 
 
@@ -92,8 +93,8 @@ a, a:hover, a:focus {
 
 .btn-theme {
   color: #fff;
-  background-color: #23238E;
-  border-color: #48bcb4;
+  background-color: #C90000;
+  border-color: #bc4848;
 }
 .btn-theme:hover,
 .btn-theme:focus,
@@ -1936,7 +1937,7 @@ label {
 	margin: 0;
 	padding: 25px 20px;
 	text-align: center;
-	background: #23238E;
+	background: #C90000;
 	border-radius: 5px 5px 0 0;
 	-webkit-border-radius: 5px 5px 0 0;
 	color: #fff;
@@ -2216,7 +2217,7 @@ label {
 
 /*footer*/
 .site-footer {
-    background: #23238E;
+    background: #C90000;
     color: #fff;
     padding: 10px 0;
 }

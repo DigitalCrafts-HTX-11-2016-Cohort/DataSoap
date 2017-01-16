@@ -1,6 +1,7 @@
 
 body {
-  background-color: #f2f2f2;
+    /*Trying out white here*/
+    /*background-color: #f2f2f2;*/
     font-family: "Lato";
     font-weight: 300;
     font-size: 16px;
@@ -11,6 +12,17 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
+/*.gradient-fill {
+    background:
+    This does not work because backstretch is regenreating itself and body is not a positioned element. Would liek to fix in the future.
+    linear-gradient(
+        rgba(90, 62, 62, 0.88),
+        rgba(4, 4, 4, 0.63) 60%
+        ),
+    url(http://www.amazingwallpaperz.com/wp-content/uploads/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg);
+	padding-top: 60px;
+    z-index: 2;
+}*/
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway";
@@ -27,6 +39,7 @@ p {
 
 .centered {
     text-align: center;
+    color: #f2f2f2
 }
 
 /* Links */
@@ -72,7 +85,15 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background-color: #34495e;
+	/*background-color: #34495e;*/
+    /*Trying out a new bg color*/
+    background:
+    /*Semi-transparent grey gradient on top of an image. rgba color won't stack*/
+    linear-gradient(
+        rgba(90, 62, 62, 0.88),
+        rgba(4, 4, 4, 0.63) 60%
+        ),
+    url(http://www.amazingwallpaperz.com/wp-content/uploads/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg);
 	padding-top: 60px;
 }
 
@@ -80,7 +101,7 @@ a:after {
 	margin-top: 30px;
 	color: white;
 	font-size: 70px;
-	
+
 }
 
 #headerwrap h3 {
@@ -109,6 +130,14 @@ a:after {
 #features {
 	padding-top: 50px;
 	padding-bottom: 50px;
+    /*Trying out below changes*/
+    background-color: rgba(201, 0, 0, 0.75);
+    color: #f2f2f2;
+    font-weight: 700;
+}
+/*Trying out the below*/
+.white h3{
+    color: #f2f2f2;
 }
 
 #features .ac a{
@@ -127,7 +156,19 @@ a:after {
 #showcase h1 {
 	color: white;
 }
-
+.accordion-heading{
+    font-size: 1.8em;
+    /*line-height: 1.0em;*/
+    font-weight: 900;
+}
+.accordion-inner::before{
+    content: url("/static/assets/img/list-icon-Ball.gif");
+    display: inline-block !important;
+}
+.accordion-inner{
+    display: inline-block !important;
+    vertical-align: text-top;
+}
 #footerwrap {
 	background-color: #2f2f2f;
 	color: white;
@@ -157,4 +198,3 @@ a:after {
 #c p {
 	color: white
 }
-
