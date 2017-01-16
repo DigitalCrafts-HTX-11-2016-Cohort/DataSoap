@@ -1,6 +1,6 @@
 # DataSoap
 
-Link to live site: <a href='http://35.166.251.127'>DataSoap</a><br>
+<b>Link to live site:</b> <a href='http://35.166.251.127'>DataSoap</a><br>
 <br><b>Overview of Project:</b><br>
 DataSoap started as a concept to build a more advanced data scrubbing system.  Datasoap allows users to be able to upload their own CSV files and have those files cleaned (scrubbed) against the national do not call list (DNC) resulting in a clean list downloadable at the users connivence.  
 
