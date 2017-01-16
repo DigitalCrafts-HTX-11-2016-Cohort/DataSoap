@@ -29,9 +29,9 @@ Given the back end intensive nature of our project, we faced our fair share of d
 
 <br><b>MVP and Stretch Goals:</b>
 <b>MVP</b><br>
-1.  Build a data scrubbing system where users can upload files and we can compare it against the national do not call list and output a downloadable file with only numbers that are not on the list.
-2.  Allow users to register for this service with a log in username and for us to be able to keep track of who accesses this service.
-3.  UI layout that is easy to use and intuitive.  All the research we've done on sites similar to this look quite outdated and we wanted users to have a pleasant and easy to use experience with our upload and download features.
+1.  Build a data scrubbing system where users can upload files and we can compare it against the national do not call list and output a downloadable file with only numbers that are not on the list.<br>
+2.  Allow users to register for this service with a log in username and for us to be able to keep track of who accesses this service.<br>
+3.  UI layout that is easy to use and intuitive.  All the research we've done on sites similar to this look quite outdated and we wanted users to have a pleasant and easy to use experience with our upload and download features.<br>
 4.  Basic dashboard where users can access history and data about their previous usage and a place where downloads could be archived for convienience.
 <br><b>Stetch Goals</b>
 1.  Adding a quick search feature so an individual can quickly search for one number without having to upload a file.<br>
