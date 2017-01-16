@@ -1,5 +1,7 @@
 # DataSoap
-<b>Overview of Project:</b><br>
+
+Link to live site: <a href='35.166.251.127'>DataSoap</a><br>
+<br><b>Overview of Project:</b><br>
 DataSoap started as a concept to build a more advanced data scrubbing system.  Datasoap allows users to be able to upload their own CSV files and have those files cleaned (scrubbed) against the national do not call list (DNC) resulting in a clean list downloadable at the users connivence.  
 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%203.54.37%20PM.png)
@@ -11,7 +13,7 @@ HTML, CSS, Bootstrap, Javascript, JQuery, Python, Flask, MySql, Amazon AWS EC2
 Karissa Martin and Deepak Shah 
 
 <b>Challenges faced & Solutions used:</b>
-<br>1. Most of the challenges we faced involved the back end of our framework.  One of the earliest was in constructing our upload process.  We were very conscious about speed and efficiency and thus wanted to create a system where we did not have to upload and save a file directly but could have the file read and organize our data as we needed.  We implemented different approaches but ended up using a built-in library, CSV reader.  CSV reader allowed us to read files before writing and to start to parse through the data with speed and to iterate through lines that were important to us with speed and return the data using its built in next() function. 
+<br>1. Most of the challenges we faced involved the back end of our framework.  One of the earliest was in constructing our upload process.  We were very conscious about speed and efficiency and thus wanted to create a system where we did not have to upload and save a file directly but could have the file read and organize our data as we needed.  We implemented different approaches but ended up using a built-in library, CSV reader.  CSV reader allowed us to read files before writing and to start to parse through the data with speed and to iterate through lines that were important to us efficiently and return the data using its built in next() function. 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.35.47%20PM.png)
 <br><br>2.Along with speed, accuracy was paramount to DataSoap.  A challenge we faced in regards to that was being able to read a file and access information such as the headers and phone numbers and correctly populate a table in MySQL with the information normalized and intact.  Given that files could vary in the number of header columns and the column including numbers could have a variety of labels, we had to devise a solution where regardless of what was uploaded we could filter out that information accurately. The solution we implemented involved utilizing csv reader initially to parse through the data, stripping out the headers and placing them in a MySQL database and then search for numbers from what was reamaining, not relying on the header content to make that determination. From there we called a function that would normalize the data (clean it) so queries against the master list could be made and numbers on the DNC list could be accurately removed.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.36.15%20PM.png)
