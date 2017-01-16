@@ -1,4 +1,4 @@
-import os, sys, mysql.connector, datetime, csv
+import os, sys, mysql.connector, datetime, csv, pygal
 from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash,send_file
 from werkzeug.utils import secure_filename
 
@@ -446,7 +446,7 @@ def upload_file():
        debug("About to post to logs")
        userfile.postToLog()
        debug("successfully posted to logs")
-       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br> Click to download" % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> <a href=\"/download\">Click to download</a> " % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
        session['success_message']=success_message
        debug("About to export clean file to files out")
        userfile.exportTable()

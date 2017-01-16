@@ -37,6 +37,10 @@ body {
 
 #success {
     text-align:center;
+    color: white;
+    padding-left: 20px;
+    background-color: red;
+    background-size: 50%;
 }
 
 #search {
