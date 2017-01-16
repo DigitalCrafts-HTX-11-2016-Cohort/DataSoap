@@ -30,7 +30,7 @@ Given the back end intensive nature of our project, we faced our fair share of d
 <br><br>4. Error handling.  In general, like any project you spend a fair bit of time with general error handling.  Because of all the different routes and databases, we knew we could run into issues if we didn't stay organized.  To this end, we organized the data in classes (users and filename) and were cognizant of how we wanted to route between our static pages and dynamic content.  We started the project by building a roadmap and although we made adjustments along the way, modeling our design this way made implementing those changes more agile.
 <br>
 <br><b>MVP and Stretch Goals:</b>
-<b>MVP</b><br>
+<br><b>MVP</b><br>
 1.  Build a data scrubbing system where users can upload files and we can compare it against the national do not call list and output a downloadable file with only numbers that are not on the list.<br>
 2.  Allow users to register for this service with a log in username and for us to be able to keep track of who accesses this service.<br>
 3.  UI layout that is easy to use and intuitive.  All the research we've done on sites similar to this look quite outdated and we wanted users to have a pleasant and easy to use experience with our upload and download features.<br>
