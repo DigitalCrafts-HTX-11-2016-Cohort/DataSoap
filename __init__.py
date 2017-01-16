@@ -1,4 +1,4 @@
-import os, sys, mysql.connector, datetime, csv, pygal, math
+import os, sys, mysql.connector, datetime, csv, pygal
 from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash,send_file
 from werkzeug.utils import secure_filename
 
