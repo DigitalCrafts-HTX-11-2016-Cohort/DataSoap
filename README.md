@@ -19,9 +19,10 @@ Karissa Martin and Deepak Shah 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.35.07%20PM.png)
 <br><b>Error handling/Troubleshooting:</b></br>
 Given the back end intensive nature of our project, we faced our fair share of delicate troubleshooting issues which we eventually worked out and wanted to share what we learned from each issue.
-<br><br>1. Big Integer
+<br><br>1. Big Integer - Given that we took striped the phone numbers to make them 10 digit integers we naturally gave them a setting of int in MySQL.  As we loaded the master DNC data set, we quickly realized that the enitre data set wasn't loading.  For some reason the entire list of numbers stopped at 2147483647.  We were perplexed because the code we wrote looked spot on.  With the help of our instructor and stack overflow, we realized that in MySQL integers have a maximum value and that in our case we need to use big int to represent any number above 2147483647.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.48.59%20PM.png)
-<br><br>2. ID conflict - picking an internal id that we would not see in any file.
+<br><br>2. ID conflict - picking an internal id that we would not see in any file.  We've had the habit of labeling our internal id tag in MySQL as id for simplicity sake.  Yet realized that in taking in any headers from user files we may run into the issue of duplication as others may have an id header.  To resolve this we labeled our internal header DNCInternalID to avoid any errors.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.49.14%20PM.png)
-<br><br>3. Concatenating string and tuples, passing it in as %s or %d
+<br><br>3. Concatenating string and tuples, passing it in as %s or %d.  File path after file path we found ourselves concatenating to direct files in and out.  When we started we kept running into erros involving concatenating strings and tuples but resolved it by passing in the data as %s or %d.
+![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%208.19.20%20PM.png)
 <br><br>4. Error handling
