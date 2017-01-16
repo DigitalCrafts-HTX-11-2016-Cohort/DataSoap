@@ -17,7 +17,7 @@ Karissa Martin and Deepak Shah 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.36.15%20PM.png)
 <br><br>3. Another challenged we faced dealt with memory and space constraints.  Our master table was fairly large but if we created and stored a new table for each upload we would quickly run out of space and it would frankly be very inefficient.  The solution we devised was to dump the data from the uploaded CSV file into a temporary table which was automatically generated upon the upload after our cleaning process.  It would only be used to make queries against the DNC master table and then delete itself upon completion. This one was tricker then it initially appeared as the path was never fixed, we allowed users to retain the file name they uploaded upon download.  We settled on using an os.path exists command as shown below.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.35.07%20PM.png)
-<br><b>Error handling/Troubleshooting:</b></br>
+<br><br><b>Error handling/Troubleshooting:</b></br>
 Given the back end intensive nature of our project, we faced our fair share of delicate troubleshooting issues which we eventually worked out and wanted to share what we learned from each issue.
 <br><br>1. Big Integer - Given that we took striped the phone numbers to make them 10 digit integers we naturally gave them a setting of int in MySQL.  As we loaded the master DNC data set, we quickly realized that the enitre data set wasn't loading.  For some reason the entire list of numbers stopped at 2147483647.  We were perplexed because the code we wrote looked spot on.  With the help of our instructor and stack overflow, we realized that in MySQL integers have a maximum value and that in our case we need to use big int to represent any number above 2147483647.<br>
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%204.48.59%20PM.png)
@@ -26,7 +26,7 @@ Given the back end intensive nature of our project, we faced our fair share of d
 <br><br>3. Concatenating string and tuples, passing it in as %s or %d.  File path after file path we found ourselves concatenating to direct files in and out.  When we started we kept running into erros involving concatenating strings and tuples but resolved it by passing in the data as %s or %d.
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%208.19.20%20PM.png)
 <br><br>4. Error handling.  In general, like any project you spend a fair bit of time with general error handling.  Because of all the different routes and databases, we knew we could run into issues if we didn't stay organized.  To this end, we organized the data in classes (users and filename) and were cognizant of how we wanted to route between our static pages and dynamic content.  We started the project by building a roadmap and although we made adjustments along the way, modeling our design this way made implementing those changes more agile.
-
+<br>
 <br><b>MVP and Stretch Goals:</b>
 <b>MVP</b><br>
 1.  Build a data scrubbing system where users can upload files and we can compare it against the national do not call list and output a downloadable file with only numbers that are not on the list.<br>
