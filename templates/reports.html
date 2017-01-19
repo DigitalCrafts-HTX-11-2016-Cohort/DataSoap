@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-      <meta charset="utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Data Soap Dashboard</title>
-	<!-- BOOTSTRAP STYLES-->
+    <link href="static/assets/css/reports.css" rel="stylesheet" />
+    <!-- BOOTSTRAP STYLES-->
     <link href="static/assets/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
+    <!-- FONTAWESOME STYLES-->
     <link href="static/assets/css/font-awesome.css" rel="stylesheet" />
-     <!-- MORRIS CHART STYLES-->
+    <!-- MORRIS CHART STYLES-->
     <link href="static/assets/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
+    <!-- CUSTOM STYLES-->
     <link href="static/assets/css/custom.css" rel="stylesheet" />
-     <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
+
 <body>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
@@ -28,99 +31,97 @@
                 <a class="navbar-brand" href="/">DataSoap</a>
             </div>
 
-  <div style="color: white;
+            <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
 font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>
-           <!-- /. NAV TOP  -->
-                <nav class="navbar-default navbar-side" role="navigation">
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
-                    <img src="/static/assets/img/soapbar.png" class="user-image img-responsive"/>
-					</li>
+                    <li class="text-center">
+                        <img src="/static/assets/img/soapbar.png" class="user-image img-responsive" />
+                    </li>
 
 
                     <li>
                         <a href="/dashboard"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
-                     <li>
+                    <li>
                         <a class="active-menu" href="/reports"><i class="fa fa-desktop fa-3x"></i> Reports</a>
                     </li>
 
-						   <li>
+                    <li>
                         <a href="/history"><i class="fa fa-history fa-3x"></i> History</a>
                     </li>
                     </li>
-						   <li>
+                    <li>
                         <a href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
                     </li>
                     </li>
-						   <li>
+                    <li>
                         <a href="/gopro"><i class="fa fa-bar-chart-o fa-3x"></i> Go Pro</a>
                     </li>
 
 
 
-                                                    </ul>
+                </ul>
 
-                                                </li>
-                                            </ul>
-                                          </li>
+                </li>
+                </ul>
+                </li>
 
-                                    </ul>
+                </ul>
 
-                                </div>
+            </div>
 
-                            </nav>
+        </nav>
         <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
+        <div id="page-wrapper">
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Your Reports</h2>
-                 </div>
-             </div>
+                        <h2>Your Reports</h2>
+                    </div>
+                </div>
 
-                     <div class="row">
-                         <h3 class="graph"> Average Percentage of Clean Data</h3>
-                         <div class="col-md-12">
+                <div class="row">
+                    <h3 class="graph"> Average Percentage of Clean Data</h3><br  /><br />
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            <ul class="reportchart">
+                                {% for day in avg_ptime_clean %}
+                                <li>
+                                    <span style="height:{{day[2]*100}}%" title="{{day[0]}}"></span>
+                                </li>
+                                {% endfor %}
+                            </ul>
 
-
-
-     <div class="contentContainer">
-         {% for day in avg_ptime_clean %}
-   <div class="progressBar">
-     <h4>{{day[0]}}</h4>
-     <div class="progressBarContainer">
-       <div class="progressBarValue value-{{day[2]*100}}">{{day[2]*100}}</div>
-     </div>
-   </div>
-   {% endfor %}
- </div>
 
                     </div>
                 </div>
-                 <!-- /. ROW  -->
-                 <hr />
+                <!-- /. ROW  -->
+                <!-- <hr /> -->
 
-    </div>
-             <!-- /. PAGE INNER  -->
             </div>
-         <!-- /. PAGE WRAPPER  -->
+            <!-- /. PAGE INNER  -->
         </div>
-     <!-- /. WRAPPER  -->
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
     <script src="static/assets/js/jquery-1.10.2.js"></script>
-      <!-- BOOTSTRAP SCRIPTS -->
+    <!-- BOOTSTRAP SCRIPTS -->
     <script src="static/assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
     <script src="static/assets/js/jquery.metisMenu.js"></script>
-      <!-- CUSTOM SCRIPTS -->
-    <script src="static/assets/js/custom.js"></script>
+    <!-- CUSTOM SCRIPTS -->
+    <!-- <script src="static/assets/js/custom.js"></script> -->
 
 
 </body>
+
 </html>
