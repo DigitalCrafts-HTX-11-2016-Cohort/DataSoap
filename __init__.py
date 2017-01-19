@@ -7,12 +7,9 @@ sys.setdefaultencoding('utf8')
 
 ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 
-#adding a comment to test
-
 #define connection
 
 app = Flask(__name__)
-
 app.secret_key = 'wnaptihtr'
 #for local testing
 # app.config['UPLOAD_FOLDER'] = "static/files_in/"
@@ -20,7 +17,6 @@ app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 #for live
 app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
 app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
-# home_dir = os.path.join(app.config['UPLOAD_FOLDER'],"")
 
 def debug(line):
     import time
@@ -93,11 +89,6 @@ class Database:
     @staticmethod
     def scrub(data):
         return filter(type(data).isdigit, data)
-        # data=data.replace('(','')
-        # data=data.replace(')','')
-        # data=data.replace('-','')
-        # data=data.replace(' ','')
-        # return data
 
     @staticmethod
     def is_int(data):
@@ -106,10 +97,7 @@ class Database:
             return True
         except ValueError:
             return False
-# class User:
-#     __init__(self,id=0)
-#     if(not type(id)==int):
-#         id=int(id)
+
 
 class Users:
     def __init__(self,id=0):
@@ -139,11 +127,7 @@ class Users:
         query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.password,self.id))
         Database.doQuery(query)
         return True
-    #
-    # def delete(self):
-    #     query = ("delete from dnc.users where id=%d"% self.id
-    #     Database.doQuery(query)
-    #     return True
+
 
 class Userfile:
     def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%H%S%f")):
@@ -192,8 +176,6 @@ class Userfile:
                         col = Database.scrub(col)
                         # debug("new value is %s\n" % col)
                     newrow.append(str(col))
-                    # if colPos == len(self.headers)-1:
-                    #     newrow.append('\n')
                 # debug("This should be 1 row: %s" % newrow)
                 cleanfile.write(','.join(newrow)+ '\n')
             cleanfile.close()
@@ -211,8 +193,6 @@ class Userfile:
             self.cols.append("@col"+str((self.headers.index(header)+1)))
             self.cols_set.append("`%s`=@col%s" % (header, (self.headers.index(header)+1)))
         query += ", PRIMARY KEY (dncinternalid))"
-        # print self.cols
-        # print self.cols_set
         Database.doQuery(query)
         return True
 
@@ -325,30 +305,13 @@ def submit_login():
         print "failed condition"
         return redirect('/')
 
-# @app.route("/update_user",methods=["POST","GET"])
-# def update_profile():
-#     id=request.args.get('id')
-#     users = Users(id)
-#     username = session.get('username')
-#     if 'username' in session:
-#         query = "select * from dnc.users where username = '%s'" % username
-#         prof = Database.getResult(query,True)
-#         firstname = prof[1]
-#         lastname = prof[2]
-#         company = prof[3]
-#         email = prof[4]
-#         username = prof[5]
-#         password = prof[6]
-#
-#
-#     return  render_template("update_student.html",student=student)
-
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
 def dashboard():
     if 'username' in session:
         debug(session.get('username'))
         return render_template("dashboard.html")
+    return redirect('/')
 
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
@@ -356,7 +319,8 @@ def report():
         query="select str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
         avg_ptime_clean= Database.getResult(query)
         debug(avg_ptime_clean)
-	return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
+        return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
+    return redirect('/')
 
 @app.route("/history", methods = ['GET', 'POST'])
 def history():
@@ -365,6 +329,7 @@ def history():
         logHistory = Database.getResult(query)
         # debug(logHistory)
         return render_template("history.html", logHistory=logHistory)
+    return redirect('/')
 
 @app.route("/profile", methods = ['GET', 'POST'])
 def profile():
@@ -383,6 +348,8 @@ def profile():
             email = prof[4]
             password = prof[6]
         return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email, username=username, password=password, id=id)
+    else:
+        return redirect('/')
 
 @app.route("/submit_profile_update", methods = ['GET', 'POST'])
 def update_profile():
@@ -403,12 +370,12 @@ def go_pro():
     session.get('username')
     if 'username' in session:
         return render_template("gopro.html")
+    else:
+        return redirect('/')
 
 @app.route("/logout", methods = ['GET', 'POST'])
 def logout():
-    del session['username']
-    if 'success_message' in session:
-        del session['success_message']
+    session.clear()
     return redirect('/')
 
 @app.route("/main_page", methods = ['GET', 'POST'])
@@ -417,12 +384,6 @@ def main_page():
         del session['success_message']
     return redirect('/')
 
-#
-#
-# @app.route('/', methods = ['GET', 'POST'])
-# def home():
-#     debug("loading main page")
-#     return render_template("dashboard.html", title="DNC Dashboard")
 
 @app.route('/process', methods = ['GET', 'POST'])
 def upload_file():
@@ -461,15 +422,9 @@ def upload_file():
        session['success_message']="<h3>No File Selected - Please try again.</h3>"
        return redirect ("/dashboard")
 
-@app.route('/<file_name>.txt')
-def send_text_file(file_name):
-    """Send your static text file."""
-    file_dot_text = file_name + '.txt'
-    return app.send_static_file(file_dot_text)
-
 @app.route('/download', methods=['GET', 'POST'])
 def download():
-    # return send_from_directory(directory=app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/")
+    # debug("Sending the file to user side")
     return send_file(app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+session.get('time_in')+session.get('filename'),as_attachment=True, attachment_filename=session.get('filename'))
 
 @app.after_request
