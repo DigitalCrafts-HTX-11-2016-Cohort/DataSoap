@@ -16,7 +16,7 @@ app.secret_key = 'wnaptihtr'
 app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 #for live
 app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
-app.config['MAX_CONTENT_LENGTH'] = 8 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
 def debug(line):
     import time
@@ -293,16 +293,17 @@ def submit_login():
     query = "select id from dnc.users where username = '%s' and password = '%s'" % (users.username, users.password)
     debug(query)
     foo = Database.getResult(query,True)
-    if len(foo) > 0:
-        debug("This User exists and password true")
-        session['username'] = users.username
-        session['logged in'] = True
-        session['userid'] = foo[0]
-        debug(session.get('userid'))
-        debug(session.get('username'))
-        return redirect("/dashboard")
-    else:
-        print "failed condition"
+    try:
+        if len(foo) > 0:
+            debug("This User exists and password true")
+            session['username'] = users.username
+            session['logged in'] = True
+            session['userid'] = foo[0]
+            debug(session.get('userid'))
+            debug(session.get('username'))
+            return redirect("/dashboard")
+    except TypeError as exception:
+        debug("Failed login. Redirecting")
         return redirect('/')
 
 
