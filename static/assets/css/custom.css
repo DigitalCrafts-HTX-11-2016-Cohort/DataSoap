@@ -19,11 +19,12 @@ body {
  #wrapper {
     width: 100%;
     background:#202020;
+    height: auto;
 }
 
 #page-wrapper {
     padding: 15px 15px;
-    min-height: 600px;
+    height: auto;
     background:#F3F3F3;
 
 }
@@ -32,7 +33,7 @@ body {
     margin:10px 20px 10px 0px;
     background-color:#fff!important;
     padding:10px;
-    min-height:1200px;
+    min-height: 800px;
 }
 
 #success {
@@ -440,7 +441,7 @@ line-height: 1.428571429;
      #page-wrapper{
                margin: 0 0 0 260px;
         padding: 15px 30px;
-        min-height: 1200px;
+        min-height: 800px;
 
     }
 
