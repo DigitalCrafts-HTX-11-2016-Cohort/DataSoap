@@ -1,6 +1,6 @@
 # DataSoap
 
-<b>Link to live site:</b> <a href='http://35.166.251.127'>DataSoap</a><br><br>
+<b>Link to live site:</b> <a href='http://data-soap.com/'>DataSoap</a><br><br>
 <b>Technologies, Frameworks and Programming Languages:</b><br>
 HTML, CSS, Bootstrap, Javascript, JQuery, JSON, Python, Flask, MySql, Amazon AWS EC2
 <br><br><b>Overview of Project:</b><br>
