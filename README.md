@@ -4,7 +4,7 @@
 <b>Technologies, Frameworks and Programming Languages:</b><br>
 HTML, CSS, Bootstrap, Javascript, JQuery, JSON, Python, Flask, MySql, Amazon AWS EC2
 <br><br><b>Overview of Project:</b><br>
-DataSoap started as a concept to build a more advanced data scrubbing system.  Datasoap allows users to be able to upload their own CSV files and have those files cleaned (scrubbed) against the national do not call list (DNC) resulting in a clean list downloadable at the users connivence.  
+DataSoap started as a concept to build a more advanced data scrubbing system.  Datasoap allows users to be able to upload their own CSV files and have those files cleaned (scrubbed) against the national do not call list (DNC) resulting in a clean list downloadable at the users convenience.  
 
 ![alt tag](https://github.com/DigitalCrafts-HTX-11-2016-Cohort/DataSoap/blob/master/static/assets/git_screens/Screen%20Shot%202017-01-15%20at%203.54.37%20PM.png)
 <br>
