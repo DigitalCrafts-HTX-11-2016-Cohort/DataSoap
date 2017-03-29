@@ -53,14 +53,15 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 						   <li>
                         <a   href="/history"><i class="fa fa-history fa-3x"></i> History</a>
                     </li>
-                    </li>
+
 						   <li>
                         <a   href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
                     </li>
-                    </li>
+
 						   <li>
                         <a   href="/gopro"><i class="fa fa-bar-chart-o fa-3x"></i> Go Pro</a>
                     </li>
+                </ul>
 
 
             </div>
@@ -83,7 +84,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
                      </div>
 
                     <div class="col-md-4 col-sm-6 col-xs-6">
-                    <h4> <i class="fa fa-search"></i></i> Quick Clean</a></h4>
+                    <h4> <i class="fa fa-search"></i>Quick Clean</h4>
                     <!-- <div class="row search"> -->
                     <!-- <div class search>
                     <form action='/search' id='search-form' method='get' target='_top'> -->
@@ -95,10 +96,11 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
                     <!-- </div>
                     <div id="searchResult"></div> -->
 
-                    <div class search>
-
-                    <input type="text" name="search" style="width:80%"; maxlength="110" placeholder="Phone Number" />
+                    <div class="search">
+                    <form id="quickSearch">
+                    <input type="text" name="search" style="width:80%;" maxlength="110" placeholder="Phone Number" />
                     <button type="submit" id="search" value="search" text-align="center" class="btn btn-primary btn-xs">Search</button>
+                    </form>
                     </div>
                     <div id="searchResult"></div>
                 </div></div>
@@ -109,7 +111,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 			<div class="panel panel-back noti-box">
                 <!-- <span class="icon-box bg-color-red set-icon"> -->
                     <i class="fa fa-globe fa-3x"></i>
-                </span>
+
                 <div class="text-box" >
                     <p class="main-text">99%</p>
                     <p class="text-muted">Files Scrubbed</p>
@@ -120,7 +122,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 			<div class="panel panel-back noti-box">
                 <!-- <span class="icon-box bg-color-green set-icon"> -->
                     <i class="fa fa-mobile fa-3x"></i>
-                </span>
+
                 <div class="text-box" >
                     <p class="main-text">16,000</p>
                     <p class="text-muted">cleaned last session</p>
@@ -131,7 +133,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 			<div class="panel panel-back noti-box">
                 <!-- <span class="icon-box bg-color-blue set-icon"> -->
                     <i class="fa fa-remove fa-3x"></i>
-                </span>
+
                 <div class="text-box" >
                     <p class="main-text">14,000</p>
                     <p class="text-muted">DNC Contacts Removed</p>
@@ -142,7 +144,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 			<div class="panel panel-back noti-box">
                 <!-- <span class="icon-box bg-color-brown set-icon"> -->
                     <i class="fa fa-legal fa-3x"></i>
-                </span>
+
                 <div class="text-box" >
                     <p class="main-text">0</p>
                     <p class="text-muted">Litigators</p>
@@ -176,13 +178,13 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <!-- <form action="/add_options"> -->
                                 <h3> <i class="fa fa-check-circle fa-lg"></i></i> Options</a></h3>
-<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>
-<input type="checkbox" name="income" value="income"> add household income<br />
-<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>
-<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />
-<input type="checkbox" name="work_home" value="work_home"> add work at home<br>
-<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />
-<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>
+{#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
+{#<input type="checkbox" name="income" value="income"> add household income<br />#}
+{#<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>#}
+{#<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />#}
+{#<input type="checkbox" name="work_home" value="work_home"> add work at home<br>#}
+{#<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />#}
+{#<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>#}
 <input type="checkbox" name="rem_dup" value="rem_dup" checked> remove duplicates (automatically checked)<br /><br />
 
 </div></div>
@@ -214,8 +216,9 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 
 </body>
 <script type="text/javascript">
-        $('#search').click(function() {
-            console.log("click registered");
+        $('#quickSearch').on("submit", function(e) {
+            e.preventDefault();
+            console.log("quicksearch submit registered");
            $.getJSON('/searchResult', {
                number: $('input[name="search"]').val()
            }, function(data) {

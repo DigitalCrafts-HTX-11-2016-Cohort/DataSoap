@@ -1,9 +1,11 @@
-import os, sys, mysql.connector, datetime, csv, pygal
-from flask import Flask, render_template, request, redirect, url_for, session, send_from_directory, flash,send_file
+import os, mysql.connector, datetime, csv, time
+import pymsgbox.native as pymsgbox
+# import sys
+from flask import Flask, render_template, request, redirect, session, send_file
 from werkzeug.utils import secure_filename
 
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 
@@ -12,17 +14,25 @@ ALLOWED_EXTENSIONS = set(['txt', 'csv'])
 app = Flask(__name__)
 app.secret_key = 'wnaptihtr'
 #for local testing
-# app.config['UPLOAD_FOLDER'] = "static/files_in/"
-app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
+app.config['UPLOAD_FOLDER'] = "static/files_in/"
+app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
+
 #for live
-app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
+# app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
+# app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
 def debug(line):
     import time
-    target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
-    ip=request.remote_addr
-    timestamp =  time.strftime("%Y%m%d%H%S%f", time.gmtime())
+    # local debug target
+    target = open("static/debug.log", "a")
+    # live debug target
+    # target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
+    ip = request.remote_addr
+    # local or windows timestamp no milliseconds
+    timestamp = time.strftime("%Y%m%d%H%S", time.gmtime())
+    # live or UBUNTU/LINUXtimestamp w microseconds
+    # timestamp = time.strftime("%Y%m%d%H%S%f", time.gmtime())
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
 
@@ -34,11 +44,13 @@ def allowed_file(filename):
     return '.' in filename and \
            filename_pieces[1].lower() in ALLOWED_EXTENSIONS
 
+
+# noinspection PyTypeChecker
 @app.route('/searchResult', methods=['POST', 'GET'])
 def searchResult():
     debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
-    query="select dncinternalid from dnc.`master` where PhoneNumber = %d" % int(numberSearched)
+    query="select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
     query_result = Database.getResult(query,True)
     debug(query_result)
     if query_result:
@@ -48,6 +60,7 @@ def searchResult():
     return '{"result":"%s"}' % result
 
 
+# noinspection PyTypeChecker
 class Database:
     @staticmethod
     def escape(value):
@@ -203,7 +216,7 @@ class Userfile:
         return True
 
     def cleanup(self):
-        query="delete from dnc.`%s` where " % (self.time_in)
+        query="delete from dnc.`%s` where " % self.time_in
         for i in self.phoneColList:
             if self.phoneColList[0] == i:
                 query+=" `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
@@ -303,8 +316,10 @@ def submit_login():
             debug(session.get('username'))
             return redirect("/dashboard")
     except TypeError as exception:
-        debug("Failed login. Redirecting")
-        return redirect('/')
+        pymsgbox.alert('Login Failed. Redirecting', 'Alert!')
+        debug("Failed login. Alert should have popped up.")
+        # time.sleep(5)
+        return redirect('/login')
 
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
