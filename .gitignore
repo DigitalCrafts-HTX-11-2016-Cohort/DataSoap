@@ -1,2 +1,5 @@
 settings.py
+/templates/table.html
 templates/table.html
+static/debug.log
+/static/debug.log
