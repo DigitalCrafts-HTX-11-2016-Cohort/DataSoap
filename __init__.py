@@ -1,7 +1,7 @@
 # coding=utf-8
-import os, datetime, csv, time
+import os, datetime, csv
 import pymsgbox.native as pymsgbox
-import settings as settings
+from database import Database
 # import sys
 from flask import Flask, render_template, request, redirect, session, send_file
 from werkzeug.utils import secure_filename
@@ -60,54 +60,6 @@ def searchResult():
     else:
         result="This number is Squeaky Clean!"
     return '{"result":"%s"}' % result
-
-
-# noinspection PyTypeChecker
-class Database:
-    @staticmethod
-    def escape(value):
-        return value.replace("'","''")
-
-    @staticmethod
-    def getConnection():
-        return settings.connection
-
-    @staticmethod
-    def getResult(query,getOne=False):
-        """Return a tuple of results or a single item (not in a tuple)
-        """
-        result_set=()
-        conn = Database.getConnection()
-        cur = conn.cursor()
-        cur.execute(query)
-        if getOne:
-            result_set = cur.fetchone()
-        else:
-            result_set = cur.fetchall()
-        cur.close()
-        return result_set
-
-    @staticmethod
-    def doQuery(query):
-        conn = Database.getConnection()
-        cur = conn.cursor()
-        cur.execute(query)
-        conn.commit()
-        lastId = cur.lastrowid
-        cur.close()
-        return lastId
-
-    @staticmethod
-    def scrub(data):
-        return filter(type(data).isdigit, data)
-
-    @staticmethod
-    def is_int(data):
-        try:
-            int(Database.scrub(data))
-            return True
-        except ValueError:
-            return False
 
 
 class Users:
@@ -268,7 +220,6 @@ def index():
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login_page():
-    username = session.get('username')
     if 'username' in session:
         return redirect('/dashboard')
     else:
@@ -280,17 +231,17 @@ def new_user():
 
 @app.route("/new_user_submit", methods = ['GET', 'POST'])
 def new_user_submit():
-    id=request.form.get('id')
+    # id=request.form.get('id')
     users = Users()
-    users.firstname=request.form.get('firstname')
-    users.lastname=request.form.get('lastname')
-    users.company=request.form.get('company')
-    users.email=request.form.get('email')
-    users.username=request.form.get('username')
-    users.password=request.form.get('password')
-    password1=request.form.get('password1')
+    users.firstname = request.form.get('firstname')
+    users.lastname = request.form.get('lastname')
+    users.company = request.form.get('company')
+    users.email = request.form.get('email')
+    users.username = request.form.get('username')
+    users.password = request.form.get('password')
+    password1 = request.form.get('password1')
     if users.password == password1:
-        id= users.insert()
+        id = users.insert()
         os.mkdir(app.config['DOWNLOAD_FOLDER']+str(id), 0777)
     else:
         return ("Sorry your password does not match, click back and try again!")
@@ -330,10 +281,10 @@ def dashboard():
 @app.route("/reports", methods = ['GET', 'POST'])
 def report():
     if 'userid' in session:
-        query="select str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
-        avg_ptime_clean= Database.getResult(query)
+        query = "select str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
+        avg_ptime_clean = Database.getResult(query)
         debug(avg_ptime_clean)
-        return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
+        return render_template("reports.html", avg_ptime_clean = avg_ptime_clean)
     return redirect('/')
 
 @app.route("/history", methods = ['GET', 'POST'])
@@ -342,15 +293,16 @@ def history():
         query = "select file_in_name,str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,file_in_record_count - file_out_record_count as records_removed, file_out_record_count,file_out_name from dnc.logs where userid = %d order by `Date` desc" % session.get('userid')
         logHistory = Database.getResult(query)
         # debug(logHistory)
-        return render_template("history.html", logHistory=logHistory)
+        return render_template("history.html", logHistory = logHistory)
     return redirect('/')
 
 @app.route("/profile", methods = ['GET', 'POST'])
 def profile():
+    global password
     session.get('username')
     if 'username' in session:
-        id=request.args.get('id')
-        users = Users(id)
+        id = request.args.get('id')
+        # users = Users(id)
         username = session.get('username')
         if 'username' in session:
             query = "select * from dnc.users where username = '%s'" % username
@@ -370,22 +322,14 @@ def update_profile():
     session.get('username')
     users = Users(id)
     if 'username' in session:
-        users.firstname=request.form.get('firstname')
-        users.lastname=request.form.get('lastname')
-        users.company=request.form.get('company')
-        users.email=request.form.get('email')
-        users.password=request.form.get('password')
-        users.id=session.get('userid')
+        users.firstname = request.form.get('firstname')
+        users.lastname = request.form.get('lastname')
+        users.company = request.form.get('company')
+        users.email = request.form.get('email')
+        users.password = request.form.get('password')
+        users.id = session.get('userid')
         users.update()
     return redirect('/dashboard')
-
-@app.route("/gopro", methods = ['GET', 'POST'])
-def go_pro():
-    session.get('username')
-    if 'username' in session:
-        return render_template("gopro.html")
-    else:
-        return redirect('/')
 
 @app.route("/logout", methods = ['GET', 'POST'])
 def logout():
@@ -401,42 +345,50 @@ def main_page():
 
 @app.route('/process', methods = ['GET', 'POST'])
 def upload_file():
-   if request.method == 'POST' and request.files['Select csv']:
-       f = request.files['Select csv']
-       if allowed_file(f.filename):
-           pass
-       else:
-           session['success_message']="<h3>Only txt and csv files are supported at this time - Please try again.</h3>"
-           return redirect ("/dashboard")
-       userfile=Userfile(secure_filename(f.filename).lower())
-       f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
-       session['time_in']=userfile.time_in
-       session['filename']=userfile.filename
-     #   debug(type(session.get('time_in')))
-     #   debug(userfile.filename)
-       userfile.findPhoneCols()
-       userfile.createTable()
-       userfile.importTable()
-     #   debug("File uploaded successfully with %d records" % userfile.record_count)
-       userfile.cleanup()
-       userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S%f")
-       debug("About to post to logs")
-       userfile.postToLog()
-       debug("successfully posted to logs")
-       success_message= "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> <a href=\"/download\">Click to download</a> " % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
-       session['success_message']=success_message
-       debug("About to export clean file to files out")
-       userfile.exportTable()
-       debug("Successfully exported file!")
-       debug("about to delete")
-       userfile.delete()
-       debug("delete function complete")
-       return redirect ("/dashboard")
-   else:
-       session['success_message']="<h3>No File Selected - Please try again.</h3>"
-       return redirect ("/dashboard")
+    if request.method == 'POST' and request.files['Select csv']:
+        f = request.files['Select csv']
+        if allowed_file(f.filename):
+            pass
+        else:
+            session['success_message'] = "<h3>Only txt and csv files are supported at this time - Please try again.</h3>"
+            return redirect ("/dashboard")
+        userfile = Userfile(secure_filename(f.filename).lower())
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
+        session['time_in'] = userfile.time_in
+        session['filename'] = userfile.filename
+        debug("***********")
+        debug("About to debug time_in and then filename for uploaded file")
+        debug(type(session.get('time_in')))
+        debug(userfile.filename)
+        debug("***********")
+        debug("about to findPhoneCols")
+        userfile.findPhoneCols()
+        debug("about to createTable")
+        userfile.createTable()
+        debug("about to importTable")
+        userfile.importTable()
+        debug("File uploaded successfully with %d records" % userfile.record_count)
+        userfile.cleanup()
+        # local version of datetime for windows
+        userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
+        # version of datetime for linux or ubuntu
+        # userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S%f")
+        userfile.postToLog()
+        debug("successfully posted to logs")
+        success_message = "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> <a href=\"/download\">Click to download</a> " % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+        session['success_message'] = success_message
+        debug("About to export clean file to files out")
+        userfile.exportTable()
+        debug("Successfully exported file!")
+        debug("about to delete")
+        userfile.delete()
+        debug("delete function complete")
+        return redirect ("/dashboard")
+    else:
+        session['success_message'] = "<h3>No File Selected - Please try again.</h3>"
+        return redirect ("/dashboard")
 
-@app.route('/download', methods=['GET', 'POST'])
+@app.route('/download', methods = ['GET', 'POST'])
 def download():
     # debug("Sending the file to user side")
     return send_file(app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+session.get('time_in')+session.get('filename'),as_attachment=True, attachment_filename=session.get('filename'))
