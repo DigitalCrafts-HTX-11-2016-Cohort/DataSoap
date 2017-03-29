@@ -44,3 +44,17 @@
 [201703291612][127.0.0.1] 23
 [201703291612][127.0.0.1] vista
 [201703291612][127.0.0.1] vista
+[201703291748][127.0.0.1] vista
+[201703291755][127.0.0.1] searchResult function initiated
+[201703291755][127.0.0.1] None
+[201703291708][127.0.0.1] searchResult function initiated
+[201703291708][127.0.0.1] None
+[201703291701][127.0.0.1] []
+[201703291747][127.0.0.1] <type 'unicode'>
+[201703291747][127.0.0.1] <type 'unicode'>
+[201703291747][127.0.0.1] <type 'unicode'>
+[201703291755][127.0.0.1] select id from dnc.users where username = 'patha' and password = 'please'
+[201703291755][127.0.0.1] This User exists and password true
+[201703291755][127.0.0.1] 24
+[201703291755][127.0.0.1] patha
+[201703291755][127.0.0.1] patha
