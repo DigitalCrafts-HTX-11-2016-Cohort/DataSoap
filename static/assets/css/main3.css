@@ -94,7 +94,7 @@ a:after {
         rgba(90, 62, 62, 0.88),
         rgba(4, 4, 4, 0.63) 60%
         ),
-    url(http://www.amazingwallpaperz.com/wp-content/uploads/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg);
+    url("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg");
 	padding-top: 60px;
 }
 

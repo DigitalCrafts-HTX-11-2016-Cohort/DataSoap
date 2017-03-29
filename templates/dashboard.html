@@ -37,27 +37,20 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
-                    <img src="/static/assets/img/soapbar.png" class="user-image img-responsive"/>
+				    <li class="text-center">
+                        <img src="/static/assets/img/soapbar.png" class="user-image img-responsive"/>
 					</li>
-
-
                     <li>
                         <a class="active-menu"  href="/dashboard"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
                     </li>
                      <li>
-                        <a  href="/reports"><i class="fa fa-desktop fa-3x"></i> Reports</a>
+                        <a  href="/reports"><i class="fa fa-bar-chart-o fa-3x"></i> Reports</a>
                     </li>
-						   <li>
+					<li>
                         <a   href="/history"><i class="fa fa-history fa-3x"></i> History</a>
                     </li>
-
-						   <li>
+                    <li>
                         <a   href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
-                    </li>
-
-						   <li>
-                        <a   href="/gopro"><i class="fa fa-bar-chart-o fa-3x"></i> Go Pro</a>
                     </li>
                 </ul>
 
@@ -165,31 +158,32 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
                 </div></div> -->
                 <div class="row upload">
                     <div class="col-md-6 col-sm-12 col-xs-12">
-                        <h3> <i class="fa fa-cloud-upload fa-lg"></i></i> Import your CSV File</a></h3>
+                        <h3> <i class="fa fa-cloud-upload fa-lg"></i> Import your CSV File</h3>
 
                         <form action="/process" method="POST" enctype="multipart/form-data"><input type="file" name="Select csv" />
                             <!-- <input type="file" name="myFile" /> -->
                             <!-- <input type="submit" name="btnImport"class="btn btn-primary btn" value="Submit File"/> -->
-                    </div></div>
+                    </div>
+                </div>
 
                     <div class="row options">
                         <div class="col-md-6 col-sm-12 col-xs-12">
                             <!-- <form action="/add_options"> -->
-                                <h3> <i class="fa fa-check-circle fa-lg"></i></i> Options</a></h3>
-{#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
-{#<input type="checkbox" name="income" value="income"> add household income<br />#}
-{#<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>#}
-{#<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />#}
-{#<input type="checkbox" name="work_home" value="work_home"> add work at home<br>#}
-{#<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />#}
-{#<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>#}
-<input type="checkbox" name="rem_dup" value="rem_dup" checked> remove duplicates (automatically checked)<br /><br />
+                                <h3> <i class="fa fa-check-circle fa-lg"></i> Options</h3>
+                {#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
+                {#<input type="checkbox" name="income" value="income"> add household income<br />#}
+                {#<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>#}
+                {#<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />#}
+                {#<input type="checkbox" name="work_home" value="work_home"> add work at home<br>#}
+                {#<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />#}
+                {#<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>#}
+                <input type="checkbox" name="rem_dup" value="rem_dup" checked> remove duplicates (automatically checked)<br /><br />
 
-</div></div>
+                </div></div>
 
 
-<input type="submit" name="btnImport" class="btn btn-primary btn" value="Submit File"/>
-</form>
+                <input type="submit" name="btnImport" class="btn btn-primary btn" value="Submit File"/>
+                </form>
 
                  <!-- /. ROW  -->
     </div>
@@ -200,11 +194,11 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="static/assets/js/jquery-1.10.2.js"></script>
+    <script src="/static/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="static/assets/js/bootstrap.min.js"></script>
+    <script src="/static/assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="static/assets/js/jquery.metisMenu.js"></script>
+    <script src="/static/assets/js/jquery.metisMenu.js"></script>
 
 
 

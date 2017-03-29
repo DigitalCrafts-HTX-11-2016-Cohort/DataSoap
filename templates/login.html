@@ -10,12 +10,12 @@
     <title>Login</title>
 
 
-    <link href="static/assets/css/bootstrap2.css" rel="stylesheet">
+    <link href="/static/assets/css/bootstrap2.css" rel="stylesheet">
 
-    <link href="static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
 
 
-    <link href="static/assets/css/style.css" rel="stylesheet">
+    <link href="/static/assets/css/style.css" rel="stylesheet">
 
 
   </head>
@@ -26,7 +26,7 @@
 
 	  <div id="login-page">
 	  	<div class="container">
-            <form action="/submit_login" method="POST" form class="form-login">
+            <form action="/submit_login" method="POST" class="form-login">
 		        <h2 class="form-login-heading">Sign In Now</h2>
 		        <div class="login-wrap">
 		            <input type="text" class="form-control" placeholder="User ID" name="username" autofocus>
@@ -76,14 +76,14 @@
 	  	</div>
 	  </div>
 
-    <script src="static/assets/js/jquery.js"></script>
-    <script src="static/assets/js/bootstrap1.min.js"></script>
+    <script src="/static/assets/js/jquery.js"></script>
+    <script src="/static/assets/js/bootstrap1.min.js"></script>
 
     <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="static/assets/js/jquery.backstretch.min.js"></script>
+    <script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
     <script>
-        $.backstretch("http://www.amazingwallpaperz.com/wp-content/uploads/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
+        $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
     </script>
 
 

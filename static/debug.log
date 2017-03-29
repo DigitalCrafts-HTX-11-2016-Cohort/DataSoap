@@ -58,3 +58,35 @@
 [201703291755][127.0.0.1] 24
 [201703291755][127.0.0.1] patha
 [201703291755][127.0.0.1] patha
+[201703291722][127.0.0.1] patha
+[201703291738][127.0.0.1] []
+[201703291746][127.0.0.1] []
+[201703291757][127.0.0.1] []
+[201703291718][127.0.0.1] select id from dnc.users where username = 'karissa' and password = 'please'
+[201703291718][127.0.0.1] This User exists and password true
+[201703291718][127.0.0.1] 15
+[201703291718][127.0.0.1] karissa
+[201703291718][127.0.0.1] karissa
+[201703291720][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291750][127.0.0.1] karissa
+[201703291700][127.0.0.1] searchResult function initiated
+[201703291700][127.0.0.1] None
+[201703291706][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291839][127.0.0.1] karissa
+[201703291820][127.0.0.1] karissa
+[201703291823][127.0.0.1] karissa
+[201703291839][127.0.0.1] select id from dnc.users where username = 'karissa' and password = 'please'
+[201703291839][127.0.0.1] This User exists and password true
+[201703291839][127.0.0.1] 15
+[201703291839][127.0.0.1] karissa
+[201703291839][127.0.0.1] karissa
+[201703291846][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291800][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291802][127.0.0.1] karissa
+[201703291810][127.0.0.1] karissa
+[201703291816][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291826][127.0.0.1] [(datetime.date(2017, 1, 10), Decimal('0.0000'), Decimal('0.97990000')), (datetime.date(2017, 1, 11), Decimal('14.0000'), Decimal('0.70880000')), (datetime.date(2017, 1, 12), Decimal('3.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 13), Decimal('2.0000'), Decimal('0.99990000')), (datetime.date(2017, 1, 14), Decimal('0.8889'), Decimal('0.78595556')), (datetime.date(2017, 1, 16), Decimal('1.8571'), Decimal('0.69131429')), (datetime.date(2017, 1, 19), Decimal('-4.2500'), Decimal('0.92855000')), (datetime.date(2017, 1, 20), Decimal('7175.0000'), Decimal('0.96427500')), (datetime.date(2017, 2, 22), Decimal('25156.0000'), Decimal('0.99990000')), (datetime.date(2017, 3, 1), Decimal('-53.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 6), Decimal('64816.0000'), Decimal('1.00000000')), (datetime.date(2017, 3, 24), Decimal('48572.0000'), Decimal('1.00000000'))]
+[201703291829][127.0.0.1] karissa
+[201703291814][127.0.0.1] karissa
+[201703291822][127.0.0.1] searchResult function initiated
+[201703291822][127.0.0.1] (48177323,)
