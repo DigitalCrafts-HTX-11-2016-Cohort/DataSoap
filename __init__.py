@@ -1,5 +1,7 @@
-import os, mysql.connector, datetime, csv, time
+# coding=utf-8
+import os, datetime, csv, time
 import pymsgbox.native as pymsgbox
+import settings as settings
 # import sys
 from flask import Flask, render_template, request, redirect, session, send_file
 from werkzeug.utils import secure_filename
@@ -68,11 +70,7 @@ class Database:
 
     @staticmethod
     def getConnection():
-        return mysql.connector.connect(
-            user='karissa',
-            password='wnaptihtr',
-            host='35.166.251.127',
-            database='dnc')
+        return settings.connection
 
     @staticmethod
     def getResult(query,getOne=False):
