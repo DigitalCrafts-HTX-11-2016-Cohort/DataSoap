@@ -9,7 +9,7 @@ from werkzeug.utils import secure_filename
 # reload(sys)
 # sys.setdefaultencoding('utf8')
 
-ALLOWED_EXTENSIONS = set(['txt', 'csv'])
+ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
 #define connection
 
@@ -31,10 +31,7 @@ def debug(line):
     # live debug target
     # target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
     ip = request.remote_addr
-    # local or windows timestamp no milliseconds
-    timestamp = time.strftime("%Y%m%d%H%S", time.gmtime())
-    # live or UBUNTU/LINUXtimestamp w microseconds
-    # timestamp = time.strftime("%Y%m%d%H%S%f", time.gmtime())
+    timestamp = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
 
@@ -93,12 +90,12 @@ class Users:
 
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.now().strftime("%Y%m%d%H%S%f")):
+    def __init__(self, filename, time_in=datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
         self.time_in =time_in
         self.time_out =""
-        self.filename_out =self.time_in+self.filename
+        self.filename_out =self.time_in+self.filename[8:]
         self.path_out=app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+self.filename_out
 
 
@@ -346,19 +343,20 @@ def main_page():
 @app.route('/process', methods = ['GET', 'POST'])
 def upload_file():
     if request.method == 'POST' and request.files['Select csv']:
+        microseconds = datetime.datetime.utcnow().strftime("%S%f")
         f = request.files['Select csv']
         if allowed_file(f.filename):
             pass
         else:
             session['success_message'] = "<h3>Only txt and csv files are supported at this time - Please try again.</h3>"
             return redirect ("/dashboard")
-        userfile = Userfile(secure_filename(f.filename).lower())
+        userfile = Userfile(microseconds+secure_filename(f.filename).lower())
         f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
         session['time_in'] = userfile.time_in
         session['filename'] = userfile.filename
         debug("***********")
         debug("About to debug time_in and then filename for uploaded file")
-        debug(type(session.get('time_in')))
+        debug(session.get('time_in'))
         debug(userfile.filename)
         debug("***********")
         debug("about to findPhoneCols")
@@ -369,10 +367,7 @@ def upload_file():
         userfile.importTable()
         debug("File uploaded successfully with %d records" % userfile.record_count)
         userfile.cleanup()
-        # local version of datetime for windows
-        userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S")
-        # version of datetime for linux or ubuntu
-        # userfile.time_out = datetime.datetime.now().strftime("%Y%m%d%H%S%f")
+        userfile.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
         userfile.postToLog()
         debug("successfully posted to logs")
         success_message = "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> <a href=\"/download\">Click to download</a> " % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
@@ -391,7 +386,7 @@ def upload_file():
 @app.route('/download', methods = ['GET', 'POST'])
 def download():
     # debug("Sending the file to user side")
-    return send_file(app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+session.get('time_in')+session.get('filename'),as_attachment=True, attachment_filename=session.get('filename'))
+    return send_file(app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+session.get('time_in')+session.get('filename')[8:],as_attachment=True, attachment_filename=session.get('filename')[8:])
 
 @app.after_request
 def add_header(response):
