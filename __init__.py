@@ -24,8 +24,8 @@ app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
 # app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
+
 def debug(line):
-    import time
     # local debug target
     target = open("static/debug.log", "a")
     # live debug target
@@ -35,11 +35,12 @@ def debug(line):
     target.write("\n[%s][%s] %s"%(timestamp,ip, line))
     target.close()
 
+
 def allowed_file(filename):
     filename_pieces = filename.rsplit('.', 1)
     debug(filename_pieces)
     if len(filename_pieces)>2:
-        False
+        return False
     return '.' in filename and \
            filename_pieces[1].lower() in ALLOWED_EXTENSIONS
 
@@ -49,7 +50,7 @@ def allowed_file(filename):
 def searchResult():
     debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
-    query="select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
+    query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
     query_result = Database.getResult(query,True)
     debug(query_result)
     if query_result:
@@ -60,14 +61,14 @@ def searchResult():
 
 
 class Users:
-    def __init__(self,id=0):
-        self.firstname= ""
-        self.lastname= ""
-        self.company= ""
-        self.email= ""
-        self.username= ""
-        self.password= ""
-        self.id=id
+    def __init__(self,id = 0):
+        self.firstname = ""
+        self.lastname = ""
+        self.company = ""
+        self.email = ""
+        self.username = ""
+        self.password = ""
+        self.id = id
 
     def save(self):
         if self.id>0:
@@ -90,13 +91,13 @@ class Users:
 
 
 class Userfile:
-    def __init__(self, filename, time_in=datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")):
+    def __init__(self, filename, time_in = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")):
         self.filename = filename
         self.path_in = app.config['UPLOAD_FOLDER']+self.filename
-        self.time_in =time_in
-        self.time_out =""
-        self.filename_out =self.time_in+self.filename[8:]
-        self.path_out=app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+self.filename_out
+        self.time_in = time_in
+        self.time_out = ""
+        self.filename_out = self.time_in+self.filename[8:]
+        self.path_out = app.config['DOWNLOAD_FOLDER']+str(session.get('userid'))+"/"+self.filename_out
 
 
     def findPhoneCols(self):
@@ -239,11 +240,13 @@ def new_user_submit():
     password1 = request.form.get('password1')
     if users.password == password1:
         id = users.insert()
-        os.mkdir(app.config['DOWNLOAD_FOLDER']+str(id), 0777)
+        os.mkdir(app.config['DOWNLOAD_FOLDER'] + str(id), 0o777)
     else:
         return ("Sorry your password does not match, click back and try again!")
     return redirect("/login")
 
+
+# noinspection PyTypeChecker
 @app.route("/submit_login", methods = ['GET', 'POST'])
 def submit_login():
     users = Users(id)
@@ -295,7 +298,6 @@ def history():
 
 @app.route("/profile", methods = ['GET', 'POST'])
 def profile():
-    global password
     session.get('username')
     if 'username' in session:
         id = request.args.get('id')
@@ -310,10 +312,12 @@ def profile():
             company = prof[3]
             email = prof[4]
             password = prof[6]
-        return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email, username=username, password=password, id=id)
+            return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email, username=username, password=password, id=id)
     else:
         return redirect('/')
 
+
+# noinspection PyTypeChecker
 @app.route("/submit_profile_update", methods = ['GET', 'POST'])
 def update_profile():
     session.get('username')
