@@ -49,7 +49,7 @@
 	    </div>
 
 
-	<section id="home" name="home"></section>
+	<section id="home"></section>
 	<div id="headerwrap">
 	    <div class="container">
 	    	<div class="row centered">
@@ -78,7 +78,7 @@
 	</div><!--/ #headerwrap -->
 
 
-	<section id="desc" name="desc"></section>
+	<section id="desc"></section>
 	<!-- INTRO WRAP -->
 	<div id="intro">
 		<div class="container">
@@ -125,7 +125,6 @@
 		            <div class="accordion ac" id="accordion2">
 		                <div class="accordion-group">
 		                    <div class="accordion-heading">
-		                        <data-parent="#accordion2" href="#collapseOne" />
 		                        <b>Simplicity</b>
 		                    </div><!-- /accordion-heading -->
 		                    <div id="collapseOne" class="accordion-body collapse in">
@@ -138,7 +137,6 @@
                         <div class="accordion ac" id="accordion2">
     		                <div class="accordion-group">
     		                    <div class="accordion-heading">
-    		                        <data-parent="#accordion2" href="#collapseOne" />
     		                        <b>Convienience</b>
     		                    </div><!-- /accordion-heading -->
     		                    <div id="collapseOne" class="accordion-body collapse in">
@@ -151,7 +149,6 @@
                             <div class="accordion ac" id="accordion2">
                                 <div class="accordion-group">
                                     <div class="accordion-heading">
-                                        <data-parent="#accordion2" href="#collapseOne" />
                                         <b>Census Data</b>
                                     </div><!-- /accordion-heading -->
                                     <div id="collapseOne" class="accordion-body collapse in">
@@ -164,7 +161,6 @@
                                 <div class="accordion ac" id="accordion2">
                                     <div class="accordion-group">
                                         <div class="accordion-heading">
-                                            <data-parent="#accordion2" href="#collapseOne" />
                                             <b>Detailed Reports</b>
                                         </div><!-- /accordion-heading -->
                                         <div id="collapseOne" class="accordion-body collapse in">
@@ -177,7 +173,6 @@
                                     <div class="accordion ac" id="accordion2">
                                         <div class="accordion-group">
                                             <div class="accordion-heading">
-                                                <data-parent="#accordion2" href="#collapseOne" />
                                                 <b>Peace of Mind</b>
                                             </div><!-- /accordion-heading -->
                                             <div id="collapseOne" class="accordion-body collapse in">
@@ -215,7 +210,7 @@
 		</div><!--/ .container -->
 	</div><!--/ #features -->
 
-	<section id="contact" name="contact"></section>
+	<section id="contact"></section>
 	<div id="footerwrap">
 		<div class="container">
 			<div class="col-lg-5">
@@ -231,19 +226,20 @@
 			<div class="col-lg-7">
 				<h3>Have Questions?  We'd Be Happy to Help!</h3>
 				<br>
-				<form role="form" action="mailto:test@data-soap.com" method="post" enctype="plain">
+				<form role="form" action="mailto:test@data-soap.com" method="post" enctype="text/plain">
 				  <div class="form-group">
 				    <label for="name1">Your Name</label>
-				    <input type="name" name="Name" class="form-control" id="name1" placeholder="Your Name">
+				    <input type="text" name="Name" class="form-control" id="name1" placeholder="Your Name">
 				  </div>
 				  <div class="form-group">
-				    <label for="email1">Email address</label>
-				    <input type="email" name="Mail" class="form-control" id="email1" placeholder="Enter email">
+				    <label for="email">Email address</label>
+				    <input type="text" name="Mail" class="form-control" id="email1" placeholder="Enter email">
 				  </div>
 				  <div class="form-group">
-				  	<label>Your Text</label>
-				  	<textarea class="form-control" name="Message" rows="3"></textarea>
-				  </div>
+				  	<label for="textarea">Your Text
+                          <textarea class="form-control" name="Message" rows="3"></textarea>
+                      </label>
+                  </div>
 				  <br>
 				  <button type="submit" class="btn btn-large btn-success">SUBMIT</button>
 				</form>

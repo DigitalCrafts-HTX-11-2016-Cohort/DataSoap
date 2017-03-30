@@ -1,9 +1,11 @@
 # coding=utf-8
+import scrypt
 import os, datetime, csv
 import pymsgbox.native as pymsgbox
 from database import Database
 # import sys
 from flask import Flask, render_template, request, redirect, session, send_file
+import settings as settings
 from werkzeug.utils import secure_filename
 
 # reload(sys)
@@ -11,7 +13,7 @@ from werkzeug.utils import secure_filename
 
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
-#define connection
+# define connection
 
 app = Flask(__name__)
 app.secret_key = 'wnaptihtr'
@@ -19,10 +21,11 @@ app.secret_key = 'wnaptihtr'
 app.config['UPLOAD_FOLDER'] = "static/files_in/"
 app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
 
-#for live
+# for live
 # app.config['UPLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_in/"
 # app.config['DOWNLOAD_FOLDER'] = "/var/www/FlaskApp/DNCApp/static/files_out/"
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
+
 
 
 def debug(line):
@@ -54,9 +57,9 @@ def searchResult():
     query_result = Database.getResult(query,True)
     debug(query_result)
     if query_result:
-        result="DO NOT CALL this number"
+        result = "DO NOT CALL this number"
     else:
-        result="This number is Squeaky Clean!"
+        result = "This number is Squeaky Clean!"
     return '{"result":"%s"}' % result
 
 
@@ -121,7 +124,7 @@ class Userfile:
                             self.phoneColList.append(row.index(col))
                 # debug(self.phoneColList)
             if not self.phoneColList:
-                session['success_message']="There were no recognized phone numbers in you file<br />If you have extensions or country codes, please remove those and try again"
+                session['success_message'] = "There were no recognized phone numbers in you file<br />If you have extensions or country codes, please remove those and try again"
                 return redirect('/dashboard')
 
             prc_file.seek(0)
@@ -145,7 +148,7 @@ class Userfile:
     def createTable(self):
         self.cols = []
         self.cols_set = []
-        query="create table dnc.`%s` (dncinternalid int not null auto_increment" % self.time_in
+        query = "create table dnc.`%s` (dncinternalid int not null auto_increment" % self.time_in
         for header in self.headers:
             if self.headers.index(header) in self.phoneColList:
                 query += ", `%s` bigint" % header
@@ -158,56 +161,56 @@ class Userfile:
         return True
 
     def importTable(self):
-        query="LOAD DATA LOCAL INFILE '%s' INTO TABLE dnc.`%s` FIELDS TERMINATED BY ',' IGNORE 1 LINES (%s) set %s" % (self.path_in, self.time_in, ','.join(self.cols), ','.join(self.cols_set))
+        query = "LOAD DATA LOCAL INFILE '%s' INTO TABLE dnc.`%s` FIELDS TERMINATED BY ',' IGNORE 1 LINES (%s) set %s" % (self.path_in, self.time_in, ','.join(self.cols), ','.join(self.cols_set))
         # debug(query)
         Database.doQuery(query)
         return True
 
     def cleanup(self):
-        query="delete from dnc.`%s` where " % self.time_in
+        query = "delete from dnc.`%s` where " % self.time_in
         for i in self.phoneColList:
             if self.phoneColList[0] == i:
-                query+=" `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
+                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
             else:
-                query+=" or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
+                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
         debug(query)
         Database.doQuery(query)
-        query="select count(*) from `%s`" % self.time_in
+        query = "select count(*) from `%s`" % self.time_in
         self.post_record_count = int(Database.getResult(query,True)[0])
         debug("there are %s records left in the table. %s were removed" % (self.post_record_count,self.record_count - self.post_record_count))
         return True
 
     def postToLog(self):
-        query="insert into dnc.logs (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,'%s',%d,'%s','%s',%d,'%s')" % (session.get('userid'),self.filename,self.record_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
-        debug(query)
+        query = "insert into dnc.logs (userid,file_in_name,file_in_record_count,file_in_timestamp,file_out_name,file_out_record_count,file_out_timestamp) values (%d,'%s',%d,'%s','%s',%d,'%s')" % (session.get('userid'),self.filename,self.record_count,self.time_in,self.filename_out,self.post_record_count,self.time_out)
+        # debug(query)
         Database.doQuery(query)
-        debug("posted to log!")
+        # debug("posted to log!")
         return True
 
     def exportTable(self):
-        query="SELECT * FROM dnc.`%s`" % self.time_in
+        query = "SELECT * FROM dnc.`%s`" % self.time_in
         result_tuple = Database.getResult(query)
         debug(result_tuple)
         writer = csv.writer(open(self.path_out,"wb"))
-        debug("able to create this file")
+        # debug("able to create this file")
         toprow = self.headers
         toprow.insert(0,'id')
-        debug(toprow)
+        # debug(toprow)
         writer.writerow(toprow)
-        debug("headers are in")
+        # debug("headers are in")
         for row in result_tuple:
             writer.writerow(row)
-        debug("rows are in")
+        # debug("rows are in")
         return True
 
     def delete(self):
         # if self.time_in:
-        query="DROP TABLE dnc.`%s`" % self.time_in
+        query = "DROP TABLE dnc.`%s`" % self.time_in
         Database.doQuery(query)
-        #delete mysql imported file from server.
+        # delete mysql imported file from server.
         if os.path.exists(self.path_in):
             os.remove(self.path_in)
-        #I want to keep the user orignal prc files for now in case we need to debug anything
+        # I want to keep the user orignal prc files for now in case we need to debug anything
         # if os.path.exists("%s.prc" % self.path_in):
         #     os.remove("%s.prc" % self.path_in)
         return True
@@ -239,6 +242,7 @@ def new_user_submit():
     users.password = request.form.get('password')
     password1 = request.form.get('password1')
     if users.password == password1:
+        users.password = scrypt.hash(request.form.get('password'), settings.salt)
         id = users.insert()
         os.mkdir(app.config['DOWNLOAD_FOLDER'] + str(id), 0o777)
     else:
@@ -251,19 +255,27 @@ def new_user_submit():
 def submit_login():
     users = Users(id)
     users.username = request.form.get('username')
-    users.password = request.form.get('password')
-    query = "select id from dnc.users where username = '%s' and password = '%s'" % (users.username, users.password)
-    debug(query)
-    foo = Database.getResult(query,True)
+    query = "select id,password from dnc.users where username = '%s'" % users.username
+    # debug(query)
+    foo = Database.getResult(query, True)
     try:
         if len(foo) > 0:
-            debug("This User exists and password true")
-            session['username'] = users.username
-            session['logged in'] = True
-            session['userid'] = foo[0]
-            debug(session.get('userid'))
-            debug(session.get('username'))
-            return redirect("/dashboard")
+            debug("User exists. Logging userid and hashed password from submit login(foo)")
+            debug(foo)
+            debug(foo[0])
+            if scrypt.hash(request.form.get('password'), settings.salt) == foo[1] or request.form.get('password') == foo[1]:
+                debug("passwords matched")
+                users.password = scrypt.hash(request.form.get('password'), settings.salt)
+                session['username'] = users.username
+                session['logged in'] = True
+                session['userid'] = foo[0]
+                debug(session.get('userid'))
+                debug(session.get('username'))
+                return redirect("/dashboard")
+            else:
+                debug("passwords don't match")
+                pymsgbox.alert('Wrong Password', 'Alert!')
+                return redirect('/login')
     except TypeError as exception:
         pymsgbox.alert('Login Failed. Redirecting', 'Alert!')
         debug("Failed login. Alert should have popped up.")
@@ -283,7 +295,7 @@ def report():
     if 'userid' in session:
         query = "select str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,avg(TIMESTAMPDIFF(SECOND, str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) as SecondsToProcess,avg(file_out_record_count/file_in_record_count) as CleanPercentage from dnc.logs where userid=%d group by `Date`" % session.get('userid')
         avg_ptime_clean = Database.getResult(query)
-        debug(avg_ptime_clean)
+        # debug(avg_ptime_clean)
         return render_template("reports.html", avg_ptime_clean = avg_ptime_clean)
     return redirect('/')
 
@@ -335,7 +347,7 @@ def update_profile():
         users.lastname = request.form.get('lastname')
         users.company = request.form.get('company')
         users.email = request.form.get('email')
-        users.password = request.form.get('password')
+        users.password = scrypt.hash(request.form.get('password'), settings.salt)
         users.id = session.get('userid')
         users.update()
     return redirect('/dashboard')
@@ -366,28 +378,30 @@ def upload_file():
         f.save(os.path.join(app.config['UPLOAD_FOLDER'],userfile.filename))
         session['time_in'] = userfile.time_in
         session['filename'] = userfile.filename
-        debug("***********")
-        debug("About to debug time_in and then filename for uploaded file")
-        debug(session.get('time_in'))
-        debug(userfile.filename)
-        debug("***********")
-        debug("about to findPhoneCols")
+        # debug("***********")
+        # debug("About to debug time_in and then filename for uploaded file")
+        # debug(session.get('time_in'))
+        # debug(userfile.filename)
+        # debug("***********")
+        # debug("about to findPhoneCols")
         userfile.findPhoneCols()
-        debug("about to createTable")
+        # debug("about to createTable")
         userfile.createTable()
-        debug("about to importTable")
+        # debug("about to importTable")
         userfile.importTable()
-        debug("File uploaded successfully with %d records" % userfile.record_count)
+        # debug("File uploaded successfully with %d records" % userfile.record_count)
         userfile.cleanup()
         userfile.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
         userfile.postToLog()
-        debug("successfully posted to logs")
-        success_message = "File uploaded successfully with %d original records<br />We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> <a href=\"/download\">Click to download</a> " % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
+        # debug("successfully posted to logs")
+        success_message = """File uploaded successfully with %d original records<br />
+        We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
+        <a href=\"/download\">Click to download</a> """ % (userfile.record_count,(userfile.record_count-userfile.post_record_count),userfile.post_record_count,float((float(userfile.record_count-userfile.post_record_count)/userfile.record_count)*100))
         session['success_message'] = success_message
-        debug("About to export clean file to files out")
+        # debug("About to export clean file to files out")
         userfile.exportTable()
-        debug("Successfully exported file!")
-        debug("about to delete")
+        # debug("Successfully exported file!")
+        # debug("about to delete")
         userfile.delete()
         debug("delete function complete")
         return redirect ("/dashboard")

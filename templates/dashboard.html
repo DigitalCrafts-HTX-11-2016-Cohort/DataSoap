@@ -17,7 +17,7 @@
 </head>
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0;">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Toggle navigation</span>
@@ -76,22 +76,11 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 
                     <div class="col-md-4 col-sm-6 col-xs-6">
                     <h4> <i class="fa fa-search"></i>Quick Clean</h4>
-                    <!-- <div class="row search"> -->
-                    <!-- <div class search>
-                    <form action='/search' id='search-form' method='get' target='_top'> -->
-                    <!-- <input id='search-text' name='search' placeholder='Enter phone number' type='text'/>
-                    <button id='search-button' type='submit' id="search" value="search">
-                    <span>Search</span>
-                    </button> -->
-                    <!-- </form> -->
-                    <!-- </div>
-                    <div id="searchResult"></div> -->
-
                     <div class="search">
                     <form id="quickSearch">
                     <input type="text" name="search" style="width:80%;" maxlength="110" placeholder="Phone Number" />
-                    <button type="submit" id="search" value="search" text-align="center" class="btn btn-primary btn-xs">Search</button>
-                    </form>
+                    <button type="submit" id="search" value="search" class="btn btn-primary btn-xs">Search</button>
+                    </form><br />
                     </div>
                     <div id="searchResult"></div>
                 </div></div>
@@ -145,52 +134,34 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 			</div>
                  <!-- /. ROW  -->
                 <hr />
-                <!-- <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                    <h1>Quick Search</h1>
 
-<div class="row search">
-    <div class="col-md-6 col-sm-12 col-xs-12">
-<input type="text" class="form-control input-sm" maxlength="64" placeholder="Please type phone number here" />
-<button type="submit" class="btn btn-primary btn-sm">Search</button>
-</div></div>
-<h3>Quick Search Result: </h3>
-                </div></div> -->
                 <div class="row upload">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <h3> <i class="fa fa-cloud-upload fa-lg"></i> Import your CSV File</h3>
 
-                        <form action="/process" method="POST" enctype="multipart/form-data"><input type="file" name="Select csv" />
-                            <!-- <input type="file" name="myFile" /> -->
-                            <!-- <input type="submit" name="btnImport"class="btn btn-primary btn" value="Submit File"/> -->
-                    </div>
-                </div>
-
-                    <div class="row options">
-                        <div class="col-md-6 col-sm-12 col-xs-12">
+                        <form action="/process" method="POST" enctype="multipart/form-data">
+                            <input type="file" name="Select csv" />
                             <!-- <form action="/add_options"> -->
-                                <h3> <i class="fa fa-check-circle fa-lg"></i> Options</h3>
-                {#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
-                {#<input type="checkbox" name="income" value="income"> add household income<br />#}
-                {#<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>#}
-                {#<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />#}
-                {#<input type="checkbox" name="work_home" value="work_home"> add work at home<br>#}
-                {#<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />#}
-                {#<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>#}
-                <input type="checkbox" name="rem_dup" value="rem_dup" checked> remove duplicates (automatically checked)<br /><br />
-
-                </div></div>
-
-
-                <input type="submit" name="btnImport" class="btn btn-primary btn" value="Submit File"/>
-                </form>
-
+                         <h3> <i class="fa fa-check-circle fa-lg"></i> Options</h3>
+                            {#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
+                            {#<input type="checkbox" name="income" value="income"> add household income<br />#}
+                            {#<input type="checkbox" name="rac_demo" value="rac_demo"> add racial demographics<br>#}
+                            {#<input type="checkbox" name="own_rent" value="own_rent"> add owner occupied or rental<br />#}
+                            {#<input type="checkbox" name="work_home" value="work_home"> add work at home<br>#}
+                            {#<input type="checkbox" name="age_range" value="age_range"> add age ranges<br />#}
+                            {#<input type="checkbox" name="num_ppl_hse" value="um_ppl_hse"> number of people in household<br>#}
+                            <label>
+                                <input type="checkbox" name="rem_dup" value="rem_dup" checked>
+                                remove duplicates (automatically checked)
+                            </label><br /><br />
+                             <input type="submit" name="btnImport" class="btn btn-primary btn" value="Submit File"/>
+                </form></div></div>
                  <!-- /. ROW  -->
-    </div>
-             <!-- /. PAGE INNER  -->
             </div>
-         <!-- /. PAGE WRAPPER  -->
+             <!-- /. PAGE INNER  -->
         </div>
+         <!-- /. PAGE WRAPPER  -->
+    </div>
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->

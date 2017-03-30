@@ -5,3 +5,5 @@ connection = mysql.connector.connect(
     password='wnaptihtr',
     host='35.166.251.127',
     database='dnc')
+
+salt = 'dgjnde479lbfy73qwd'
