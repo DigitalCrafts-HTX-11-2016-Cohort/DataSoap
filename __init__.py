@@ -1,5 +1,5 @@
 # coding=utf-8
-import scrypt
+import bcrypt
 import os, datetime, csv
 import pymsgbox.native as pymsgbox
 from database import Database
@@ -17,7 +17,7 @@ ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
 app = Flask(__name__)
 app.secret_key = 'wnaptihtr'
-#for local testing
+# for local testing
 app.config['UPLOAD_FOLDER'] = "static/files_in/"
 app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
 
@@ -27,7 +27,6 @@ app.config['DOWNLOAD_FOLDER'] = "static/files_out/"
 app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
 
-
 def debug(line):
     # local debug target
     target = open("static/debug.log", "a")
@@ -35,14 +34,14 @@ def debug(line):
     # target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
     ip = request.remote_addr
     timestamp = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
-    target.write("\n[%s][%s] %s"%(timestamp,ip, line))
+    target.write("\n[%s][%s] %s" % (timestamp, ip, line))
     target.close()
 
 
 def allowed_file(filename):
     filename_pieces = filename.rsplit('.', 1)
     debug(filename_pieces)
-    if len(filename_pieces)>2:
+    if len(filename_pieces) > 2:
         return False
     return '.' in filename and \
            filename_pieces[1].lower() in ALLOWED_EXTENSIONS
@@ -54,7 +53,7 @@ def searchResult():
     debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
     query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
-    query_result = Database.getResult(query,True)
+    query_result = Database.getResult(query, True)
     debug(query_result)
     if query_result:
         result = "DO NOT CALL this number"
@@ -64,31 +63,27 @@ def searchResult():
 
 
 class Users:
-    def __init__(self,id = 0):
+    def __init__(self, id = 0):
         self.firstname = ""
         self.lastname = ""
         self.company = ""
         self.email = ""
         self.username = ""
-        self.password = ""
         self.id = id
 
     def save(self):
-        if self.id>0:
+        if self.id > 0:
             return self.update()
         else:
             return self.insert()
 
     def insert(self):
-        debug(type(self.firstname))
-        debug(type(self.lastname))
-        debug(type(self.company))
-        query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s','%s')"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
+        query = ("insert into dnc.users (firstname, lastname, company, email, username, password) values ('%s','%s','%s','%s','%s',%r)" % (Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.username,self.password))
         lastID = Database.doQuery(query)
         return lastID
 
     def update(self):
-        query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', password= '%s' where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.password,self.id))
+        query = ("update dnc.users set firstname = '%s', lastname= '%s', company= '%s', email= '%s', password= %r where id=%d"%(Database.escape(self.firstname),Database.escape(self.lastname),Database.escape(self.company),self.email,self.password,self.id))
         Database.doQuery(query)
         return True
 
@@ -239,11 +234,19 @@ def new_user_submit():
     users.company = request.form.get('company')
     users.email = request.form.get('email')
     users.username = request.form.get('username')
-    users.password = request.form.get('password')
-    password1 = request.form.get('password1')
-    if users.password == password1:
-        users.password = scrypt.hash(request.form.get('password'), settings.salt)
+    # can't instantiate users.password as a string then change it to unicode in below block
+    password0 = str(request.form.get('password'))
+    password1 = str(request.form.get('password1'))
+    if password0 == password1:
+        hashedpw = bcrypt.hashpw(password0, bcrypt.gensalt(13))
+        debug("this is the type and value of hashedpw before assignment")
+        debug(hashedpw)
+        debug(type(hashedpw))
+        users.password = hashedpw
+        debug("after assignment to user.password")
+        debug(type(users.password))
         id = users.insert()
+        # TO DO - need to add a if username exists clause. Causes crash as of now
         os.mkdir(app.config['DOWNLOAD_FOLDER'] + str(id), 0o777)
     else:
         return ("Sorry your password does not match, click back and try again!")
@@ -255,17 +258,19 @@ def new_user_submit():
 def submit_login():
     users = Users(id)
     users.username = request.form.get('username')
-    query = "select id,password from dnc.users where username = '%s'" % users.username
+    users.password = request.form.get('password')
+    query = "select id, password from dnc.users where username = '%s'" % users.username
     # debug(query)
-    foo = Database.getResult(query, True)
+    foo = Database.getResult(query,True)
     try:
         if len(foo) > 0:
-            debug("User exists. Logging userid and hashed password from submit login(foo)")
-            debug(foo)
-            debug(foo[0])
-            if scrypt.hash(request.form.get('password'), settings.salt) == foo[1] or request.form.get('password') == foo[1]:
+            debug("User exists")
+            pass_to_hash = str(request.form.get('password'))
+            if bcrypt.checkpw(pass_to_hash, str(foo[1])) or pass_to_hash == foo[1]:
                 debug("passwords matched")
-                users.password = scrypt.hash(request.form.get('password'), settings.salt)
+                users.password = bcrypt.hashpw(pass_to_hash, bcrypt.gensalt(13))
+                debug("in login. type check for password")
+                debug(type(users.password))
                 session['username'] = users.username
                 session['logged in'] = True
                 session['userid'] = foo[0]
@@ -274,13 +279,19 @@ def submit_login():
                 return redirect("/dashboard")
             else:
                 debug("passwords don't match")
-                pymsgbox.alert('Wrong Password', 'Alert!')
+                pymsgbox.alert('Wrong Username or Password', 'Alert!')
                 return redirect('/login')
+        else:
+            debug("username doesn't exist")
+            pymsgbox.alert('Wrong Username or Password', 'Alert!')
+            return redirect('/login')
     except TypeError as exception:
+        debug(exception)
         pymsgbox.alert('Login Failed. Redirecting', 'Alert!')
         debug("Failed login. Alert should have popped up.")
         # time.sleep(5)
         return redirect('/login')
+
 
 
 @app.route("/dashboard", methods = ['GET', 'POST'])
@@ -313,7 +324,7 @@ def history():
         order by `Date` desc""" % session.get('userid')
         logHistory = Database.getResult(query)
         # debug(logHistory)
-        return render_template("history.html", logHistory = logHistory)
+        return render_template("history.html", logHistory=logHistory)
     return redirect('/')
 
 @app.route("/profile", methods = ['GET', 'POST'])
@@ -347,7 +358,7 @@ def update_profile():
         users.lastname = request.form.get('lastname')
         users.company = request.form.get('company')
         users.email = request.form.get('email')
-        users.password = scrypt.hash(request.form.get('password'), settings.salt)
+        users.password = bcrypt.hashpw(str(request.form.get('password')), bcrypt.gensalt(13))
         users.id = session.get('userid')
         users.update()
     return redirect('/dashboard')
