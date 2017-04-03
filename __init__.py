@@ -25,7 +25,7 @@ app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
 
 def allowed_file(filename):
     filename_pieces = filename.rsplit('.', 1)
-    Database.debug(filename_pieces)
+    # Database.debug(filename_pieces)
     if len(filename_pieces) > 2:
         return False
     return '.' in filename and \
@@ -35,11 +35,11 @@ def allowed_file(filename):
 # noinspection PyTypeChecker
 @app.route('/searchResult', methods=['POST', 'GET'])
 def searchResult():
-    Database.debug("searchResult function initiated")
+    # Database.debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
     query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
     query_result = Database.getResult(query, True)
-    Database.debug(query_result)
+    # Database.debug(query_result)
     if query_result:
         result = "DO NOT CALL this number"
     else:
@@ -79,12 +79,12 @@ def new_user_submit():
     password1 = str(request.form.get('password1'))
     if password0 == password1:
         hashedpw = pbkdf2_sha256.hash(password0)
-        Database.debug("this is the type and value of hashedpw before assignment")
-        Database.debug(hashedpw)
-        Database.debug(type(hashedpw))
+        # Database.debug("this is the type and value of hashedpw before assignment")
+        # Database.debug(hashedpw)
+        # Database.debug(type(hashedpw))
         user.password = hashedpw
-        Database.debug("after assignment to user.password")
-        Database.debug(type(user.password))
+        # Database.debug("after assignment to user.password")
+        # Database.debug(type(user.password))
         userid = user.insert()
         # TO DO - need to add a if username exists clause. Causes crash as of now
         os.mkdir(settings.download + str(userid), 0o777)
@@ -104,29 +104,29 @@ def submit_login():
     foo = Database.getResult(query, True)
     try:
         if len(foo) > 0:
-            Database.debug("User exists")
+            # Database.debug("User exists")
             pass_to_hash = str(request.form.get('password'))
             if pbkdf2_sha256.identify(str(foo[1])):
                 passCheckMethod = pbkdf2_sha256.verify(pass_to_hash, str(foo[1]))
             else:
                 passCheckMethod = (pass_to_hash == foo[1])
             if passCheckMethod:
-                Database.debug("passwords matched")
+                # Database.debug("passwords matched")
                 user.password = pbkdf2_sha256.hash(pass_to_hash)
-                Database.debug("in login. type check for password")
-                Database.debug(type(user.password))
+                # Database.debug("in login. type check for password")
+                # Database.debug(type(user.password))
                 session['username'] = user.username
                 session['logged in'] = True
                 session['userid'] = foo[0]
-                Database.debug(session.get('userid'))
-                Database.debug(session.get('username'))
+                # Database.debug(session.get('userid'))
+                # Database.debug(session.get('username'))
                 return redirect("/dashboard")
             else:
-                Database.debug("passwords don't match")
+                # Database.debug("passwords don't match")
                 pymsgbox.alert('Wrong Username or Password', 'Alert!')
                 return redirect('/login')
         else:
-            Database.debug("username doesn't exist")
+            # Database.debug("username doesn't exist")
             pymsgbox.alert('Wrong Username or Password', 'Alert!')
             return redirect('/login')
     except TypeError as exception:
@@ -140,7 +140,6 @@ def submit_login():
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
     if 'username' in session:
-        Database.debug(session.get('username'))
         return render_template("dashboard.html")
     return redirect('/')
 
@@ -248,22 +247,22 @@ def upload_file():
         f.save(os.path.join(settings.upload, leads.filename))
         session['time_in'] = leads.time_in
         session['filename'] = leads.filename
-        Database.debug("***********")
-        Database.debug("About to Database.debug time_in and then filename for uploaded file")
-        Database.debug(session.get('time_in'))
-        Database.debug(leads.filename)
-        Database.debug("***********")
-        Database.debug("about to findPhoneCols")
+        # Database.debug("***********")
+        # Database.debug("About to Database.debug time_in and then filename for uploaded file")
+        # Database.debug(session.get('time_in'))
+        # Database.debug(leads.filename)
+        # Database.debug("***********")
+        # Database.debug("about to findPhoneCols")
         leads.findPhoneCols()
-        Database.debug("about to createTable")
+        # Database.debug("about to createTable")
         leads.createTable()
-        Database.debug("about to importTable")
+        # Database.debug("about to importTable")
         leads.importTable()
-        Database.debug("File uploaded successfully with %d records" % leads.record_count)
+        # Database.debug("File uploaded successfully with %d records" % leads.record_count)
         leads.cleanup()
-        leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+        # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
         leads.postToLog()
-        Database.debug("successfully posted to logs")
+        # Database.debug("successfully posted to logs")
         success_message = """File uploaded successfully with %d original records<br />
         We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
         <a href=\"/download\">Click to download</a> """ \
@@ -277,7 +276,7 @@ def upload_file():
         # Database.debug("Successfully exported file!")
         # Database.debug("about to delete")
         leads.delete()
-        Database.debug("delete function complete")
+        # Database.debug("delete function complete")
         return redirect("/dashboard")
     else:
         session['success_message'] = "<h3>No File Selected - Please try again.</h3>"

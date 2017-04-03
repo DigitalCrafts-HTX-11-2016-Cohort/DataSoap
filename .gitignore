@@ -4,3 +4,5 @@ settings.py
 *.log
 /static/files_in/*
 /static/files_out/*
+settings.py
+settings.pyc
