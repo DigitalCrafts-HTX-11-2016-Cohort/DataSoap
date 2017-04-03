@@ -55,6 +55,9 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login_page():
     if 'username' in session:
+        session.pop('success_message', None)
+        session.pop('time_in', None)
+        session.pop('filename', None)
         return redirect('/dashboard')
     else:
         return render_template("login.html")
@@ -116,7 +119,6 @@ def submit_login():
                 # Database.debug("in login. type check for password")
                 # Database.debug(type(user.password))
                 session['username'] = user.username
-                session['logged in'] = True
                 session['userid'] = foo[0]
                 # Database.debug(session.get('userid'))
                 # Database.debug(session.get('username'))
@@ -156,7 +158,9 @@ def report():
         avg(file_out_record_count/file_in_record_count) as CleanPercentage 
         from dnc.logs 
         where userid=%d 
-        group by `Date`""" % session.get('userid')
+        group by `Date`
+        ORDER BY `Date`desc
+        limit 5""" % session.get('userid')
         avg_ptime_clean = Database.getResult(query)
         # Database.debug(avg_ptime_clean)
         return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
@@ -226,7 +230,7 @@ def logout():
 @app.route("/main_page", methods=['GET', 'POST'])
 def main_page():
     if 'success_message' in session:
-        del session['success_message']
+        session.pop('success_message', None)
     return redirect('/')
 
 
@@ -245,11 +249,11 @@ def upload_file():
             return redirect("/dashboard")
         leads = Userfile(microseconds + secure_filename(f.filename).lower(), time_in)
         f.save(os.path.join(settings.upload, leads.filename))
-        session['time_in'] = leads.time_in
+        session['time_in'] = time_in
         session['filename'] = leads.filename
         # Database.debug("***********")
         # Database.debug("About to Database.debug time_in and then filename for uploaded file")
-        # Database.debug(session.get('time_in'))
+        # Database.debug(time_in)
         # Database.debug(leads.filename)
         # Database.debug("***********")
         # Database.debug("about to findPhoneCols")
