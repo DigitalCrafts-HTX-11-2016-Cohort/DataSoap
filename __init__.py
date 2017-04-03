@@ -196,7 +196,8 @@ def profile():
             company = prof[3]
             email = prof[4]
             password = prof[6]
-            return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email, username=username, password=password, id=userid)
+            return render_template("profile.html", firstname=firstname, lastname=lastname, company=company, email=email,
+                                   username=username, password=password, id=userid)
     else:
         return redirect('/')
 
