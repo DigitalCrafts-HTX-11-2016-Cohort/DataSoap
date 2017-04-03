@@ -151,16 +151,12 @@ def report():
     if 'userid' in session:
         query = """select 
         str_to_date(file_in_timestamp,'%%Y%%m%%d') as `Date`,
-        avg(TIMESTAMPDIFF(SECOND, 
-          str_to_date(file_in_timestamp,'%%Y%%m%%d%%H%%S'), 
-          str_to_date(file_out_timestamp,'%%Y%%m%%d%%H%%S'))) 
-        as SecondsToProcess,
-        avg(file_out_record_count/file_in_record_count) as CleanPercentage 
+        mid(file_in_name,9) as Filename,
+        file_out_record_count/file_in_record_count as CleanPercentage 
         from dnc.logs 
-        where userid=%d 
-        group by `Date`
+        where userid=%d and datediff(CURRENT_DATE(),file_in_timestamp) < 10
         ORDER BY `Date`desc
-        limit 5""" % session.get('userid')
+        limit 10""" % session.get('userid')
         avg_ptime_clean = Database.getResult(query)
         # Database.debug(avg_ptime_clean)
         return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
