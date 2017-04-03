@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a6ba0c35-656f-444c-9dcf-f92e5aaf1a03" name="Default" comment="" />
+    <list default="true" id="a6ba0c35-656f-444c-9dcf-f92e5aaf1a03" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/userfile.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/users.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database.py" afterPath="$PROJECT_DIR$/database.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.py" afterPath="$PROJECT_DIR$/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/debug.log" afterPath="$PROJECT_DIR$/static/debug.log" />
+    </list>
     <ignored path="static/files_in/" />
     <ignored path="static/files_out/" />
     <ignored path="static/debug.log" />
@@ -15,7 +24,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/DataSoap$DataSoap.coverage" NAME="DataSoap Coverage Results" MODIFIED="1490642487257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/DataSoap$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1490902873256" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataSoap$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1491234439326" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -25,31 +34,117 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dnc@35.166.251.127" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dnc@35.166.251.127" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="dnc" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1149">
+              <caret line="246" column="61" lean-forward="true" selection-start-line="246" selection-start-column="61" selection-end-line="246" selection-end-column="61" />
+              <folding>
+                <element signature="e#15#42#0" expanded="true" />
+                <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+                <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+                <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+                <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+                <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+                <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="userfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2465">
+              <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+              <folding>
+                <element signature="e#15#42#0" expanded="true" />
+                <marker date="1491235990705" expanded="true" signature="3707:3733" ph="delete from " />
+                <marker date="1491235990705" expanded="true" signature="4115:4140" ph="select count... missing_value" />
+                <marker date="1491235990705" expanded="true" signature="4471:4723" ph="insert into dnc.logs... " />
+                <marker date="1491235990705" expanded="true" signature="4471:4990" ph="insert into dnc.logs... " />
+                <marker date="1491235990705" expanded="true" signature="4471:6178" ph="insert into dnc.logs... " />
+                <marker date="1491235990705" expanded="true" signature="5163:5185" ph="SELECT * FRO... missing_value" />
+                <marker date="1491235990705" expanded="true" signature="5758:5777" ph="DROP TABLE d... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+              <folding>
+                <element signature="e#15#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="debug.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/debug.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-41007">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>morr</find>
-      <find>custom</find>
-      <find>log</find>
-      <find>=&quot;static</find>
-      <find>=&quot;ass</find>
-      <find>src=&quot;static</find>
-      <find>http://www.amazingwallpaperz.com/wp-content/uploads/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg</find>
-      <find>=</find>
-      <find>process</find>
-      <find>time</find>
-      <find>userfile</find>
-      <find>+</find>
-      <find>session</find>
-      <find>file_out</find>
-      <find>file_out_name</find>
-      <find>filename_out</find>
-      <find>download</find>
-      <find>session['fil</find>
       <find>userfile.filename</find>
       <find>filename</find>
       <find>session['f</find>
@@ -62,6 +157,24 @@
       <find>password</find>
       <find>salt</find>
       <find>bcrypt</find>
+      <find>scryp</find>
+      <find>local</find>
+      <find>bcrypt.check</find>
+      <find>hash</find>
+      <find>verify</find>
+      <find>windows</find>
+      <find>database</find>
+      <find>id</find>
+      <find>settings.local</find>
+      <find>app</find>
+      <find>allowed</find>
+      <find>app.config['DOWNLOAD_FOLDER']</find>
+      <find>upload</find>
+      <find>download</find>
+      <find>debug</find>
+      <find>userfile</find>
+      <find>time_in</find>
+      <find>Userfile</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,7 +190,6 @@
         <option value="$PROJECT_DIR$/static/assets/css/main3.css" />
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/templates/profile.html" />
         <option value="$PROJECT_DIR$/templates/registration.html" />
         <option value="$PROJECT_DIR$/templates/reports.html" />
@@ -86,7 +198,10 @@
         <option value="$PROJECT_DIR$/templates/blank.html" />
         <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql" />
+        <option value="$PROJECT_DIR$/static/debug.log" />
         <option value="$PROJECT_DIR$/settings.py" />
+        <option value="$PROJECT_DIR$/database.py" />
+        <option value="$PROJECT_DIR$/userfile.py" />
         <option value="$PROJECT_DIR$/__init__.py" />
       </list>
     </option>
@@ -109,10 +224,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1767" />
+    <option name="y" value="18" />
+    <option name="width" value="1283" />
+    <option name="height" value="948" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -129,9 +244,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataSoap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="DataSoap" />
@@ -172,18 +298,18 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/settings.py" />
-    <property name="settings.editor.selected.configurable" value="database.sql.templating" />
+    <property name="last_opened_file_path" value="C:/Python27/python.exe" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="node.js.selected.package.stylelint" value="" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/kmartin/.PyCharm2017.1/config/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -418,18 +544,19 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-1767" y="18" width="1283" height="948" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.50578034" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35041717" sideWeight="0.2249408" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.49723756" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.4913295" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31045407" sideWeight="0.49421966" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35041717" sideWeight="0.7750592" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.49421966" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.115625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32946146" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.4940805" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17521705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0394633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.49723756" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56071806" sideWeight="0.49710983" order="4" side_tool="false" content_ui="tabs" />
@@ -441,6 +568,28 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35041717" sideWeight="0.2249408" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.49723756" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.4913295" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35041717" sideWeight="0.7750592" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996634" sideWeight="0.49421966" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.4940805" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17521705" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0394633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.49723756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56071806" sideWeight="0.49710983" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="processedProjectFiles" value="true" />
@@ -467,28 +616,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#15#28#0" expanded="true" />
-            <marker date="1490902873250" expanded="true" signature="1600:1666" ph="select dncin... master" />
-            <marker date="1490902873250" expanded="true" signature="2422:2540" ph="insert into dnc.users... " />
-            <marker date="1490902873250" expanded="true" signature="2781:2888" ph="update dnc.u... " />
-            <marker date="1490902873250" expanded="true" signature="6593:6619" ph="delete from " />
-            <marker date="1490902873250" expanded="true" signature="6992:7017" ph="select count... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="7312:7486" ph="insert into dnc.logs... " />
-            <marker date="1490902873250" expanded="true" signature="7768:7790" ph="SELECT * FRO... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="8316:8335" ph="DROP TABLE d... " />
-            <marker date="1490902873250" expanded="true" signature="10129:10184" ph="select id fr... users" />
-            <marker date="1490902873250" expanded="true" signature="11680:12000" ph="select str_t... logs" />
-            <marker date="1490902873250" expanded="true" signature="12331:12628" ph="select file_... logs" />
-            <marker date="1490902873250" expanded="true" signature="13114:13159" ph="select * fro... users" />
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+            <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+            <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+            <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -497,19 +632,52 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#15#28#0" expanded="true" />
-            <marker date="1490902873250" expanded="true" signature="1600:1666" ph="select dncin... master" />
-            <marker date="1490902873250" expanded="true" signature="2422:2540" ph="insert into dnc.users... " />
-            <marker date="1490902873250" expanded="true" signature="2781:2888" ph="update dnc.u... " />
-            <marker date="1490902873250" expanded="true" signature="6593:6619" ph="delete from " />
-            <marker date="1490902873250" expanded="true" signature="6992:7017" ph="select count... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="7312:7486" ph="insert into dnc.logs... " />
-            <marker date="1490902873250" expanded="true" signature="7768:7790" ph="SELECT * FRO... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="8316:8335" ph="DROP TABLE d... " />
-            <marker date="1490902873250" expanded="true" signature="10129:10184" ph="select id fr... users" />
-            <marker date="1490902873250" expanded="true" signature="11680:12000" ph="select str_t... logs" />
-            <marker date="1490902873250" expanded="true" signature="12331:12628" ph="select file_... logs" />
-            <marker date="1490902873250" expanded="true" signature="13114:13159" ph="select * fro... users" />
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+            <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+            <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+            <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+            <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+            <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+            <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+            <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+            <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+            <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
           </folding>
         </state>
       </provider>
@@ -589,43 +757,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/js/morris/morris.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-153">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="20" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/newuser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1377">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/gopro.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="231" column="18" lean-forward="false" selection-start-line="231" selection-start-column="18" selection-end-line="231" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/assets/js/morris/morris.js" />
+    <entry file="file://$PROJECT_DIR$/static/assets/js/custom.js" />
+    <entry file="file://$PROJECT_DIR$/newuser.py" />
+    <entry file="file://$PROJECT_DIR$/templates/gopro.html" />
     <entry file="file://$PROJECT_DIR$/static/assets/css/main3.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="96" column="22" lean-forward="false" selection-start-line="96" selection-start-column="22" selection-end-line="96" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -638,7 +777,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,10 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
           <caret line="31" column="33" lean-forward="false" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="33" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,7 +791,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,7 +798,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="556">
           <caret line="74" column="104" lean-forward="true" selection-start-line="74" selection-start-column="104" selection-end-line="74" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -673,7 +805,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
           <caret line="85" column="42" lean-forward="true" selection-start-line="85" selection-start-column="42" selection-end-line="85" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -681,7 +812,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="233">
           <caret line="243" column="28" lean-forward="false" selection-start-line="243" selection-start-column="28" selection-end-line="243" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -689,9 +819,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="14" column="100" lean-forward="true" selection-start-line="14" selection-start-column="100" selection-end-line="14" selection-end-column="100" />
-          <folding>
-            <element signature="n#style#0;n#nav#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -699,6 +826,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-506">
           <caret line="17" column="101" lean-forward="false" selection-start-line="17" selection-start-column="101" selection-end-line="17" selection-end-column="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="103" column="54" lean-forward="false" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/bcrypt/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="50" column="6" lean-forward="true" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="42" />
           <folding />
         </state>
       </provider>
@@ -711,49 +852,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+    <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="103" column="54" lean-forward="false" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
+        <state relative-caret-position="221">
+          <caret line="13" column="46" lean-forward="false" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/__init__.py">
+    <entry file="file://$PROJECT_DIR$/static/debug.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="273" column="45" lean-forward="true" selection-start-line="273" selection-start-column="45" selection-end-line="273" selection-end-column="45" />
-          <folding>
-            <element signature="e#15#28#0" expanded="true" />
-            <marker date="1490902873250" expanded="true" signature="1600:1666" ph="select dncin... master" />
-            <marker date="1490902873250" expanded="true" signature="2422:2540" ph="insert into dnc.users... " />
-            <marker date="1490902873250" expanded="true" signature="2781:2888" ph="update dnc.u... " />
-            <marker date="1490902873250" expanded="true" signature="6593:6619" ph="delete from " />
-            <marker date="1490902873250" expanded="true" signature="6992:7017" ph="select count... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="7312:7486" ph="insert into dnc.logs... " />
-            <marker date="1490902873250" expanded="true" signature="7768:7790" ph="SELECT * FRO... missing_value" />
-            <marker date="1490902873250" expanded="true" signature="8316:8335" ph="DROP TABLE d... " />
-            <marker date="1490902873250" expanded="true" signature="10129:10184" ph="select id fr... users" />
-            <marker date="1490902873250" expanded="true" signature="11680:12000" ph="select str_t... logs" />
-            <marker date="1490902873250" expanded="true" signature="12331:12628" ph="select file_... logs" />
-            <marker date="1490902873250" expanded="true" signature="13114:13159" ph="select * fro... users" />
-          </folding>
+        <state relative-caret-position="-41007">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/database.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="119">
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding>
+            <element signature="e#15#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
+    <entry file="file://$PROJECT_DIR$/userfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="27" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-          <folding />
+        <state relative-caret-position="2465">
+          <caret line="145" column="0" lean-forward="false" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
+          <folding>
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990705" expanded="true" signature="3707:3733" ph="delete from " />
+            <marker date="1491235990705" expanded="true" signature="4115:4140" ph="select count... missing_value" />
+            <marker date="1491235990705" expanded="true" signature="4471:4723" ph="insert into dnc.logs... " />
+            <marker date="1491235990705" expanded="true" signature="4471:4990" ph="insert into dnc.logs... " />
+            <marker date="1491235990705" expanded="true" signature="4471:6178" ph="insert into dnc.logs... " />
+            <marker date="1491235990705" expanded="true" signature="5163:5185" ph="SELECT * FRO... missing_value" />
+            <marker date="1491235990705" expanded="true" signature="5758:5777" ph="DROP TABLE d... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1149">
+          <caret line="246" column="61" lean-forward="true" selection-start-line="246" selection-start-column="61" selection-end-line="246" selection-end-column="61" />
+          <folding>
+            <element signature="e#15#42#0" expanded="true" />
+            <marker date="1491235990807" expanded="true" signature="1067:1133" ph="select dncin... master" />
+            <marker date="1491235990807" expanded="true" signature="3266:3322" ph="select id, p... users" />
+            <marker date="1491235990807" expanded="true" signature="5271:5676" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="5271:6011" ph="select str_t... logs" />
+            <marker date="1491235990807" expanded="true" signature="6015:6312" ph="select file_... logs" />
+            <marker date="1491235990807" expanded="true" signature="6740:6785" ph="select * fro... users" />
+          </folding>
         </state>
       </provider>
     </entry>

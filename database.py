@@ -1,9 +1,22 @@
 # coding=utf-8
 import settings as settings
+import datetime
+from flask import request
 
 
 # noinspection PyTypeChecker
 class Database:
+    @staticmethod
+    def debug(line):
+        if settings.local:
+            target = open("static/debug.log", "a")
+        else:
+            target = open("/var/www/FlaskApp/DNCApp/debug.log", "a")
+        ip = request.remote_addr
+        timestamp = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+        target.write("\n[%s][%s] %s" % (timestamp, ip, line))
+        target.close()
+
     @staticmethod
     def escape(value):
         return value.replace("'", "''")
