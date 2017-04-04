@@ -255,28 +255,29 @@ def upload_file():
         # Database.debug("about to findPhoneCols")
         leads.findPhoneCols()
         # Database.debug("about to createTable")
-        leads.createTable()
-        # Database.debug("about to importTable")
-        leads.importTable()
-        # Database.debug("File uploaded successfully with %d records" % leads.record_count)
-        leads.cleanup()
-        # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
-        leads.postToLog()
-        # Database.debug("successfully posted to logs")
-        success_message = """File uploaded successfully with %d original records<br />
-        We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
-        <a href=\"/download\">Click to download</a> """ \
-                          % (leads.record_count,
-                             (leads.record_count-leads.post_record_count),
-                             leads.post_record_count,
-                             float((float(leads.record_count-leads.post_record_count)/leads.record_count)*100))
-        session['success_message'] = success_message
-        # Database.debug("About to export clean file to files out")
-        leads.exportTable()
-        # Database.debug("Successfully exported file!")
-        # Database.debug("about to delete")
-        leads.delete()
-        # Database.debug("delete function complete")
+        if leads.keep_processing:
+            leads.createTable()
+            # Database.debug("about to importTable")
+            leads.importTable()
+            # Database.debug("File uploaded successfully with %d records" % leads.record_count)
+            leads.cleanup()
+            # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+            leads.postToLog()
+            # Database.debug("successfully posted to logs")
+            success_message = """File uploaded successfully with %d original records<br />
+            We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
+            <a href=\"/download\">Click to download</a> """ \
+                            % (leads.record_count,
+                               (leads.record_count-leads.post_record_count),
+                               leads.post_record_count,
+                               float((float(leads.record_count-leads.post_record_count)/leads.record_count)*100))
+            session['success_message'] = success_message
+            # Database.debug("About to export clean file to files out")
+            leads.exportTable()
+            # Database.debug("Successfully exported file!")
+            # Database.debug("about to delete")
+            leads.delete()
+            # Database.debug("delete function complete")
         return redirect("/dashboard")
     else:
         session['success_message'] = "<h3>No File Selected - Please try again.</h3>"

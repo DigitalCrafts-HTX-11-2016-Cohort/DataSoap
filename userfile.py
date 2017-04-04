@@ -15,33 +15,42 @@ class Userfile:
         self.time_out = ""
         self.filename_out = self.time_in+self.filename[8:]
         self.path_out = settings.download+str(session.get('userid'))+"/"+self.filename_out
+        self.phoneColList = []
+        self.keep_processing = True
 
     def findPhoneCols(self):
         os.rename(self.path_in, ("%s.prc" % self.path_in))
         prc_file = open("%s.prc" % self.path_in)
-        # Database.debug("changed original to .prc")
         dReader = csv.DictReader(prc_file)
         cleanfile = open(self.path_in, "w")
         self.headers = dReader.fieldnames
         self.record_count = sum(1 for row in dReader)
+        # Database.debug("Record count for uploaded userfile is:")
+        # Database.debug(self.record_count)
+        if self.record_count < 5:
+            # Database.debug("Less than 5 rows")
+            session['success_message'] = """There were not enough records in you file or you have empty rows<br />
+            Please use the quick search function to scrub just a few records, or remove empty rows and try again"""
+            self.keep_processing = False
+            return redirect('/dashboard')
         # Database.debug("headers from old file are: %s" % self.headers)
-        self.phoneColList = []
         with open("%s.prc" % self.path_in) as prc_file:
             reader = csv.reader(prc_file)
-            for i in range(3):
+            for i in range(5):
                 row = reader.next()
                 for col in row:
                     if len(Database.scrub(col)) == 10 and Database.is_int(col):
-                        # Database.debug("This col index should be added %d" % row.index(col))
+                        Database.debug("This col index should be added %d" % row.index(col))
                         if row.index(col) not in self.phoneColList:
                             self.phoneColList.append(row.index(col))
                 # Database.debug(self.phoneColList)
             if not self.phoneColList:
-                session['success_message'] = """There were no recognized phone numbers in you file<br />
+                session['success_message'] = """There were no recognized phone number columns in you file<br />
                 If you have extensions or country codes, please remove those and try again"""
+                self.keep_processing = False
                 return redirect('/dashboard')
             prc_file.seek(0)
-            # Database.debug(self.record_count)
+            Database.debug(self.record_count)
             for line in reader:
                 newrow = []
                 # Database.debug(line)
@@ -51,6 +60,10 @@ class Userfile:
                     if colPos in self.phoneColList:
                         # Database.debug("this column index is in the list %s and will be scrubbed" % self.phoneColList)
                         col = Database.scrub(col)
+                        if len(col) == 10 or len(col) == 0:
+                            pass
+                        else:
+                            Database.debug("Column %s has value %s which is not a 10 digit phone number." % (self.headers[colPos], line[colPos]))
                         # Database.debug("new value is %s\n" % col)
                     newrow.append(str(col))
                 # Database.debug("This should be 1 row: %s" % newrow)
@@ -87,12 +100,12 @@ class Userfile:
                 query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
             else:
                 query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
-        Database.debug(query)
+        # Database.debug(query)
         Database.doQuery(query)
         query = "select count(*) from `%s`" % self.time_in
         self.post_record_count = int(Database.getResult(query, True)[0])
-        Database.debug("there are %s records left in the table. %s were removed"
-                       % (self.post_record_count, self.record_count - self.post_record_count))
+        # Database.debug("there are %s records left in the table. %s were removed"
+        #                % (self.post_record_count, self.record_count - self.post_record_count))
         return True
 
     def postToLog(self):
@@ -120,7 +133,7 @@ class Userfile:
     def exportTable(self):
         query = "SELECT * FROM dnc.`%s`" % self.time_in
         result_tuple = Database.getResult(query)
-        Database.debug(result_tuple)
+        # Database.debug(result_tuple)
         writer = csv.writer(open(self.path_out, "wb"))
         # Database.debug("able to create this file")
         toprow = self.headers
