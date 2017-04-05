@@ -51,6 +51,8 @@ class Userfile:
                 return redirect('/dashboard')
             prc_file.seek(0)
             Database.debug(self.record_count)
+            phone_errors = []
+            phone_errors_count = 0
             for line in reader:
                 newrow = []
                 # Database.debug(line)
@@ -63,11 +65,23 @@ class Userfile:
                         if len(col) == 10 or len(col) == 0:
                             pass
                         else:
-                            Database.debug("Column %s has value %s which is not a 10 digit phone number." % (self.headers[colPos], line[colPos]))
+                            phone_errors.append("Column <strong>%s</strong> has value %s"
+                                                % (self.headers[colPos], line[colPos]))
+                            phone_errors_count += 1
                         # Database.debug("new value is %s\n" % col)
                     newrow.append(str(col))
                 # Database.debug("This should be 1 row: %s" % newrow)
                 cleanfile.write(','.join(newrow) + '\n')
+            if len(phone_errors):
+                limit = min(9, len(phone_errors) - 1)
+                Database.debug(phone_errors)
+                message = """There were %d phone numbers in you file which were not 10 digits long<br />
+                Please correct and try again. Examples below:<br />""" % phone_errors_count
+                for error in range(0, limit):
+                    message += phone_errors[error] + "<br />"
+                session['success_message'] = message
+                self.keep_processing = False
+                return redirect('/dashboard')
             cleanfile.close()
         return True
 

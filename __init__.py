@@ -10,6 +10,7 @@ import pymsgbox.native as pymsgbox
 from flask import Flask, render_template, request, redirect, session, send_file
 from passlib.hash import pbkdf2_sha256
 from werkzeug.utils import secure_filename
+from werkzeug.exceptions import RequestEntityTooLarge
 
 # reload(sys)
 # sys.setdefaultencoding('utf8')
@@ -17,10 +18,10 @@ from werkzeug.utils import secure_filename
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
 # define connection
-
 app = Flask(__name__)
-app.secret_key = 'wnaptihtr'
-app.config['MAX_CONTENT_LENGTH'] = 10 * 1024 * 1024
+app.secret_key = settings.secret_key
+# If you edit max filesize below, make sure to update the 413 error handling message accordingly (bottom of __init__ )
+app.config['MAX_CONTENT_LENGTH'] = 40 * 1024 * 1024
 
 
 def allowed_file(filename):
@@ -232,55 +233,66 @@ def main_page():
 
 @app.route('/process', methods=['GET', 'POST'])
 def upload_file():
-    if request.method == 'POST' and request.files['Select csv']:
-        f = request.files['Select csv']
-        if allowed_file(f.filename):
-            microseconds = datetime.datetime.utcnow().strftime("%S%f")
-            time_in = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
-            print("microseconds generated for uploaded file w good filename:")
-            print(microseconds)
+    Database.debug("in /process")
+    if request.method == 'POST':
+        Database.debug("file selected")
+        try:
+            f = request.files['Select csv']
+            if allowed_file(f.filename):
+                microseconds = datetime.datetime.utcnow().strftime("%S%f")
+                time_in = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+                print("microseconds generated for uploaded file w good filename:")
+                print(microseconds)
+                pass
+            elif f:
+                session['success_message'] = "<h3>Only txt and csv files are currently supported - " \
+                    "Please try again.</h3>"
+                return redirect("/dashboard")
+            else:
+                session['success_message'] = "<h3>No File Selected - Please try again.</h3>"
+                return redirect("/dashboard")
+            leads = Userfile(microseconds + secure_filename(f.filename).lower(), time_in)
+            Database.debug("about to save file")
+            f.save(os.path.join(settings.upload, leads.filename))
+            session['time_in'] = time_in
+            session['filename'] = leads.filename
+            # Database.debug("***********")
+            # Database.debug("About to Database.debug time_in and then filename for uploaded file")
+            # Database.debug(time_in)
+            # Database.debug(leads.filename)
+            # Database.debug("***********")
+            # Database.debug("about to findPhoneCols")
+            leads.findPhoneCols()
+            # Database.debug("about to createTable")
+            if leads.keep_processing:
+                leads.createTable()
+                # Database.debug("about to importTable")
+                leads.importTable()
+                # Database.debug("File uploaded successfully with %d records" % leads.record_count)
+                leads.cleanup()
+                # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+                leads.postToLog()
+                # Database.debug("successfully posted to logs")
+                success_message = """File uploaded successfully with %d original records<br />
+                We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
+                <a href=\"/download\">Click to download</a> """ \
+                                % (leads.record_count,
+                                   (leads.record_count-leads.post_record_count),
+                                   leads.post_record_count,
+                                   float((float(leads.record_count-leads.post_record_count)/leads.record_count)*100))
+                session['success_message'] = success_message
+                # Database.debug("About to export clean file to files out")
+                leads.exportTable()
+                # Database.debug("Successfully exported file!")
+                # Database.debug("about to delete")
+                leads.delete()
+                # Database.debug("delete function complete")
+        except RequestEntityTooLarge as e:
+            # Database.debug("exception caught")
+            error_details = "*******ALERT******* Username %s attempted to upload file over the limit" \
+                            % session.get('username')
+            Database.debug(error_details)
             pass
-        else:
-            session['success_message'] = "<h3>Only txt and csv files are currently supported - Please try again.</h3>"
-            return redirect("/dashboard")
-        leads = Userfile(microseconds + secure_filename(f.filename).lower(), time_in)
-        f.save(os.path.join(settings.upload, leads.filename))
-        session['time_in'] = time_in
-        session['filename'] = leads.filename
-        # Database.debug("***********")
-        # Database.debug("About to Database.debug time_in and then filename for uploaded file")
-        # Database.debug(time_in)
-        # Database.debug(leads.filename)
-        # Database.debug("***********")
-        # Database.debug("about to findPhoneCols")
-        leads.findPhoneCols()
-        # Database.debug("about to createTable")
-        if leads.keep_processing:
-            leads.createTable()
-            # Database.debug("about to importTable")
-            leads.importTable()
-            # Database.debug("File uploaded successfully with %d records" % leads.record_count)
-            leads.cleanup()
-            # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
-            leads.postToLog()
-            # Database.debug("successfully posted to logs")
-            success_message = """File uploaded successfully with %d original records<br />
-            We scrubbed %d out and %d remain<br />Your data was %d%% dirty... Now it's DataSoap clean! <br /> 
-            <a href=\"/download\">Click to download</a> """ \
-                            % (leads.record_count,
-                               (leads.record_count-leads.post_record_count),
-                               leads.post_record_count,
-                               float((float(leads.record_count-leads.post_record_count)/leads.record_count)*100))
-            session['success_message'] = success_message
-            # Database.debug("About to export clean file to files out")
-            leads.exportTable()
-            # Database.debug("Successfully exported file!")
-            # Database.debug("about to delete")
-            leads.delete()
-            # Database.debug("delete function complete")
-        return redirect("/dashboard")
-    else:
-        session['success_message'] = "<h3>No File Selected - Please try again.</h3>"
         return redirect("/dashboard")
 
 
