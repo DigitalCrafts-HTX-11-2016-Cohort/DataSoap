@@ -12,21 +12,22 @@
 /*==============================================
     GENERAL  STYLES
     =============================================*/
-body {
-    font-family: 'Open Sans', sans-serif;
+html, body {
+    /*font-family: 'Open Sans', sans-serif;*/
     height: 100%;
+    overflow: auto;
 }
 
  #wrapper {
     width: 100%;
-    background:#202020;
-    height: auto;
+    /*background:#202020;*/
+    height: 100%;
 }
 
 #page-wrapper {
     padding: 15px 15px;
-    height: auto;
-    background:#F3F3F3;
+    height: calc( 100% - 60px);
+    /*background:#F3F3F3;*/
 
 }
 #page-inner {
@@ -34,7 +35,16 @@ body {
     margin:10px 20px 10px 0px;
     background-color:#fff!important;
     padding:10px;
-    min-height: 800px;
+    height: calc( 100% - 20px);
+    /*overflow-y: scroll;*/
+}
+#page-inner-history {
+    width:100%;
+    margin:10px 20px 10px 0px;
+    background-color:#fff!important;
+    padding:10px;
+    height: calc( 100% - 20px);
+    overflow-y: scroll;
 }
 
 #success {
@@ -136,6 +146,20 @@ h4 {
 -moz-border-radius: 0px;
 border-radius: 0px;
 
+}
+.square-btn-adjust:hover {
+    background-color: #ff1717;
+}
+
+.search {
+    vertical-align: middle;
+}
+.search input {
+    width: 75%;
+    height: 34px;
+}
+.search button {
+    width: 25%;
 }
 p {
     font-size:16px;
@@ -388,13 +412,13 @@ font-weight: 700;
 
 }
 .navbar-cls-top {
-	background:#4D4D4D;
+	background:none;
 	border-bottom:none;
 
 }
-.navbar-cls-top .navbar-brand:hover {
+.navbar-cls-top:hover .navbar-brand:hover {
 
-background: #C90000;
+background: #ff1717;
 color:#fff;
 
 }
@@ -404,7 +428,7 @@ border:0px solid black;
 
 }
 .navbar-header {
-    background: #A70303;
+    /*background: #A70303;*/
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
 background-color: #B40101;
@@ -440,7 +464,7 @@ line-height: 1.428571429;
 
  @media(min-width:768px) {
      #page-wrapper{
-               margin: 0 0 0 260px;
+        margin: 0 0 0 260px;
         padding: 15px 30px;
         min-height: 800px;
 

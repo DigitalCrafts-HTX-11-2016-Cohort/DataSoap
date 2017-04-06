@@ -26,11 +26,7 @@
                 </button>
                 <a class="navbar-brand" href="/">DataSoap</a>
             </div>
-
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
+            {#                <div style="color: white; padding: 15px 50px 5px 50px; float: right; font-size: 16px;"> <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>#}
         </nav>
            <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
@@ -58,7 +54,7 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
          </nav>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
-            <div id="page-inner">
+            <div id="page-inner-history">
                 <div class="row">
                     <div class="col-md-12">
                      <h2>File History</h2>
@@ -126,5 +122,11 @@ font-size: 16px;"> Last login : 16 January 2017 &nbsp; <a href="/logout" class="
 
     <script src="/static/assets/js/dataTables/jquery.dataTables.js"></script>
     <script src="/static/assets/js/dataTables/dataTables.bootstrap.js"></script>
+<!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+    <script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
+    <script>
+        $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
+    </script>
 </body>
 </html>
