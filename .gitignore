@@ -12,3 +12,15 @@ settings.pyc
 settings.py
 
 *.txt
+
+database.pyc
+
+settings.py
+
+settings.pyc
+
+static/debug.log
+
+userfile.pyc
+
+users.pyc
