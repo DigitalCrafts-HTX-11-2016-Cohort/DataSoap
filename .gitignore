@@ -6,3 +6,9 @@ settings.py
 /static/files_out/*
 settings.py
 settings.pyc
+
+*.pyc
+
+settings.py
+
+*.txt
