@@ -20,13 +20,14 @@ html, body {
 
  #wrapper {
     width: 100%;
-    /*background:#202020;*/
+    position: fixed;
     height: 100%;
 }
 
 #page-wrapper {
     padding: 15px 15px;
     height: calc( 100% - 60px);
+    overflow-y: auto;
     /*background:#F3F3F3;*/
 
 }
@@ -36,7 +37,7 @@ html, body {
     background-color:#fff!important;
     padding:10px;
     height: calc( 100% - 20px);
-    /*overflow-y: scroll;*/
+    overflow-y: auto;
 }
 #page-inner-history {
     width:100%;
@@ -466,7 +467,7 @@ line-height: 1.428571429;
      #page-wrapper{
         margin: 0 0 0 260px;
         padding: 15px 30px;
-        min-height: 800px;
+        /*min-height: 800px;*/
 
     }
 

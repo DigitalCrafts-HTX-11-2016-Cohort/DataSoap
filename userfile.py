@@ -10,12 +10,14 @@ from flask import session, redirect
 class Userfile:
     def __init__(self, filename, time_in):
         self.filename = filename
-        self.path_in = settings.upload+self.filename
+        self.path_in = settings.upload + self.filename
         self.time_in = time_in
         self.time_out = ""
-        self.filename_out = self.time_in+self.filename[8:]
-        self.path_out = settings.download+str(session.get('userid'))+"/"+self.filename_out
-        self.phoneColList = []
+        self.filename_out = self.time_in + self.filename[8:]
+        self.path_out = settings.download + str(session.get('userid')) + "/" + self.filename_out
+        self.phoneColDict = {}
+        self.notPhoneDict = {}
+        self.finalPhoneColList = []
         self.keep_processing = True
 
     def findPhoneCols(self):
@@ -27,8 +29,8 @@ class Userfile:
         self.record_count = sum(1 for row in dReader)
         # Database.debug("Record count for uploaded userfile is:")
         # Database.debug(self.record_count)
-        if self.record_count < 5:
-            # Database.debug("Less than 5 rows")
+        if self.record_count < 10:
+            Database.debug("Less than 10 rows")
             session['success_message'] = """There were not enough records in you file or you have empty rows<br />
             Please use the quick search function to scrub just a few records, or remove empty rows and try again"""
             self.keep_processing = False
@@ -36,21 +38,40 @@ class Userfile:
         # Database.debug("headers from old file are: %s" % self.headers)
         with open("%s.prc" % self.path_in) as prc_file:
             reader = csv.reader(prc_file)
-            for i in range(5):
+            for i in range(self.record_count - 1):
                 row = reader.next()
                 for col in row:
-                    if len(Database.scrub(col)) == 10 and Database.is_int(col):
-                        Database.debug("This col index should be added %d" % row.index(col))
-                        if row.index(col) not in self.phoneColList:
-                            self.phoneColList.append(row.index(col))
-                # Database.debug(self.phoneColList)
-            if not self.phoneColList:
+                    if len(Database.scrub(col)) == 10 and Database.is_phone(col):
+                        # Database.debug("This col index should be added %d" % row.index(col))
+                        if row.index(col) not in self.phoneColDict:
+                            self.phoneColDict[row.index(col)] = 1
+                        else:
+                            self.phoneColDict[row.index(col)] += 1
+                    elif len(Database.scrub(col)) == 10:
+                        if row.index(col) not in self.notPhoneDict:
+                            Database.debug("Failing data is %s" % col)
+                            self.notPhoneDict[row.index(col)] = 1
+                        else:
+                            self.notPhoneDict[row.index(col)] += 1
+            Database.debug("The POTENTIAL phone column list is %s" % self.phoneColDict)
+            Database.debug("The 10 Int NON-PHONE column list is %s" % self.notPhoneDict)
+            self.finalPhoneColList = [x for x in self.phoneColDict if \
+                                      (self.notPhoneDict.get(x, 1) / float(self.phoneColDict.get(x))) < .101]
+            for x in self.phoneColDict:
+                Database.debug("Col %s %d / %d = %f. Is that less than .101? %s" % \
+                               (x, self.notPhoneDict.get(x, 1), self.phoneColDict.get(x),
+                                (self.notPhoneDict.get(x, 1) / float(self.phoneColDict.get(x))),
+                                ((self.notPhoneDict.get(x, 1) / float(self.phoneColDict.get(x))) < .101)))
+            Database.debug("The FINAL phone column list is %s" % self.finalPhoneColList)
+            if not self.finalPhoneColList:
+                Database.debug("Phone numbers not detected")
                 session['success_message'] = """There were no recognized phone number columns in you file<br />
                 If you have extensions or country codes, please remove those and try again"""
                 self.keep_processing = False
+                Database.debug("redirecting to dashboard")
                 return redirect('/dashboard')
             prc_file.seek(0)
-            Database.debug(self.record_count)
+            Database.debug("Records in file are %d" % self.record_count)
             phone_errors = []
             phone_errors_count = 0
             for line in reader:
@@ -59,29 +80,33 @@ class Userfile:
                 for col in line:
                     colPos = line.index(col)
                     # Database.debug("\nthis column in position %d and pre-scrub value is %s" % (colPos,col))
-                    if colPos in self.phoneColList:
+                    if colPos in self.finalPhoneColList:
                         # Database.debug("this column index is in the list %s and will be scrubbed" % self.phoneColList)
                         col = Database.scrub(col)
-                        if len(col) == 10 or len(col) == 0:
+                        if (len(col) == 10 and Database.is_phone(col)) or len(col) == 0:
                             pass
                         else:
                             phone_errors.append("Column <strong>%s</strong> has value %s"
                                                 % (self.headers[colPos], line[colPos]))
                             phone_errors_count += 1
-                        # Database.debug("new value is %s\n" % col)
+                            # *** Instead of adding these in a message, we need to keep them as a malformed list and DELETE the line from the reader then proceed.
+                            # Database.debug("new value is %s\n" % col)
                     newrow.append(str(col))
                 # Database.debug("This should be 1 row: %s" % newrow)
                 cleanfile.write(','.join(newrow) + '\n')
             if len(phone_errors):
                 limit = min(9, len(phone_errors) - 1)
-                Database.debug(phone_errors)
-                message = """There were %d phone numbers in you file which were not 10 digits long<br />
+                # Database.debug(phone_errors)
+                message = """There were %d items in you file which are not valid phone numbers<br />
                 Please correct and try again. Examples below:<br />""" % phone_errors_count
                 for error in range(0, limit):
                     message += phone_errors[error] + "<br />"
                 session['success_message'] = message
                 self.keep_processing = False
                 return redirect('/dashboard')
+            # Database.debug("About to close cleanfile")
+            # ***NOTE_TO_MAINTAINER*** if your file gets to here and you get an Internal Server Error, stop testing on
+            # credentials you made on local and use production creds (which have folders created for them correctly)
             cleanfile.close()
         return True
 
@@ -90,12 +115,12 @@ class Userfile:
         self.cols_set = []
         query = "create table dnc.`%s` (dncinternalid int not null auto_increment" % self.time_in
         for header in self.headers:
-            if self.headers.index(header) in self.phoneColList:
+            if self.headers.index(header) in self.phoneColDict:
                 query += ", `%s` bigint" % header
             else:
                 query += ", `%s` text" % header
-            self.cols.append("@col"+str((self.headers.index(header)+1)))
-            self.cols_set.append("`%s`=@col%s" % (header, (self.headers.index(header)+1)))
+            self.cols.append("@col" + str((self.headers.index(header) + 1)))
+            self.cols_set.append("`%s`=@col%s" % (header, (self.headers.index(header) + 1)))
         query += ", PRIMARY KEY (dncinternalid))"
         Database.doQuery(query)
         return True
@@ -109,8 +134,8 @@ class Userfile:
 
     def cleanup(self):
         query = "delete from dnc.`%s` where " % self.time_in
-        for i in self.phoneColList:
-            if self.phoneColList[0] == i:
+        for i in self.phoneColDict:
+            if self.phoneColDict[0] == i:
                 query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
             else:
                 query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
@@ -118,8 +143,8 @@ class Userfile:
         Database.doQuery(query)
         query = "select count(*) from `%s`" % self.time_in
         self.post_record_count = int(Database.getResult(query, True)[0])
-        # Database.debug("there are %s records left in the table. %s were removed"
-        #                % (self.post_record_count, self.record_count - self.post_record_count))
+        Database.debug("there are %s records left in the table. %s were removed"
+                       % (self.post_record_count, self.record_count - self.post_record_count))
         return True
 
     def postToLog(self):
@@ -147,17 +172,17 @@ class Userfile:
     def exportTable(self):
         query = "SELECT * FROM dnc.`%s`" % self.time_in
         result_tuple = Database.getResult(query)
-        # Database.debug(result_tuple)
+        Database.debug("Data received. About to open %s" % self.path_out)
         writer = csv.writer(open(self.path_out, "wb"))
-        # Database.debug("able to create this file")
+        Database.debug("able to create this file")
         toprow = self.headers
         toprow.insert(0, 'id')
-        # Database.debug(toprow)
+        Database.debug(toprow)
         writer.writerow(toprow)
-        # Database.debug("headers are in")
+        Database.debug("headers are in")
         for row in result_tuple:
             writer.writerow(row)
-        # Database.debug("rows are in")
+        Database.debug("rows are in")
         return True
 
     def delete(self):

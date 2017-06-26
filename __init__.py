@@ -121,6 +121,8 @@ def submit_login():
                 # Database.debug(type(user.password))
                 session['username'] = user.username
                 session['userid'] = foo[0]
+                if os.path.isdir(settings.download + str(foo[0])) == False:
+                    os.mkdir(settings.download + str(foo[0]), 0o777)
                 # Database.debug(session.get('userid'))
                 # Database.debug(session.get('username'))
                 return redirect("/dashboard")
@@ -256,21 +258,21 @@ def upload_file():
             f.save(os.path.join(settings.upload, leads.filename))
             session['time_in'] = time_in
             session['filename'] = leads.filename
-            # Database.debug("***********")
-            # Database.debug("About to Database.debug time_in and then filename for uploaded file")
-            # Database.debug(time_in)
-            # Database.debug(leads.filename)
-            # Database.debug("***********")
-            # Database.debug("about to findPhoneCols")
+            Database.debug("***********")
+            Database.debug("About to Database.debug time_in and then filename for uploaded file")
+            Database.debug(time_in)
+            Database.debug(leads.filename)
+            Database.debug("***********")
+            Database.debug("about to findPhoneCols")
             leads.findPhoneCols()
             # Database.debug("about to createTable")
             if leads.keep_processing:
                 leads.createTable()
                 # Database.debug("about to importTable")
                 leads.importTable()
-                # Database.debug("File uploaded successfully with %d records" % leads.record_count)
+                Database.debug("File uploaded successfully with %d records" % leads.record_count)
                 leads.cleanup()
-                # leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
+                leads.time_out = datetime.datetime.utcnow().strftime("%Y%m%d%H%S%f")
                 leads.postToLog()
                 # Database.debug("successfully posted to logs")
                 success_message = """File uploaded successfully with %d original records<br />
@@ -281,12 +283,12 @@ def upload_file():
                                    leads.post_record_count,
                                    float((float(leads.record_count-leads.post_record_count)/leads.record_count)*100))
                 session['success_message'] = success_message
-                # Database.debug("About to export clean file to files out")
+                Database.debug("About to export clean file to files out")
                 leads.exportTable()
-                # Database.debug("Successfully exported file!")
-                # Database.debug("about to delete")
+                Database.debug("Successfully exported file!")
+                Database.debug("about to delete")
                 leads.delete()
-                # Database.debug("delete function complete")
+                Database.debug("delete function complete")
         except RequestEntityTooLarge as e:
             # Database.debug("exception caught")
             error_details = "*******ALERT******* Username %s attempted to upload file over the limit" \

@@ -54,9 +54,22 @@ class Database:
         return filter(type(data).isdigit, data)
 
     @staticmethod
-    def is_int(data):
+    def is_phone(data):
+        # Database.debug("In Database.is_phone function")
         try:
             int(Database.scrub(data))
-            return True
+            data_i = Database.scrub(data)
+            if data_i[0] == "1":
+                return False
+            elif data_i[1] == "9":
+                return False
+            elif data_i[1] == data_i[2]:
+                return False
+            elif data_i[:2] == "37":
+                return False
+            elif data_i[:2] == "96":
+                return False
+            else:
+                return True
         except ValueError:
             return False
