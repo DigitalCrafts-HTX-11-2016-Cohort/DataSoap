@@ -38,11 +38,16 @@ def allowed_file(filename):
 def searchResult():
     # Database.debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
+    areaCode = numberSearched[:3]
     query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
+    query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
     query_result = Database.getResult(query, True)
+    query2_result = Database.getResult(query2, True)
     # Database.debug(query_result)
     if query_result:
         result = "DO NOT CALL this number"
+    elif query2_result:
+        result = "Your Subscription does not include this area code"
     else:
         result = "This number is Squeaky Clean!"
     return '{"result":"%s"}' % result
