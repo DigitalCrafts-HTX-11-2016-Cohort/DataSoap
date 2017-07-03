@@ -71,6 +71,8 @@ def login_page():
 
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
+    Database.debug('Do we get into the new_user function?')
+    Database.debug(session)
     if 'admin' in session:
         Database.debug('There is a session variable called admin and the value is: %r' % session.get('admin'))
         if session.get('admin'):
