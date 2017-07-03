@@ -82,7 +82,7 @@ def new_user():
             pymsgbox.alert('Only admin users can register others. Please contact an admin to assist', 'Alert!')
             return redirect('/dashboard')
     else:
-        pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
+        # pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
         return redirect('/')
 
 @app.route("/new_user_submit", methods=['GET', 'POST'])
