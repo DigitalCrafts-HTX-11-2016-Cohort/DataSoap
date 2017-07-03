@@ -72,9 +72,11 @@ def login_page():
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
     if 'admin' in session:
+        Database.debug('There is a session variable called admin and the value is: %r' % session.get('admin'))
         if session.get('admin'):
             return render_template("registration.html")
         else:
+            Database.debug('Admin is falsey')
             pymsgbox.alert('Only admin users can register others. Please contact an admin to assist', 'Alert!')
             return redirect('/dashboard')
     else:
@@ -124,9 +126,12 @@ def submit_login():
                 pymsgbox.alert('Your account is inactive. Please contact us to re-open', 'Alert!')
                 return redirect('/login')
             if foo[2]:
+                Database.debug('This is an admin')
                 session['admin'] = True
             else:
+                Database.debug('This is not an admin user')
                 session['admin'] = False
+            Database.debug('session.get(admin) is %s' % session.get('admin'))
             # Database.debug("User exists")
             pass_to_hash = str(request.form.get('password'))
             if pbkdf2_sha256.identify(str(foo[1])):
