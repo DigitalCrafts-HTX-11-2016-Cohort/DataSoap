@@ -71,7 +71,7 @@ def login_page():
 
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
-    if session.get('admin'):
+    if session.get('admin', False):
         return render_template("registration.html")
     else:
         pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
