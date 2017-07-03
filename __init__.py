@@ -71,12 +71,15 @@ def login_page():
 
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
-    if session.get('admin', False):
-        return render_template("registration.html")
+    if 'admin' in session:
+        if session.get('admin'):
+            return render_template("registration.html")
+        else:
+            pymsgbox.alert('Only admin users can register others. Please contact an admin to assist', 'Alert!')
+            return redirect('/dashboard')
     else:
         pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
         return redirect('/')
-
 
 @app.route("/new_user_submit", methods=['GET', 'POST'])
 def new_user_submit():
