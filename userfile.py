@@ -26,6 +26,15 @@ class Userfile:
         dReader = csv.DictReader(prc_file)
         cleanfile = open(self.path_in, "w")
         self.headers = dReader.fieldnames
+        Database.debug(self.headers)
+        for header in self.headers:
+            if len(header) >= 10:
+                if Database.is_phone(header):
+                    session['success_message'] = """Your file is missing a header row.<br />
+                                Please insert a header row and try again"""
+                    self.keep_processing = False
+                    return redirect('/dashboard')
+        Database.debug(self.headers)
         self.record_count = sum(1 for row in dReader)
         # Database.debug("Record count for uploaded userfile is:")
         # Database.debug(self.record_count)
@@ -96,14 +105,14 @@ class Userfile:
                 cleanfile.write(','.join(newrow) + '\n')
             if len(phone_errors):
                 limit = min(9, len(phone_errors) - 1)
-                # Database.debug(phone_errors)
+                Database.debug(phone_errors)
                 message = """There were %d items in you file which are not valid phone numbers<br />
                 Please correct and try again. Examples below:<br />""" % phone_errors_count
                 for error in range(0, limit):
                     message += phone_errors[error] + "<br />"
                 session['success_message'] = message
-                self.keep_processing = False
-                return redirect('/dashboard')
+                self.keep_processing = True
+                # return redirect('/dashboard')
             # Database.debug("About to close cleanfile")
             # ***NOTE_TO_MAINTAINER*** if your file gets to here and you get an Internal Server Error, stop testing on
             # credentials you made on local and use production creds (which have folders created for them correctly)
@@ -133,13 +142,19 @@ class Userfile:
         return True
 
     def cleanup(self):
+
         query = "delete from dnc.`%s` where " % self.time_in
-        for i in self.phoneColDict:
-            if self.phoneColDict[0] == i:
-                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
+        Database.debug("self.phoneColDict is %r" % self.phoneColDict)
+        for key in self.phoneColDict:
+            Database.debug("key is %r and list of keys is %r" %
+                           (key, self.finalPhoneColList))
+            if key == self.finalPhoneColList[0]:
+                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key]
             else:
-                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[i]
-        # Database.debug(query)
+                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key]
+            query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)" % self.headers[key]
+        Database.debug("Cleanup query is:")
+        Database.debug(query)
         Database.doQuery(query)
         query = "select count(*) from `%s`" % self.time_in
         self.post_record_count = int(Database.getResult(query, True)[0])

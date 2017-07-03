@@ -71,7 +71,11 @@ def login_page():
 
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
-    return render_template("registration.html")
+    if session.get('admin'):
+        return render_template("registration.html")
+    else:
+        pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
+        return redirect('/')
 
 
 @app.route("/new_user_submit", methods=['GET', 'POST'])
@@ -108,11 +112,18 @@ def submit_login():
     user = Users(id)
     user.username = request.form.get('username')
     user.password = request.form.get('password')
-    query = "select id, password from dnc.users where username = '%s'" % user.username
+    query = "select id, password, admin, Deleted from dnc.users where username = '%s'" % user.username
     # Database.debug(query)
     foo = Database.getResult(query, True)
     try:
         if len(foo) > 0:
+            if foo[3]:
+                pymsgbox.alert('Your account is inactive. Please contact us to re-open', 'Alert!')
+                return redirect('/login')
+            if foo[2]:
+                session['admin'] = True
+            else:
+                session['admin'] = False
             # Database.debug("User exists")
             pass_to_hash = str(request.form.get('password'))
             if pbkdf2_sha256.identify(str(foo[1])):
