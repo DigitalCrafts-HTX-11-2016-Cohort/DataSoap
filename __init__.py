@@ -5,8 +5,6 @@ from userfile import Userfile
 from users import Users
 import datetime
 import os
-import pymsgbox.native as pymsgbox
-# import sys
 from flask import Flask, render_template, request, redirect, session, send_file
 from passlib.hash import pbkdf2_sha256
 from werkzeug.utils import secure_filename
@@ -76,13 +74,14 @@ def new_user():
     if 'admin' in session:
         Database.debug('There is a session variable called admin and the value is: %r' % session.get('admin'))
         if session.get('admin'):
+            Database.debug("sending to registration page")
             return render_template("registration.html")
         else:
             Database.debug('Admin is falsey')
-            pymsgbox.alert('Only admin users can register others. Please contact an admin to assist', 'Alert!')
+            Database.popup('Only admin users can register others. Please contact an admin to assist')
             return redirect('/dashboard')
     else:
-        # pymsgbox.alert('Registration is private at this time. Please contact an admin to assist', 'Alert!')
+        Database.popup("Registration is private at this time. Please contact an admin to assist")
         return redirect('/')
 
 @app.route("/new_user_submit", methods=['GET', 'POST'])
@@ -125,7 +124,7 @@ def submit_login():
     try:
         if len(foo) > 0:
             if foo[3]:
-                pymsgbox.alert('Your account is inactive. Please contact us to re-open', 'Alert!')
+                Database.popup('Your account is inactive. Please contact us to re-open')
                 return redirect('/login')
             if foo[2]:
                 Database.debug('This is an admin')
@@ -154,15 +153,15 @@ def submit_login():
                 return redirect("/dashboard")
             else:
                 # Database.debug("passwords don't match")
-                pymsgbox.alert('Wrong Username or Password', 'Alert!')
+                Database.popup('Wrong Username or Password')
                 return redirect('/login')
         else:
             # Database.debug("username doesn't exist")
-            pymsgbox.alert('Wrong Username or Password', 'Alert!')
+            Database.popup('Wrong Username or Password')
             return redirect('/login')
     except TypeError as exception:
         Database.debug(exception)
-        pymsgbox.alert('Login Failed. Redirecting', 'Alert!')
+        Database.popup('Login Failed. Redirecting')
         Database.debug("Failed login. Alert should have popped up.")
         # time.sleep(5)
         return redirect('/login')
@@ -171,6 +170,7 @@ def submit_login():
 @app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
     if 'username' in session:
+        Database.debug(session)
         return render_template("dashboard.html")
     return redirect('/')
 

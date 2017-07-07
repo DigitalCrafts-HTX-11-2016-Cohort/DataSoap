@@ -29,11 +29,16 @@ class Userfile:
         Database.debug(self.headers)
         for header in self.headers:
             if len(header) >= 10:
-                if Database.is_phone(header):
-                    session['success_message'] = """Your file is missing a header row.<br />
-                                Please insert a header row and try again"""
-                    self.keep_processing = False
-                    return redirect('/dashboard')
+                try:
+                    Database.is_phone(header)
+                except:
+                    pass
+                else:
+                    if Database.is_phone(header):
+                        session['success_message'] = """Your file is missing a header row.<br />
+                                    Please insert a header row and try again"""
+                        self.keep_processing = False
+                        return redirect('/dashboard')
         Database.debug(self.headers)
         self.record_count = sum(1 for row in dReader)
         # Database.debug("Record count for uploaded userfile is:")
@@ -125,11 +130,11 @@ class Userfile:
         query = "create table dnc.`%s` (dncinternalid int not null auto_increment" % self.time_in
         for header in self.headers:
             if self.headers.index(header) in self.phoneColDict:
-                query += ", `%s` bigint" % header
+                query += ", `%s` bigint" % header.strip()
             else:
-                query += ", `%s` text" % header
+                query += ", `%s` text" % header.strip()
             self.cols.append("@col" + str((self.headers.index(header) + 1)))
-            self.cols_set.append("`%s`=@col%s" % (header, (self.headers.index(header) + 1)))
+            self.cols_set.append("`%s`=@col%s" % (header.strip(), (self.headers.index(header) + 1)))
         query += ", PRIMARY KEY (dncinternalid))"
         Database.doQuery(query)
         return True
@@ -149,10 +154,10 @@ class Userfile:
             Database.debug("key is %r and list of keys is %r" %
                            (key, self.finalPhoneColList))
             if key == self.finalPhoneColList[0]:
-                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key]
+                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
             else:
-                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key]
-            query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)" % self.headers[key]
+                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
+            query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)" % self.headers[key].strip()
         Database.debug("Cleanup query is:")
         Database.debug(query)
         Database.doQuery(query)

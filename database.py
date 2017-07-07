@@ -1,6 +1,12 @@
 # coding=utf-8
 import settings as settings
 import datetime
+if settings.local:
+    import pymsgbox
+# if not settings.local:
+    # import gi
+    # gi.require_version("Gtk", "3.0")
+    # from gi.repository import Gtk
 from flask import request
 
 
@@ -73,3 +79,15 @@ class Database:
                 return True
         except ValueError:
             return False
+
+    @staticmethod
+    def popup(message):
+        if settings.local:
+            pymsgbox.alert(text=message, title='Alert', button='OK')
+        else:
+            # window = Gtk.Window(title="Alert")
+            # # label = Gtk.Label(message)
+            # window.show()
+            # window.connect("delete-event", Gtk.main_quit)
+            # Gtk.main()
+            pass
