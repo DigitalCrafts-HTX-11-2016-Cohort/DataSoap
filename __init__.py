@@ -5,7 +5,7 @@ from userfile import Userfile
 from users import Users
 import datetime
 import os
-from flask import Flask, render_template, request, redirect, session, send_file, flash
+from flask import Flask, render_template, request, redirect, session, send_file
 from passlib.hash import pbkdf2_sha256
 from werkzeug.utils import secure_filename
 from werkzeug.exceptions import RequestEntityTooLarge

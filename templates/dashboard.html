@@ -3,11 +3,17 @@
 {% include "nav.html" %}
 <div id="page-wrapper" >
             <div id="page-inner">
-                <div class="row" id="success">
-                    {% if session.get('success_message') %}
-                    {{session.get('success_message') | safe}}
-                    {% endif %}
-                </div>
+                {% with messages = get_flashed_messages() %}
+                        {% if messages or session.get('success_message') %}
+                             <div class="alert alert-info alert-dismissable" role="alert" style="margin-left: 20%; margin-right: 20%; margin-bottom: 2px; text-align: center;">
+                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">X</button>
+                             {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                            {{session.get('success_message', "") | safe}}
+                            </div>
+                        {% endif %}
+                {% endwith %}
                 <div class="row">
                     <div class="col-md-6 col-sm-6 col-xs-6">
                         <h2>Welcome back {{session.get('username').title()}}! </h2>

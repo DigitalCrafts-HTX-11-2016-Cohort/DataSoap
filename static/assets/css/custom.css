@@ -353,6 +353,7 @@ font-weight: 700;
 }
 .sidebar-collapse , .sidebar-collapse .nav{
 	background:none;
+    overflow-y: visible;
 }
 .sidebar-collapse .nav {
 	padding:0;
@@ -375,7 +376,22 @@ font-weight: 700;
 	background:#0A0A0A;
 	outline:0;
 }
-
+@media (min-width: 768px) {
+  .sidebar-collapse {
+    width: auto;
+    border-top: 0;
+    box-shadow: none;
+  }
+  .sidebar-collapse.collapse {
+    display: block !important;
+    height: auto !important;
+    padding-bottom: 0;
+    overflow: visible !important;
+  }
+  .sidebar-collapse.in {
+    overflow-y: visible;
+  }
+}
 .nav-second-level > li > a:before ,
 .nav-third-level > li > a:before {
 	content:"";

@@ -43,6 +43,10 @@ a, a:hover, a:focus {
 }
 
 /* Bootstrap Modifications */
+.alert > a {
+    text-decoration: underline;
+    color: #080808;
+}
 .modal-header {
 	background: #23238E;
 }

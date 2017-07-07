@@ -1,9 +1,7 @@
 # coding=utf-8
 import settings as settings
 import datetime
-from flask import request
-if settings.local:
-    import pymsgbox
+from flask import request, flash
 
 
 # noinspection PyTypeChecker
@@ -78,15 +76,7 @@ class Database:
 
     @staticmethod
     def popup(message):
-        if settings.local:
-            pymsgbox.alert(text=message, title='Alert', button='OK')
-        else:
-            # dialog = DialogExample()
-            # label = Gtk.Label(message)
-            # dialog.show()
-            # dialog.connect("delete-event", Gtk.main_quit)
-            # Gtk.main()
-            pass
+        flash(message)
 
 # class DialogExample(Gtk.Dialog):
 #
