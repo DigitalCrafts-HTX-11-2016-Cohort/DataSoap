@@ -1,66 +1,7 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-      <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Soap Dashboard</title>
-	<!-- BOOTSTRAP STYLES-->
-    <link href="static/assets/css/bootstrap.css" rel="stylesheet" />
-     <!-- FONTAWESOME STYLES-->
-    <link href="static/assets/css/font-awesome.css" rel="stylesheet" />
-        <!-- CUSTOM STYLES-->
-    <link href="static/assets/css/custom.css" rel="stylesheet" />
-    <link href="/static/assets/css/style.css" rel="stylesheet">
-     <!-- GOOGLE FONTS-->
-   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-</head>
+﻿{% include "header.html" %}
 <body>
-    <div id="wrapper">
-        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0;">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/main_page">DataSoap</a>
-            </div>
-
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;">  &nbsp; <a href="/logout" class="btn btn-danger square-btn-adjust">Logout</a> </div>
-        </nav>
-           <!-- /. NAV TOP  -->
-                <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-				    <li class="text-center">
-                        <img src="/static/assets/img/soapbar.png" class="user-image img-responsive"/>
-					</li>
-                    <li>
-                        <a class="active-menu"  href="/dashboard"><i class="fa fa-dashboard fa-3x"></i> Dashboard</a>
-                    </li>
-                     <li>
-                        <a  href="/reports"><i class="fa fa-bar-chart-o fa-3x"></i> Reports</a>
-                    </li>
-					<li>
-                        <a   href="/history"><i class="fa fa-history fa-3x"></i> History</a>
-                    </li>
-                    <li>
-                        <a   href="/profile"><i class="fa fa-user fa-3x"></i> Profile</a>
-                    </li>
-                </ul>
-
-
-            </div>
-
-        </nav>
-        <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
+{% include "nav.html" %}
+<div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row" id="success">
                     {% if session.get('success_message') %}
@@ -190,8 +131,10 @@ font-size: 16px;">  &nbsp; <a href="/logout" class="btn btn-danger square-btn-ad
 </script>
 <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
-    <script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
-    <script>
-        $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
-    </script>
+<script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
+</script>
+<script src="/static/assets/js/jquery.min3.js"></script>
+<script src="/static/assets/js/smoothscroll3.js"></script>
 </html>

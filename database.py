@@ -1,13 +1,9 @@
 # coding=utf-8
 import settings as settings
 import datetime
+from flask import request
 if settings.local:
     import pymsgbox
-# if not settings.local:
-    # import gi
-    # gi.require_version("Gtk", "3.0")
-    # from gi.repository import Gtk
-from flask import request
 
 
 # noinspection PyTypeChecker
@@ -85,9 +81,24 @@ class Database:
         if settings.local:
             pymsgbox.alert(text=message, title='Alert', button='OK')
         else:
-            # window = Gtk.Window(title="Alert")
-            # # label = Gtk.Label(message)
-            # window.show()
-            # window.connect("delete-event", Gtk.main_quit)
+            # dialog = DialogExample()
+            # label = Gtk.Label(message)
+            # dialog.show()
+            # dialog.connect("delete-event", Gtk.main_quit)
             # Gtk.main()
             pass
+
+# class DialogExample(Gtk.Dialog):
+#
+#     def __init__(self, parent):
+#         Gtk.Dialog.__init__(self, "Alert", parent, 0,
+#             (Gtk.STOCK_CANCEL, Gtk.ResponseType.CANCEL,
+#              Gtk.STOCK_OK, Gtk.ResponseType.OK))
+#
+#         self.set_default_size(150, 100)
+#
+#         label = Gtk.Label("This is a dialog to display additional information")
+#
+#         box = self.get_content_area()
+#         box.add(label)
+#         self.show_all()

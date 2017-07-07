@@ -1,30 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="login">
+{% include "header.html" %}
 
+  <body data-spy="scroll" data-offset="0" data-target="#navigation">
 
-    <title>Login</title>
-
-
-    <link href="/static/assets/css/bootstrap2.css" rel="stylesheet">
-
-    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-
-
-    <link href="/static/assets/css/style.css" rel="stylesheet">
-
-
-  </head>
-
-  <body>
-
-
-
-	  <div id="login-page">
+    <!-- Fixed navbar -->
+	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+	      <div class="container">
+	        <div class="navbar-header">
+	          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="/#home"><b>DataSoap</b></a>
+	        </div>
+	        <div class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li class="active"><a href="/#home" class="smothscroll">Home</a></li>
+	            <li><a href="/#intro" class="smothscroll">About Us</a></li>
+	            <li><a href="/#features" class="smothScroll">Features</a></li>
+	            <li><a href="/#contact" class="smothScroll">Contact Us</a></li>
+                <li><a href="/new_user">Register</a></li>
+                <li><a href="/login">Login</a></li>
+	          </ul>
+	        </div><!--/.nav-collapse -->
+	      </div>
+	    </div>
+    <div id="login-page">
 	  	<div class="container">
             <form action="/submit_login" method="POST" class="form-login">
 		        <h2 class="form-login-heading">Sign In Now</h2>
@@ -85,7 +86,12 @@
     <script>
         $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
     </script>
-
+     <style>
+          li {
+              font-weight: 300;
+              font-size: 16px;
+          }
+      </style>
 
   </body>
 </html>

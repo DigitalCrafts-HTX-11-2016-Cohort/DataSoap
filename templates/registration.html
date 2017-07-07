@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Dashboard">
-
-
-    <title>Please Register</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/static/assets/css/bootstrap.css" rel="stylesheet">
-    <!--external css-->
-    <link href="/static/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-
-    <!-- Custom styles for this template -->
-    <link href="/static/assets/css/style.css" rel="stylesheet">
-
-  </head>
-
-  <body class="gradient-fill">
-
-
-
+{% include "header.html" %}
+<body>
+{% include "nav.html" %}
 	  <div id="login-page">
 	  	<div class="container">
                             <form action="/new_user_submit" method="POST" class="form-login">
