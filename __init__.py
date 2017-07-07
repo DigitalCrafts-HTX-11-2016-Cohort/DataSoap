@@ -15,11 +15,14 @@ from werkzeug.exceptions import RequestEntityTooLarge
 
 ALLOWED_EXTENSIONS = {'txt', 'csv'}
 
+
 # define connection
 app = Flask(__name__)
 app.secret_key = settings.secret_key
 # If you edit max filesize below, make sure to update the 413 error handling message accordingly (bottom of __init__ )
 app.config['MAX_CONTENT_LENGTH'] = 40 * 1024 * 1024
+if not settings.local:
+    app.config['SERVER_NAME'] = settings.serverName
 
 
 def allowed_file(filename):
@@ -203,7 +206,7 @@ def history():
         file_out_name
         from dnc.logs 
         where userid = %d 
-        order by `Date` desc""" % session.get('userid')
+        order by file_in_timestamp desc""" % session.get('userid')
         logHistory = Database.getResult(query)
         # Database.debug(logHistory)
         return render_template("history.html", logHistory=logHistory)

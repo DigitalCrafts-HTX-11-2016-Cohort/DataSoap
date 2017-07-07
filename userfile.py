@@ -168,25 +168,26 @@ class Userfile:
         return True
 
     def postToLog(self):
-        query = """insert into dnc.logs (
-        userid, 
-        file_in_name, 
-        file_in_record_count, 
-        file_in_timestamp, 
-        file_out_name, 
-        file_out_record_count, 
-        file_out_timestamp
-        ) values (%d,'%s',%d,'%s','%s',%d,'%s')""" \
-                % (session.get('userid'),
-                   self.filename,
-                   self.record_count,
-                   self.time_in,
-                   self.filename_out,
-                   self.post_record_count,
-                   self.time_out)
-        # Database.debug(query)
-        Database.doQuery(query)
-        # Database.debug("posted to log!")
+        if not settings.local:
+            query = """insert into dnc.logs (
+            userid, 
+            file_in_name, 
+            file_in_record_count, 
+            file_in_timestamp, 
+            file_out_name, 
+            file_out_record_count, 
+            file_out_timestamp
+            ) values (%d,'%s',%d,'%s','%s',%d,'%s')""" \
+                    % (session.get('userid'),
+                       self.filename,
+                       self.record_count,
+                       self.time_in,
+                       self.filename_out,
+                       self.post_record_count,
+                       self.time_out)
+            # Database.debug(query)
+            Database.doQuery(query)
+            # Database.debug("posted to log!")
         return True
 
     def exportTable(self):
