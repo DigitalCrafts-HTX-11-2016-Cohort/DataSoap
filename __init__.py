@@ -5,7 +5,7 @@ from userfile import Userfile
 from users import Users
 import datetime
 import os
-from flask import Flask, render_template, request, redirect, session, send_file
+from flask import Flask, render_template, request, redirect, session, send_file, flash
 from passlib.hash import pbkdf2_sha256
 from werkzeug.utils import secure_filename
 from werkzeug.exceptions import RequestEntityTooLarge
@@ -21,8 +21,8 @@ app = Flask(__name__)
 app.secret_key = settings.secret_key
 # If you edit max filesize below, make sure to update the 413 error handling message accordingly (bottom of __init__ )
 app.config['MAX_CONTENT_LENGTH'] = 40 * 1024 * 1024
-if not settings.local:
-    app.config['SERVER_NAME'] = settings.serverName
+# if not settings.local:
+#     app.config['SERVER_NAME'] = settings.serverName
 
 
 def allowed_file(filename):
@@ -39,18 +39,21 @@ def allowed_file(filename):
 def searchResult():
     # Database.debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
-    areaCode = numberSearched[:3]
-    query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
-    query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
-    query_result = Database.getResult(query, True)
-    query2_result = Database.getResult(query2, True)
-    # Database.debug(query_result)
-    if query_result:
-        result = "DO NOT CALL this number"
-    elif query2_result:
-        result = "Your Subscription does not include this area code"
+    if Database.is_phone(numberSearched):
+        areaCode = numberSearched[:3]
+        query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
+        query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
+        query_result = Database.getResult(query, True)
+        query2_result = Database.getResult(query2, True)
+        # Database.debug(query_result)
+        if query_result:
+            result = "DO NOT CALL this number"
+        elif query2_result:
+            result = "Your Subscription does not include this area code"
+        else:
+            result = "This number is Squeaky Clean!"
     else:
-        result = "This number is Squeaky Clean!"
+        result = "This is not a valid phone number"
     return '{"result":"%s"}' % result
 
 
@@ -81,11 +84,13 @@ def new_user():
             return render_template("registration.html")
         else:
             Database.debug('Admin is falsey')
-            Database.popup('Only admin users can register others. Please contact an admin to assist')
+            flash('Only admin users can register others. Please contact an admin to assist')
             return redirect('/dashboard')
     else:
-        Database.popup("Registration is private at this time. Please contact an admin to assist")
+        flash("Registration is private at this time. Please contact an admin to assist")
+        # return render_template("index.html")
         return redirect('/')
+
 
 @app.route("/new_user_submit", methods=['GET', 'POST'])
 def new_user_submit():
@@ -110,8 +115,10 @@ def new_user_submit():
         userid = user.insert()
         # TO DO - need to add a if username exists clause. Causes crash as of now
         os.mkdir(settings.download + str(userid), 0o777)
+        session.clear()
     else:
-        return "Sorry your password does not match, click back and try again!"
+        flash("Sorry your passwords did not match, please try again!")
+        return redirect('/new_user')
     return redirect("/login")
 
 
@@ -127,7 +134,7 @@ def submit_login():
     try:
         if len(foo) > 0:
             if foo[3]:
-                Database.popup('Your account is inactive. Please contact us to re-open')
+                flash('Your account is inactive. Please contact us to re-open')
                 return redirect('/login')
             if foo[2]:
                 Database.debug('This is an admin')
@@ -156,15 +163,15 @@ def submit_login():
                 return redirect("/dashboard")
             else:
                 # Database.debug("passwords don't match")
-                Database.popup('Wrong Username or Password')
+                flash('Wrong Username or Password')
                 return redirect('/login')
         else:
             # Database.debug("username doesn't exist")
-            Database.popup('Wrong Username or Password')
+            flash('Wrong Username or Password')
             return redirect('/login')
     except TypeError as exception:
         Database.debug(exception)
-        Database.popup('Login Failed. Redirecting')
+        flash('Login Failed. Redirecting')
         Database.debug("Failed login. Alert should have popped up.")
         # time.sleep(5)
         return redirect('/login')
@@ -341,7 +348,10 @@ def add_header(response):
     and also to cache the rendered page for 10 minutes.
     """
     response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
-    response.headers['Cache-Control'] = 'public, max-age=600'
+    # ATTENTION: Do not enable caching without removing flask messages!!
+    # Cache will affect Flask's flash messaging system.
+    # Redirect will not display flashed messages
+    response.headers['Cache-Control'] = 'public, max-age=0'
     if settings.local:
         response.headers['Cache-Control'] = 'public, max-age=0'
     return response

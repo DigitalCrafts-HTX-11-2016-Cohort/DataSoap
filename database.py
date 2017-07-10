@@ -1,7 +1,7 @@
 # coding=utf-8
 import settings as settings
 import datetime
-from flask import request, flash
+from flask import request
 
 
 # noinspection PyTypeChecker
@@ -74,9 +74,6 @@ class Database:
         except ValueError:
             return False
 
-    @staticmethod
-    def popup(message):
-        flash(message)
 
 # class DialogExample(Gtk.Dialog):
 #
