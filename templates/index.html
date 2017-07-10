@@ -6,7 +6,7 @@
     <link rel="shortcut icon" href="/static/assets/ico/favicon.png">
     <title>Data Soap</title>
 	<!-- BOOTSTRAP STYLES-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link href="static/assets/css/bootstrap3.css" rel="stylesheet">
      <!-- FONTAWESOME STYLES-->
     <link href="static/assets/css/font-awesome-used.css" rel="stylesheet" />
@@ -15,11 +15,11 @@
     <link href="static/assets/css/custom.css" rel="stylesheet" />
 {#    <link href="/static/assets/css/style.css" rel="stylesheet">#}
 
-{#   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>#}
+
 
 </head>
 
-  <body data-spy="scroll" data-offset="0" data-target="#navigation">
+  <body>
 
     <!-- Fixed navbar -->
 	    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
@@ -33,7 +33,7 @@
 	          <a class="navbar-brand" href="#"><b>DataSoap</b></a>
 	        </div>
 	        <div class="navbar-collapse collapse">
-	          <ul class="nav navbar-nav">
+	          <ul class="nav navbar-nav" id="top-menu">
 	            <li class="active"><a href="#home">Home</a></li>
 	            <li><a href="#intro">About Us</a></li>
 	            <li><a href="#features">Features</a></li>
@@ -241,12 +241,8 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/static/assets/js/bootstrap3.js"></script>
-{#	<script>#}
-{#	$('.carousel').carousel({#}
-{#	  interval: 3500#}
-{#	})#}
-{#	</script>#}
     <script src="/static/assets/js/jquery-1.10.2.js"></script>
     <script src="/static/assets/js/bootstrap.min.js"></script>
+
   </body>
 </html>
