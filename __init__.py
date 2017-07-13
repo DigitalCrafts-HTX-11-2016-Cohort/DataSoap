@@ -143,8 +143,10 @@ def submit_login():
                 Database.debug('This is not an admin user')
                 session['admin'] = False
             if foo[4]:
-                Database.debug(foo[4])
-                session['acknowledged'] = True
+                # Database.debug(foo[4])
+                # Database.debug(abs(datetime.datetime.now() - foo[4]).days)
+                if abs(datetime.datetime.now()-foo[4]).days < 180:
+                    session['acknowledged'] = True
             else:
                 session['acknowledged'] = False
             Database.debug('session is %s' % session)
