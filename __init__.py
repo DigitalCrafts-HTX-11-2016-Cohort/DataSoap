@@ -75,7 +75,7 @@ def login_page():
 
 @app.route('/new_user', methods=['GET', 'POST'])
 def new_user():
-    Database.debug('Do we get into the new_user function?')
+    # Database.debug('Do we get into the new_user function?')
     Database.debug(session)
     if 'admin' in session:
         Database.debug('There is a session variable called admin and the value is: %r' % session.get('admin'))
@@ -128,7 +128,7 @@ def submit_login():
     user = Users(id)
     user.username = request.form.get('username')
     user.password = request.form.get('password')
-    query = "select id, password, admin, Deleted from dnc.users where username = '%s'" % user.username
+    query = "select id, password, admin, Deleted, date_acknowledged from dnc.users where username = '%s'" % user.username
     # Database.debug(query)
     foo = Database.getResult(query, True)
     try:
@@ -142,7 +142,12 @@ def submit_login():
             else:
                 Database.debug('This is not an admin user')
                 session['admin'] = False
-            Database.debug('session.get(admin) is %s' % session.get('admin'))
+            if foo[4]:
+                Database.debug(foo[4])
+                session['acknowledged'] = True
+            else:
+                session['acknowledged'] = False
+            Database.debug('session is %s' % session)
             # Database.debug("User exists")
             pass_to_hash = str(request.form.get('password'))
             if pbkdf2_sha256.identify(str(foo[1])):
@@ -156,7 +161,7 @@ def submit_login():
                 # Database.debug(type(user.password))
                 session['username'] = user.username
                 session['userid'] = foo[0]
-                if os.path.isdir(settings.download + str(foo[0])) == False:
+                if os.path.isdir(settings.download + str(foo[0])) is False:
                     os.mkdir(settings.download + str(foo[0]), 0o777)
                 # Database.debug(session.get('userid'))
                 # Database.debug(session.get('username'))
@@ -181,7 +186,13 @@ def submit_login():
 def dashboard():
     if 'username' in session:
         Database.debug(session)
-        return render_template("dashboard.html")
+        if 'acknowledged' in session:
+            if not session['acknowledged']:
+                return render_template("TOS.html")
+            else:
+                return render_template("dashboard.html")
+        else:
+            return render_template("dashboard.html")
     return redirect('/')
 
 
@@ -255,6 +266,17 @@ def update_profile():
         user.update()
     return redirect('/dashboard')
 
+@app.route("/submit_acknowledgement", methods=['GET', 'POST'])
+def update_acknowledgement():
+    session.get('username')
+    user = Users(id)
+    if 'username' in session:
+        fullname = request.form.get('fullname')
+        company = request.form.get('company')
+        user.id = session.get('userid')
+        user.acknowledge(fullname, company)
+        session['acknowledged'] = True
+    return redirect('/dashboard')
 
 @app.route("/logout", methods=['GET', 'POST'])
 def logout():

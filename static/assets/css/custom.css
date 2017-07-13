@@ -113,14 +113,16 @@ padding: 20px;
     margin: 0 0 3px;
 }
 .main-text {
-    font-size: 25px;
-    font-weight:600;
+    font-size: 16px;
+    font-weight:500;
 }
 
  .chat-box li.left .chat-body {
 margin-left: 90px;
 }
-
+.hideMobile {
+    display: none
+}
 
 /*==============================================
     MENU STYLES
@@ -271,5 +273,11 @@ line-height: 1.428571429;
    .navbar {
  border-radius: 0px;
 }
-
+   .main-text {
+    font-size: 25px;
+    font-weight:600;
+}
+.hideMobile {
+    display: block;
+}
 }

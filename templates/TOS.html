@@ -1,0 +1,66 @@
+{% include "header.html" %}
+<body>
+{% include "nav.html" %}
+<div id="page-wrapper" >
+            <div id="page-inner hideMobile">
+                <div class="row hideMobile">
+                    <div class="col-md-6 col-sm-12 hideMobile">
+                        <h2>Welcome to DataSoap {{session.get('username').title()}}! </h2>
+                 </div>
+                    </div>
+                 <!-- /. ROW  -->
+                <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-xs-12">
+			<div class="panel panel-back noti-box">
+                <h3> <i class="fa fa-check-circle fa-lg"></i> DATA SOAP ACKNOWLEDGEMENT</h3>
+
+                <div class="text-box" >
+                    <p class="main-text">
+                        I agree to use Data Soap only for performance of services for Vista Energy in conformance with
+                        the Marketing Agreement Addendum between my company and Vista Energy, and understand the use
+                        or application of Data Soap for any other purpose may violate local, state, or federal laws
+                        or regulations.<br><br>
+
+                    </p>
+
+                </div>
+                 <form action="/submit_acknowledgement" method="POST" enctype="multipart/form-data">
+                          <input type="text" placeholder="Initials" class="form-control" name="initials" maxlength="3" autofocus>
+                         <br>
+                          <input type="text" placeholder="Full Name" class="form-control" name="fullname">
+                         <br>
+                          <input type="text" placeholder="Marketing Company" class="form-control" name="company">
+                         <br>
+                         <button type="submit" name="btnImport" class="btn btn-theme btn-block">Submit</button>
+                     </form>
+
+             </div>
+		     </div>
+
+                </div>
+                 <!-- /. ROW  -->
+            </div>
+             <!-- /. PAGE INNER  -->
+        </div>
+         <!-- /. PAGE WRAPPER  -->
+    </div>
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="/static/assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="/static/assets/js/bootstrap.min.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="/static/assets/js/jquery.metisMenu.js"></script>
+
+
+
+</body>
+<!--BACKSTRETCH-->
+    <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+<script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("/static/assets/img/Black-and-Red-Abstract-High-Resolution-Wallpaper.jpg", {speed: 500});
+</script>
+<script src="/static/assets/js/jquery.min3.js"></script>
+</html>

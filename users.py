@@ -1,5 +1,6 @@
 # coding=utf-8
 from database import Database
+from datetime import datetime
 
 
 class Users:
@@ -31,5 +32,13 @@ class Users:
                 where id = %d"""
                  % (Database.escape(self.firstname), Database.escape(self.lastname), Database.escape(self.company),
                     Database.escape(self.email), self.password, self.id))
+        Database.doQuery(query)
+        return True
+
+    def acknowledge(self, fullname, company):
+        query = ("""update dnc.users set date_acknowledged = '%s', name_as_typed = '%s', company_as_typed = '%s'
+                where id = %d"""
+                 % (datetime.now(), Database.escape(fullname), Database.escape(company), self.id))
+        Database.debug(query)
         Database.doQuery(query)
         return True
