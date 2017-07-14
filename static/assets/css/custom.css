@@ -34,7 +34,7 @@ html, body {
 #page-inner {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#fff!important;
+    background-color:rgba(255, 255, 255, 0.88)!important;
     padding:10px;
     height: calc( 100% - 20px);
     overflow-y: auto;
@@ -42,7 +42,7 @@ html, body {
 #page-inner-history {
     width:100%;
     margin:10px 20px 10px 0px;
-    background-color:#fff!important;
+    background-color:rgba(255, 255, 255, 0.88)!important;
     padding:10px;
     height: calc( 100% - 20px);
     overflow-y: scroll;
