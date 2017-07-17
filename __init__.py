@@ -57,6 +57,10 @@ def searchResult():
                 result = "This number is Squeaky Clean!"
         else:
             result = "This is not a valid phone number"
+        query_to_post = "INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (%d, %d, %s)" \
+                        % (int(session.get('userid',999)), int(numberSearched), "'" + result + "'")
+        Database.debug(query_to_post)
+        Database.doQuery(query_to_post)
     else:
         result = "Unauthorized Request"
     return '{"result":"%s"}' % result
