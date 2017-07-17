@@ -39,21 +39,26 @@ def allowed_file(filename):
 def searchResult():
     # Database.debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
-    if Database.is_phone(numberSearched):
-        areaCode = numberSearched[:3]
-        query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
-        query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
-        query_result = Database.getResult(query, True)
-        query2_result = Database.getResult(query2, True)
-        # Database.debug(query_result)
-        if query_result:
-            result = "DO NOT CALL this number"
-        elif query2_result:
-            result = "Your Subscription does not include this area code"
+    auth_code = request.args.get('auth', False)
+    Database.debug(auth_code)
+    if auth_code == 'skdjhg9wp845tyhzdfbhg' or session.get('userid'):
+        if Database.is_phone(numberSearched):
+            areaCode = numberSearched[:3]
+            query = "select dncinternalid from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
+            query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
+            query_result = Database.getResult(query, True)
+            query2_result = Database.getResult(query2, True)
+            # Database.debug(query_result)
+            if query_result:
+                result = "DO NOT CALL this number"
+            elif query2_result:
+                result = "Your Subscription does not include this area code"
+            else:
+                result = "This number is Squeaky Clean!"
         else:
-            result = "This number is Squeaky Clean!"
+            result = "This is not a valid phone number"
     else:
-        result = "This is not a valid phone number"
+        result = "Unauthorized Request"
     return '{"result":"%s"}' % result
 
 

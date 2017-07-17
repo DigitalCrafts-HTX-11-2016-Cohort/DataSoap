@@ -135,7 +135,7 @@ class Userfile:
                 query += ", `%s` text" % header.strip()
             self.cols.append("@col" + str((self.headers.index(header) + 1)))
             self.cols_set.append("`%s`=@col%s" % (header.strip(), (self.headers.index(header) + 1)))
-        query += ", PRIMARY KEY (dncinternalid))"
+        query += ", deleteFlag bit null, PRIMARY KEY (dncinternalid))"
         Database.doQuery(query)
         return True
 
@@ -148,7 +148,7 @@ class Userfile:
 
     def cleanup(self):
 
-        query = "delete from dnc.`%s` where " % self.time_in
+        query = "update dnc.`%s` set deleteFlag = 1 where " % self.time_in
         Database.debug("self.phoneColDict is %r" % self.phoneColDict)
         for key in self.phoneColDict:
             Database.debug("key is %r and list of keys is %r" %
@@ -161,7 +161,7 @@ class Userfile:
         Database.debug("Cleanup query is:")
         Database.debug(query)
         Database.doQuery(query)
-        query = "select count(*) from `%s`" % self.time_in
+        query = "select count(*) from `%s` where deleteFlag IS NULL" % self.time_in
         self.post_record_count = int(Database.getResult(query, True)[0])
         Database.debug("there are %s records left in the table. %s were removed"
                        % (self.post_record_count, self.record_count - self.post_record_count))
@@ -191,7 +191,7 @@ class Userfile:
         return True
 
     def exportTable(self):
-        query = "SELECT * FROM dnc.`%s`" % self.time_in
+        query = "SELECT * FROM dnc.`%s` where deleteFlag IS NULL" % self.time_in
         result_tuple = Database.getResult(query)
         Database.debug("Data received. About to open %s" % self.path_out)
         writer = csv.writer(open(self.path_out, "wb"))
@@ -207,6 +207,19 @@ class Userfile:
         return True
 
     def delete(self):
+        query = "SELECT * FROM dnc.`%s` where deleteFlag = 1" % self.time_in
+        result_tuple = Database.getResult(query)
+        # Database.debug("Data received. About to open %s" % self.path_out + ".RMVD")
+        writer = csv.writer(open(self.path_out + ".RMVD", "wb"))
+        Database.debug("able to create the removed file")
+        toprow = self.headers
+        toprow.insert(0, 'id')
+        # Database.debug(toprow)
+        writer.writerow(toprow)
+        # Database.debug("headers are in")
+        for row in result_tuple:
+            writer.writerow(row)
+        Database.debug("removed file completed")
         # if self.time_in:
         query = "DROP TABLE dnc.`%s`" % self.time_in
         Database.doQuery(query)
