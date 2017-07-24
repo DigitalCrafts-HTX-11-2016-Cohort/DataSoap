@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="dnc@35.166.251.127">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
     <root id="1"/>
     <schema id="2" parent="1" name="dnc">
       <Current>1</Current>
@@ -12,226 +12,232 @@
     <schema id="6" parent="1" name="mysql"/>
     <schema id="7" parent="1" name="performance_schema"/>
     <schema id="8" parent="1" name="sys"/>
-    <table id="9" parent="2" name="PurchasedCodes"/>
-    <table id="10" parent="2" name="federal"/>
+    <schema id="9" parent="1" name="#mysql50#mysql.old"/>
+    <table id="10" parent="2" name="PurchasedCodes"/>
     <table id="11" parent="2" name="litigator"/>
-    <table id="12" parent="2" name="logs"/>
-    <table id="13" parent="2" name="master"/>
-    <table id="14" parent="2" name="user_company"/>
+    <table id="12" parent="2" name="log_removed_numbers"/>
+    <table id="13" parent="2" name="logs"/>
+    <table id="14" parent="2" name="master"/>
     <table id="15" parent="2" name="users"/>
     <table id="16" parent="2" name="wireless_convert"/>
-    <column id="17" parent="9" name="AreaCode">
+    <column id="17" parent="10" name="AreaCode">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="18" parent="10" name="AreaCode">
+    <column id="18" parent="11" name="AreaCode">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="10" name="PhoneNumber">
+    <column id="19" parent="11" name="PhoneNumber">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="10" name="Source">
-      <Position>3</Position>
-      <DataType>varchar(15)|0</DataType>
-      <DefaultExpression>&apos;Federal_DNC&apos;</DefaultExpression>
-    </column>
-    <index id="21" parent="10" name="PhoneNumber_UNIQUE">
-      <ColNames>PhoneNumber</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="22" parent="10" name="PhoneNumber_UNIQUE">
-      <ColNames>PhoneNumber</ColNames>
-      <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="23" parent="11" name="AreaCode">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="24" parent="11" name="PhoneNumber">
-      <Position>2</Position>
-      <DataType>bigint(20)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="25" parent="11" name="Source">
+    <column id="20" parent="11" name="Source">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
       <DefaultExpression>&apos;Litigator_List&apos;</DefaultExpression>
     </column>
-    <index id="26" parent="11" name="PhoneNumber_UNIQUE">
+    <index id="21" parent="11" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="27" parent="11" name="PhoneNumber_UNIQUE">
+    <key id="22" parent="11" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="28" parent="12" name="id">
+    <column id="23" parent="12" name="id">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="29" parent="12" name="userid">
+    <column id="24" parent="12" name="userid">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="30" parent="12" name="file_in_name">
+    <column id="25" parent="12" name="timestamp">
       <Position>3</Position>
-      <DataType>varchar(80)|0</DataType>
+      <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="31" parent="12" name="file_in_record_count">
+    <column id="26" parent="12" name="phone">
       <Position>4</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="32" parent="12" name="file_in_timestamp">
+    <column id="27" parent="12" name="result">
       <Position>5</Position>
-      <DataType>text|0</DataType>
-      <NotNull>1</NotNull>
+      <DataType>varchar(50)|0</DataType>
     </column>
-    <column id="33" parent="12" name="file_out_name">
-      <Position>6</Position>
-      <DataType>varchar(80)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="34" parent="12" name="file_out_record_count">
-      <Position>7</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="35" parent="12" name="file_out_timestamp">
-      <Position>8</Position>
-      <DataType>text|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="36" parent="12" name="PRIMARY">
+    <index id="28" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="12" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="37" parent="13" name="dncinternalid">
+    <key id="30" parent="12" name="id">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>id</UnderlyingIndexName>
+    </key>
+    <column id="31" parent="13" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="38" parent="13" name="PhoneNumber">
+    <column id="32" parent="13" name="userid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="13" name="file_in_name">
+      <Position>3</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="13" name="file_in_record_count">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="13" name="file_in_timestamp">
+      <Position>5</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="36" parent="13" name="file_out_name">
+      <Position>6</Position>
+      <DataType>varchar(80)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="37" parent="13" name="file_out_record_count">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="13" name="file_out_timestamp">
+      <Position>8</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="39" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="40" parent="14" name="dncinternalid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="41" parent="14" name="PhoneNumber">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="39" parent="13" name="phone">
-      <ColNames>PhoneNumber</ColNames>
-    </index>
-    <index id="40" parent="13" name="PhoneNumber_UNIQUE">
-      <ColNames>PhoneNumber</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="41" parent="13" name="PRIMARY">
+    <column id="42" parent="14" name="wireless">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <key id="43" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>dncinternalid</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="42" parent="13" name="PhoneNumber_UNIQUE">
-      <ColNames>PhoneNumber</ColNames>
-      <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
-    </key>
-    <column id="43" parent="14" name="id">
+    <column id="44" parent="15" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="44" parent="14" name="company_name">
+    <column id="45" parent="15" name="firstname">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="45" parent="14" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="46" parent="15" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-    </column>
-    <column id="47" parent="15" name="firstname">
-      <Position>2</Position>
-      <DataType>varchar(45)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="48" parent="15" name="lastname">
+    <column id="46" parent="15" name="lastname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="15" name="company">
+    <column id="47" parent="15" name="company">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="50" parent="15" name="email">
+    <column id="48" parent="15" name="email">
       <Position>5</Position>
       <DataType>varchar(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="15" name="username">
+    <column id="49" parent="15" name="username">
       <Position>6</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="52" parent="15" name="password">
+    <column id="50" parent="15" name="password">
       <Position>7</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="53" parent="15" name="admin">
+    <column id="51" parent="15" name="admin">
       <Position>8</Position>
       <DataType>bit(1)|0</DataType>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="54" parent="15" name="Deleted">
+    <column id="52" parent="15" name="Deleted">
       <Position>9</Position>
       <DataType>bit(1)|0</DataType>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
     </column>
-    <index id="55" parent="15" name="username_UNIQUE">
+    <column id="53" parent="15" name="date_acknowledged">
+      <Position>10</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="54" parent="15" name="name_as_typed">
+      <Position>11</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <column id="55" parent="15" name="company_as_typed">
+      <Position>12</Position>
+      <DataType>varchar(45)|0</DataType>
+    </column>
+    <index id="56" parent="15" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="56" parent="15" name="PRIMARY">
+    <key id="57" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="57" parent="15" name="username_UNIQUE">
+    <key id="58" parent="15" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="58" parent="16" name="PhoneNumber">
+    <column id="59" parent="16" name="PhoneNumber">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="59" parent="16" name="Source">
+    <column id="60" parent="16" name="Source">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
       <DefaultExpression>&apos;Wireless_switch&apos;</DefaultExpression>
     </column>
-    <index id="60" parent="16" name="PhoneNumber_UNIQUE">
+    <index id="61" parent="16" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="61" parent="16" name="PhoneNumber_UNIQUE">
+    <key id="62" parent="16" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
     </key>
