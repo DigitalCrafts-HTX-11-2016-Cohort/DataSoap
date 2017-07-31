@@ -44,9 +44,10 @@ def searchResult():
     if auth_code == 'skdjhg9wp845tyhzdfbhg' or session.get('userid'):
         if Database.is_phone(numberSearched):
             areaCode = numberSearched[:3]
-            query = "select PhoneNumber from dnc.`master` where master.PhoneNumber = %d" % int(numberSearched)
+            query = "select PhoneNumber from dnc.`master_noindex` where master_noindex.PhoneNumber = %d" % int(numberSearched)
             query2 = "select AreaCode from dnc.`PurchasedCodes` WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
             query_result = Database.getResult(query, True)
+            print (query_result)
             query2_result = Database.getResult(query2, True)
             # Database.debug(query_result)
             if not query2_result:
@@ -215,10 +216,11 @@ def report():
         mid(file_in_name,9) as Filename,
         file_out_record_count/file_in_record_count as CleanPercentage 
         from dnc.logs 
-        where userid=%d and datediff(CURRENT_DATE(),file_in_timestamp) < 10
+        where userid=%d and datediff(CURRENT_DATE(),str_to_date(file_in_timestamp,'%%Y%%m%%d')) < 10
         ORDER BY `Date`desc
         limit 10""" % session.get('userid')
         avg_ptime_clean = Database.getResult(query)
+        # Database.debug(query)
         # Database.debug(avg_ptime_clean)
         return render_template("reports.html", avg_ptime_clean=avg_ptime_clean)
     return redirect('/')

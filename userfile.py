@@ -154,9 +154,9 @@ class Userfile:
             Database.debug("key is %r and list of keys is %r" %
                            (key, self.finalPhoneColList))
             if key == self.finalPhoneColList[0]:
-                query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
+                query += " `%s` in (select PhoneNumber from dnc.`master_noindex`)" % self.headers[key].strip()
             else:
-                query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
+                query += " or `%s` in (select PhoneNumber from dnc.`master_noindex`)" % self.headers[key].strip()
             query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)" % self.headers[key].strip()
         Database.debug("Cleanup query is:")
         Database.debug(query)

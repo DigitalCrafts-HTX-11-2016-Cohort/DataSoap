@@ -33,7 +33,11 @@ class Database:
         cur = conn.cursor()
         cur.execute(query)
         if getOne:
-            result_set = cur.fetchone()
+            result_initial = cur.fetchall()
+            try:
+                result_set = result_initial[0]
+            except:
+                result_set = result_initial
         else:
             result_set = cur.fetchall()
         cur.close()
