@@ -129,7 +129,7 @@ class Userfile:
         self.cols_set = []
         query = "create table dnc.`%s` (dncinternalid int not null auto_increment" % self.time_in
         for header in self.headers:
-            if self.headers.index(header) in self.phoneColDict:
+            if self.headers.index(header) in self.finalPhoneColList:
                 query += ", `%s` bigint" % header.strip()
             else:
                 query += ", `%s` text" % header.strip()
@@ -149,8 +149,8 @@ class Userfile:
     def cleanup(self):
 
         query = "update dnc.`%s` set deleteFlag = 1 where " % self.time_in
-        Database.debug("self.phoneColDict is %r" % self.phoneColDict)
-        for key in self.phoneColDict:
+        Database.debug("self.finalPhoneColList is %r" % self.finalPhoneColList)
+        for key in self.finalPhoneColList:
             Database.debug("key is %r and list of keys is %r" %
                            (key, self.finalPhoneColList))
             if key == self.finalPhoneColList[0]:

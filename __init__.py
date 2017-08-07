@@ -20,7 +20,7 @@ ALLOWED_EXTENSIONS = {'txt', 'csv'}
 app = Flask(__name__)
 app.secret_key = settings.secret_key
 # If you edit max filesize below, make sure to update the 413 error handling message accordingly (bottom of __init__ )
-app.config['MAX_CONTENT_LENGTH'] = 40 * 1024 * 1024
+app.config['MAX_CONTENT_LENGTH'] = 50 * 1024 * 1024
 # if not settings.local:
 #     app.config['SERVER_NAME'] = settings.serverName
 
@@ -367,14 +367,16 @@ def upload_file():
                 leads.exportTable()
                 Database.debug("Successfully exported file!")
                 Database.debug("about to delete")
-                leads.delete()
-                Database.debug("delete function complete")
+                # leads.delete()
+                # Database.debug("delete function complete")
         except RequestEntityTooLarge as e:
             # Database.debug("exception caught")
             error_details = "*******ALERT******* Username %s attempted to upload file over the limit" \
                             % session.get('username')
             Database.debug(error_details)
-            pass
+            print(error_details)
+            flash('This file is too large. Please split into multiple files and try again')
+            return redirect("/dashboard")
         return redirect("/dashboard")
 
 
