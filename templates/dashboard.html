@@ -89,7 +89,7 @@
                         <p style="padding-top: 0; font-style: italic;">Please limit files to 10Mb</p>
                         <br /><br />
                         <form action="/process" method="POST" enctype="multipart/form-data">
-                            <input type="file" name="Select csv" /><br />
+                            <input id="fileinput" type="file" name="Select csv" /><br />
                             <!-- <form action="/add_options"> -->
 {#                         <h3> <i class="fa fa-check-circle fa-lg"></i> Options</h3>#}
                             {#<input type="checkbox" name="lat_long" value="lat_long"> add latitude and longitude<br>#}
@@ -103,7 +103,7 @@
 {#                                <input type="checkbox" name="rem_dup" value="rem_dup" checked>#}
 {#                                remove duplicates (automatically checked)#}
 {#                            </label>#}<br /><br />
-                            <button type="submit" name="btnImport" class="btn btn-theme btn-block">Submit File</button>
+                            <button type="submit" name="btnImport" class="btn btn-theme btn-block" onclick="showFileSize();">Submit File</button>
                 </form></div></div>
                  <!-- /. ROW  -->
             </div>
@@ -135,6 +135,32 @@
           }); return false;
         });
 </script>
+
+{#Function to check filesize pre-upload#}
+<script type='text/javascript'>
+function showFileSize() {
+    var input, file;
+    if (!window.FileReader) {
+        alert("This browser prevents us from checking your file size. Please ensure your file is under 35MB before proceeding");
+        return;
+    }
+    input = document.getElementById('fileinput');
+    if (!input.files) {
+        alert("This browser prevents us from checking your file size. Please ensure your file is under 35MB before proceeding");
+    }
+    else {
+        file = input.files[0]; console.log(file);
+        if (file.size > 35000000) {
+            alert("This file is larger than the 35Mb limit\nPlease split into smaller files and try again.\n10Mb or smaller is recommended");
+            input.value = '';
+        } else {
+            return true
+        }
+    }
+}
+
+</script>
+
 <!--BACKSTRETCH-->
     <!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
 <script type="text/javascript" src="/static/assets/js/jquery.backstretch.min.js"></script>
