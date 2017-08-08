@@ -367,7 +367,7 @@ def upload_file():
                 leads.exportTable()
                 Database.debug("Successfully exported file!")
                 Database.debug("about to delete")
-                # leads.delete()
+                leads.delete()
                 # Database.debug("delete function complete")
         except RequestEntityTooLarge as e:
             # Database.debug("exception caught")

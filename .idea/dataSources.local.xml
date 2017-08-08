@@ -20,5 +20,16 @@
         <enabled>false</enabled>
       </ssl-config>
     </data-source>
+    <data-source name="Staging" uuid="7247b56a-8c94-4ef1-88ef-6ea87f3f9042">
+      <database-info product="Microsoft SQL Server" version="12.00.5000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 6.0 for SQL Server" driver-version="6.0.8112.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <domain-auth>true</domain-auth>
+      <user-name>IRISHEXC\kmartin</user-name>
+      <introspection-schemas>VIP:dbo</introspection-schemas>
+    </data-source>
   </component>
 </project>

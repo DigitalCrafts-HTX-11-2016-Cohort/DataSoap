@@ -115,3 +115,1843 @@
 [201703292043][127.0.0.1] about to delete
 [201703292043][127.0.0.1] delete function complete
 [201703292043][127.0.0.1] karissa
+[201707061231428000][127.0.0.1] This is an admin
+[201707061231452000][127.0.0.1] session.get(admin) is True
+[201707061206787000][127.0.0.1] Do we get into the new_user function?
+[201707061206787000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707061206787000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707061214490000][127.0.0.1] Do we get into the new_user function?
+[201707061214490000][127.0.0.1] <SecureCookieSession {}>
+[201707061217867000][127.0.0.1] Do we get into the new_user function?
+[201707061217867000][127.0.0.1] <SecureCookieSession {}>
+[201707061307188000][127.0.0.1] This is an admin
+[201707061307188000][127.0.0.1] session.get(admin) is True
+[201707061325206000][127.0.0.1] This is an admin
+[201707061325207000][127.0.0.1] session.get(admin) is True
+[201707061331610000][127.0.0.1] This is an admin
+[201707061331610000][127.0.0.1] session.get(admin) is True
+[201707061339305000][127.0.0.1] in /process
+[201707061339306000][127.0.0.1] file selected
+[201707061339324000][127.0.0.1] about to save file
+[201707061339328000][127.0.0.1] ***********
+[201707061339328000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061339328000][127.0.0.1] 201707061339324000
+[201707061339328000][127.0.0.1] 39324000luke_pa_leads_fake_phones.csv
+[201707061339329000][127.0.0.1] ***********
+[201707061339329000][127.0.0.1] about to findPhoneCols
+[201707061339330000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_not', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061353310000][127.0.0.1] in /process
+[201707061353310000][127.0.0.1] file selected
+[201707061353446000][127.0.0.1] about to save file
+[201707061353447000][127.0.0.1] ***********
+[201707061353447000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061353447000][127.0.0.1] 201707061353445000
+[201707061353447000][127.0.0.1] 53445000luke_pa_leads2.csv
+[201707061353448000][127.0.0.1] ***********
+[201707061353448000][127.0.0.1] about to findPhoneCols
+[201707061353448000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061338653000][127.0.0.1] in /process
+[201707061338653000][127.0.0.1] file selected
+[201707061338655000][127.0.0.1] about to save file
+[201707061338659000][127.0.0.1] ***********
+[201707061338659000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061338659000][127.0.0.1] 201707061338655000
+[201707061338659000][127.0.0.1] 38655000luke_pa_leads_fake_phones.csv
+[201707061338659000][127.0.0.1] ***********
+[201707061338659000][127.0.0.1] about to findPhoneCols
+[201707061338660000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_not', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061304456000][127.0.0.1] in /process
+[201707061304456000][127.0.0.1] file selected
+[201707061304458000][127.0.0.1] about to save file
+[201707061304461000][127.0.0.1] ***********
+[201707061304461000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061304462000][127.0.0.1] 201707061304457000
+[201707061304462000][127.0.0.1] 04457000luke_pa_leads_fake_phones.csv
+[201707061304462000][127.0.0.1] ***********
+[201707061304462000][127.0.0.1] about to findPhoneCols
+[201707061304463000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_not', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061304463000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_not', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061304466000][127.0.0.1] Failing data is 1577871240
+[201707061304477000][127.0.0.1] The POTENTIAL phone column list is {15: 164}
+[201707061304478000][127.0.0.1] The 10 Int NON-PHONE column list is {15: 10}
+[201707061304478000][127.0.0.1] Col 15 10 / 164 = 0.060976. Is that less than .101? True
+[201707061304478000][127.0.0.1] The FINAL phone column list is [15]
+[201707061304479000][127.0.0.1] Records in file are 176
+[201707061304486000][127.0.0.1] ['Column <strong>Phone Number_not</strong> has value 1577871240', 'Column <strong>Phone Number_not</strong> has value 7943850207', 'Column <strong>Phone Number_not</strong> has value 7222666441', 'Column <strong>Phone Number_not</strong> has value 3714292400', 'Column <strong>Phone Number_not</strong> has value 3748436901', 'Column <strong>Phone Number_not</strong> has value 9613876787', 'Column <strong>Phone Number_not</strong> has value 1922210166', 'Column <strong>Phone Number_not</strong> has value 9942757016', 'Column <strong>Phone Number_not</strong> has value 1127670542', 'Column <strong>Phone Number_not</strong> has value 2884611259']
+[201707061305293000][127.0.0.1] File uploaded successfully with 176 records
+[201707061305294000][127.0.0.1] self.phoneColDict is {15: 164}
+[201707061305294000][127.0.0.1] key is 15 and list of keys is [15]
+[201707061305294000][127.0.0.1] Cleanup query is:
+[201707061305295000][127.0.0.1] delete from dnc.`201707061304457000` where  `Phone Number_not` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number_not`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707061305824000][127.0.0.1] there are 134 records left in the table. 42 were removed
+[201707061306138000][127.0.0.1] About to export clean file to files out
+[201707061306442000][127.0.0.1] Data received. About to open static/files_out/1/201707061304457000luke_pa_leads_fake_phones.csv
+[201707061306536000][127.0.0.1] able to create this file
+[201707061306537000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_not', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061306537000][127.0.0.1] headers are in
+[201707061306539000][127.0.0.1] rows are in
+[201707061306540000][127.0.0.1] Successfully exported file!
+[201707061306540000][127.0.0.1] about to delete
+[201707061306831000][127.0.0.1] delete function complete
+[201707061325768000][127.0.0.1] in /process
+[201707061325768000][127.0.0.1] file selected
+[201707061325770000][127.0.0.1] about to save file
+[201707061325771000][127.0.0.1] ***********
+[201707061325771000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061325771000][127.0.0.1] 201707061325769000
+[201707061325772000][127.0.0.1] 25769000luke_pa_leads2.csv
+[201707061325772000][127.0.0.1] ***********
+[201707061325772000][127.0.0.1] about to findPhoneCols
+[201707061325774000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061325774000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061325776000][127.0.0.1] Failing data is 1127670542
+[201707061325788000][127.0.0.1] The POTENTIAL phone column list is {15: 164}
+[201707061325789000][127.0.0.1] The 10 Int NON-PHONE column list is {15: 10}
+[201707061325789000][127.0.0.1] Col 15 10 / 164 = 0.060976. Is that less than .101? True
+[201707061325789000][127.0.0.1] The FINAL phone column list is [15]
+[201707061325789000][127.0.0.1] Records in file are 176
+[201707061325796000][127.0.0.1] ['Column <strong>Phone Number_some</strong> has value 1127670542', 'Column <strong>Phone Number_some</strong> has value 2884611259', 'Column <strong>Phone Number_some</strong> has value 1577871240', 'Column <strong>Phone Number_some</strong> has value 7943850207', 'Column <strong>Phone Number_some</strong> has value 7222666441', 'Column <strong>Phone Number_some</strong> has value 3714292400', 'Column <strong>Phone Number_some</strong> has value 3748436901', 'Column <strong>Phone Number_some</strong> has value 9613876787', 'Column <strong>Phone Number_some</strong> has value 1922210166', 'Column <strong>Phone Number_some</strong> has value 9942757016']
+[201707061326527000][127.0.0.1] File uploaded successfully with 176 records
+[201707061326528000][127.0.0.1] self.phoneColDict is {15: 164}
+[201707061326528000][127.0.0.1] key is 15 and list of keys is [15]
+[201707061326528000][127.0.0.1] Cleanup query is:
+[201707061326529000][127.0.0.1] delete from dnc.`201707061325769000` where  `Phone Number_some` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number_some`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707061327033000][127.0.0.1] there are 134 records left in the table. 42 were removed
+[201707061327320000][127.0.0.1] About to export clean file to files out
+[201707061327624000][127.0.0.1] Data received. About to open static/files_out/1/201707061325769000luke_pa_leads2.csv
+[201707061327625000][127.0.0.1] able to create this file
+[201707061327625000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707061327625000][127.0.0.1] headers are in
+[201707061327627000][127.0.0.1] rows are in
+[201707061327627000][127.0.0.1] Successfully exported file!
+[201707061327627000][127.0.0.1] about to delete
+[201707061327915000][127.0.0.1] delete function complete
+[201707061335368000][127.0.0.1] in /process
+[201707061335368000][127.0.0.1] file selected
+[201707061335370000][127.0.0.1] about to save file
+[201707061335371000][127.0.0.1] ***********
+[201707061335371000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061335372000][127.0.0.1] 201707061335370000
+[201707061335372000][127.0.0.1] 35370000dnc_nexxa20170616_064339373.txt
+[201707061335372000][127.0.0.1] ***********
+[201707061335372000][127.0.0.1] about to findPhoneCols
+[201707061335373000][127.0.0.1] ['4194768613 ']
+[201707061319235000][127.0.0.1] in /process
+[201707061319235000][127.0.0.1] file selected
+[201707061319237000][127.0.0.1] about to save file
+[201707061319238000][127.0.0.1] ***********
+[201707061319238000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061319238000][127.0.0.1] 201707061319237000
+[201707061319238000][127.0.0.1] 19237000dnc_nexxa20170616_064339373.txt
+[201707061319239000][127.0.0.1] ***********
+[201707061319239000][127.0.0.1] about to findPhoneCols
+[201707061319243000][127.0.0.1] ['Phone ']
+[201707061319243000][127.0.0.1] ['Phone ']
+[201707061319247000][127.0.0.1] Failing data is 3009617591 
+[201707061319249000][127.0.0.1] The POTENTIAL phone column list is {0: 331}
+[201707061319249000][127.0.0.1] The 10 Int NON-PHONE column list is {0: 1}
+[201707061319250000][127.0.0.1] Col 0 1 / 331 = 0.003021. Is that less than .101? True
+[201707061319250000][127.0.0.1] The FINAL phone column list is [0]
+[201707061319250000][127.0.0.1] Records in file are 345
+[201707061319254000][127.0.0.1] ['Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 3009617591 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ']
+[201707061314452000][127.0.0.1] in /process
+[201707061314452000][127.0.0.1] file selected
+[201707061314456000][127.0.0.1] about to save file
+[201707061314476000][127.0.0.1] ***********
+[201707061314477000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061314477000][127.0.0.1] 201707061314456000
+[201707061314477000][127.0.0.1] 14456000dnc_nexxa20170616_064339373.txt
+[201707061314477000][127.0.0.1] ***********
+[201707061314477000][127.0.0.1] about to findPhoneCols
+[201707061314478000][127.0.0.1] ['Phone ']
+[201707061314478000][127.0.0.1] ['Phone ']
+[201707061314482000][127.0.0.1] Failing data is 3009617591 
+[201707061314487000][127.0.0.1] The POTENTIAL phone column list is {0: 331}
+[201707061314487000][127.0.0.1] The 10 Int NON-PHONE column list is {0: 1}
+[201707061314487000][127.0.0.1] Col 0 1 / 331 = 0.003021. Is that less than .101? True
+[201707061314487000][127.0.0.1] The FINAL phone column list is [0]
+[201707061314488000][127.0.0.1] Records in file are 345
+[201707061314492000][127.0.0.1] ['Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 3009617591 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ']
+[201707061315322000][127.0.0.1] File uploaded successfully with 345 records
+[201707061315322000][127.0.0.1] self.phoneColDict is {0: 331}
+[201707061315322000][127.0.0.1] key is 0 and list of keys is [0]
+[201707061315323000][127.0.0.1] Cleanup query is:
+[201707061315323000][127.0.0.1] delete from dnc.`201707061314456000` where  `Phone ` in (select PhoneNumber from dnc.`master`) or MID(`Phone `,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707061327193000][127.0.0.1] in /process
+[201707061327193000][127.0.0.1] file selected
+[201707061327195000][127.0.0.1] about to save file
+[201707061327200000][127.0.0.1] ***********
+[201707061327201000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707061327201000][127.0.0.1] 201707061327195000
+[201707061327201000][127.0.0.1] 27195000dnc_nexxa20170616_064339373.txt
+[201707061327201000][127.0.0.1] ***********
+[201707061327201000][127.0.0.1] about to findPhoneCols
+[201707061327202000][127.0.0.1] ['Phone ']
+[201707061327202000][127.0.0.1] ['Phone ']
+[201707061327206000][127.0.0.1] Failing data is 3009617591 
+[201707061327208000][127.0.0.1] The POTENTIAL phone column list is {0: 331}
+[201707061327208000][127.0.0.1] The 10 Int NON-PHONE column list is {0: 1}
+[201707061327211000][127.0.0.1] Col 0 1 / 331 = 0.003021. Is that less than .101? True
+[201707061327211000][127.0.0.1] The FINAL phone column list is [0]
+[201707061327211000][127.0.0.1] Records in file are 345
+[201707061327215000][127.0.0.1] ['Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 3009617591 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ']
+[201707061327951000][127.0.0.1] File uploaded successfully with 345 records
+[201707061327951000][127.0.0.1] self.phoneColDict is {0: 331}
+[201707061327951000][127.0.0.1] key is 0 and list of keys is [0]
+[201707061327952000][127.0.0.1] Cleanup query is:
+[201707061327952000][127.0.0.1] delete from dnc.`201707061327195000` where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707061328520000][127.0.0.1] there are 273 records left in the table. 72 were removed
+[201707061328809000][127.0.0.1] About to export clean file to files out
+[201707061329033000][127.0.0.1] Data received. About to open static/files_out/1/201707061327195000dnc_nexxa20170616_064339373.txt
+[201707061329034000][127.0.0.1] able to create this file
+[201707061329034000][127.0.0.1] ['id', 'Phone ']
+[201707061329034000][127.0.0.1] headers are in
+[201707061329035000][127.0.0.1] rows are in
+[201707061329035000][127.0.0.1] Successfully exported file!
+[201707061329035000][127.0.0.1] about to delete
+[201707061329333000][127.0.0.1] delete function complete
+[201707061459046000][127.0.0.1] Do we get into the new_user function?
+[201707061459047000][127.0.0.1] <SecureCookieSession {}>
+[201707061457556000][127.0.0.1] Do we get into the new_user function?
+[201707061457557000][127.0.0.1] <SecureCookieSession {}>
+[201707061405624000][127.0.0.1] Do we get into the new_user function?
+[201707061405624000][127.0.0.1] <SecureCookieSession {}>
+[201707061908113000][127.0.0.1] Do we get into the new_user function?
+[201707061908113000][127.0.0.1] <SecureCookieSession {}>
+[201707061952336000][127.0.0.1] Do we get into the new_user function?
+[201707061952336000][127.0.0.1] <SecureCookieSession {}>
+[201707061949183000][127.0.0.1] Do we get into the new_user function?
+[201707061949183000][127.0.0.1] <SecureCookieSession {}>
+[201707061903603000][127.0.0.1] This is an admin
+[201707061903603000][127.0.0.1] session.get(admin) is True
+[201707061903704000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707061931840000][127.0.0.1] Do we get into the new_user function?
+[201707061931840000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707061931841000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707061931841000][127.0.0.1] sending to registration page
+[201707071408955000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071415856000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071435737000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071411187000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071541335000][127.0.0.1] Do we get into the new_user function?
+[201707071541336000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071541336000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071541336000][127.0.0.1] sending to registration page
+[201707071546554000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071513682000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071522865000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071535007000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071548271000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071514476000][127.0.0.1] Do we get into the new_user function?
+[201707071514477000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071514478000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071514478000][127.0.0.1] sending to registration page
+[201707071517580000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071502746000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071556251000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071559005000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071500816000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071555143000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071532743000][127.0.0.1] Do we get into the new_user function?
+[201707071532743000][127.0.0.1] <SecureCookieSession {}>
+[201707071513423000][127.0.0.1] Do we get into the new_user function?
+[201707071513423000][127.0.0.1] <SecureCookieSession {}>
+[201707071600652000][127.0.0.1] Do we get into the new_user function?
+[201707071600653000][127.0.0.1] <SecureCookieSession {}>
+[201707071625843000][127.0.0.1] Do we get into the new_user function?
+[201707071625843000][127.0.0.1] <SecureCookieSession {}>
+[201707071649713000][127.0.0.1] Do we get into the new_user function?
+[201707071649714000][127.0.0.1] <SecureCookieSession {}>
+[201707071614845000][127.0.0.1] This is an admin
+[201707071614846000][127.0.0.1] session.get(admin) is True
+[201707071614942000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071621818000][127.0.0.1] Do we get into the new_user function?
+[201707071621818000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071621819000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071621819000][127.0.0.1] sending to registration page
+[201707071624586000][127.0.0.1] Do we get into the new_user function?
+[201707071624587000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071624587000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071624587000][127.0.0.1] sending to registration page
+[201707071645374000][127.0.0.1] Do we get into the new_user function?
+[201707071645374000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071645375000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071645375000][127.0.0.1] sending to registration page
+[201707071650450000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071620780000][127.0.0.1] Do we get into the new_user function?
+[201707071620780000][127.0.0.1] <SecureCookieSession {}>
+[201707071608460000][127.0.0.1] Do we get into the new_user function?
+[201707071608460000][127.0.0.1] <SecureCookieSession {}>
+[201707071617746000][127.0.0.1] This is an admin
+[201707071617746000][127.0.0.1] session.get(admin) is True
+[201707071617852000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071639298000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071642191000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071717492000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071710234000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071737496000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071728992000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071820072000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071827039000][127.0.0.1] Do we get into the new_user function?
+[201707071827040000][127.0.0.1] <SecureCookieSession {}>
+[201707071849967000][127.0.0.1] This is an admin
+[201707071849967000][127.0.0.1] session.get(admin) is True
+[201707071850066000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071837129000][127.0.0.1] Do we get into the new_user function?
+[201707071837129000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071837129000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071837130000][127.0.0.1] sending to registration page
+[201707071842392000][127.0.0.1] Do we get into the new_user function?
+[201707071842392000][127.0.0.1] <SecureCookieSession {}>
+[201707071850359000][127.0.0.1] This is an admin
+[201707071850359000][127.0.0.1] session.get(admin) is True
+[201707071850460000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071848037000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071859571000][127.0.0.1] Do we get into the new_user function?
+[201707071859571000][127.0.0.1] <SecureCookieSession {}>
+[201707071808657000][127.0.0.1] This is an admin
+[201707071808657000][127.0.0.1] session.get(admin) is True
+[201707071808751000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071804260000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071809713000][127.0.0.1] Do we get into the new_user function?
+[201707071809713000][127.0.0.1] <SecureCookieSession {}>
+[201707071826452000][127.0.0.1] This is an admin
+[201707071826453000][127.0.0.1] session.get(admin) is True
+[201707071826557000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071803935000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071809106000][127.0.0.1] Do we get into the new_user function?
+[201707071809106000][127.0.0.1] <SecureCookieSession {}>
+[201707071817472000][127.0.0.1] This is an admin
+[201707071817472000][127.0.0.1] session.get(admin) is True
+[201707071817566000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071814990000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071823099000][127.0.0.1] Do we get into the new_user function?
+[201707071823099000][127.0.0.1] <SecureCookieSession {}>
+[201707071837040000][127.0.0.1] This is an admin
+[201707071837040000][127.0.0.1] session.get(admin) is True
+[201707071837136000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071805720000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071849177000][127.0.0.1] Do we get into the new_user function?
+[201707071849178000][127.0.0.1] <SecureCookieSession {}>
+[201707071857461000][127.0.0.1] This is an admin
+[201707071857462000][127.0.0.1] session.get(admin) is True
+[201707071857555000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071845958000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071854185000][127.0.0.1] Do we get into the new_user function?
+[201707071854185000][127.0.0.1] <SecureCookieSession {}>
+[201707071801282000][127.0.0.1] This is an admin
+[201707071801283000][127.0.0.1] session.get(admin) is True
+[201707071801381000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071843429000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071852599000][127.0.0.1] Do we get into the new_user function?
+[201707071852599000][127.0.0.1] <SecureCookieSession {}>
+[201707071859422000][127.0.0.1] This is an admin
+[201707071859423000][127.0.0.1] session.get(admin) is True
+[201707071859527000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071845262000][127.0.0.1] Do we get into the new_user function?
+[201707071845262000][127.0.0.1] <SecureCookieSession {}>
+[201707071851741000][127.0.0.1] This is an admin
+[201707071851742000][127.0.0.1] session.get(admin) is True
+[201707071851834000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071833636000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071824359000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071844807000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071857615000][127.0.0.1] Do we get into the new_user function?
+[201707071857615000][127.0.0.1] <SecureCookieSession {}>
+[201707071806891000][127.0.0.1] This is an admin
+[201707071806892000][127.0.0.1] session.get(admin) is True
+[201707071806987000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071822305000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071827521000][127.0.0.1] Do we get into the new_user function?
+[201707071827522000][127.0.0.1] <SecureCookieSession {}>
+[201707071835406000][127.0.0.1] This is an admin
+[201707071835407000][127.0.0.1] session.get(admin) is True
+[201707071835516000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Registration is private at this time. Please contact an admin to assist')]}>
+[201707071837978000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071841716000][127.0.0.1] Do we get into the new_user function?
+[201707071841716000][127.0.0.1] <SecureCookieSession {}>
+[201707071806461000][127.0.0.1] Do we get into the new_user function?
+[201707071806461000][127.0.0.1] <SecureCookieSession {}>
+[201707071812889000][127.0.0.1] Do we get into the new_user function?
+[201707071812889000][127.0.0.1] <SecureCookieSession {}>
+[201707071813486000][127.0.0.1] Do we get into the new_user function?
+[201707071813487000][127.0.0.1] <SecureCookieSession {}>
+[201707071830941000][127.0.0.1] This is an admin
+[201707071830941000][127.0.0.1] session.get(admin) is True
+[201707071831037000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071838241000][127.0.0.1] in /process
+[201707071838242000][127.0.0.1] file selected
+[201707071838244000][127.0.0.1] about to save file
+[201707071838262000][127.0.0.1] ***********
+[201707071838263000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707071838263000][127.0.0.1] 201707071838244000
+[201707071838263000][127.0.0.1] 38244000dnc_nexxa20170616_064339373.txt
+[201707071838263000][127.0.0.1] ***********
+[201707071838263000][127.0.0.1] about to findPhoneCols
+[201707071838264000][127.0.0.1] ['Phone ']
+[201707071838265000][127.0.0.1] ['Phone ']
+[201707071838268000][127.0.0.1] Failing data is 3009617591 
+[201707071838271000][127.0.0.1] The POTENTIAL phone column list is {0: 331}
+[201707071838272000][127.0.0.1] The 10 Int NON-PHONE column list is {0: 1}
+[201707071838272000][127.0.0.1] Col 0 1 / 331 = 0.003021. Is that less than .101? True
+[201707071838272000][127.0.0.1] The FINAL phone column list is [0]
+[201707071838272000][127.0.0.1] Records in file are 345
+[201707071838276000][127.0.0.1] ['Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 3009617591 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ']
+[201707071839087000][127.0.0.1] File uploaded successfully with 345 records
+[201707071839087000][127.0.0.1] self.phoneColDict is {0: 331}
+[201707071839087000][127.0.0.1] key is 0 and list of keys is [0]
+[201707071839088000][127.0.0.1] Cleanup query is:
+[201707071839088000][127.0.0.1] delete from dnc.`201707071838244000` where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707071839652000][127.0.0.1] there are 273 records left in the table. 72 were removed
+[201707071839972000][127.0.0.1] About to export clean file to files out
+[201707071840218000][127.0.0.1] Data received. About to open static/files_out/1/201707071838244000dnc_nexxa20170616_064339373.txt
+[201707071840221000][127.0.0.1] able to create this file
+[201707071840221000][127.0.0.1] ['id', 'Phone ']
+[201707071840221000][127.0.0.1] headers are in
+[201707071840222000][127.0.0.1] rows are in
+[201707071840222000][127.0.0.1] Successfully exported file!
+[201707071840222000][127.0.0.1] about to delete
+[201707071840548000][127.0.0.1] delete function complete
+[201707071840561000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707071838244000', u'admin': True, u'userid': 1, u'success_message': 'File uploaded successfully with 345 original records<br />\n                We scrubbed 72 out and 273 remain<br />Your data was 20% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '38244000dnc_nexxa20170616_064339373.txt'}>
+[201707071808250000][127.0.0.1] in /process
+[201707071808250000][127.0.0.1] file selected
+[201707071808252000][127.0.0.1] about to save file
+[201707071808253000][127.0.0.1] ***********
+[201707071808253000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707071808254000][127.0.0.1] 201707071808252000
+[201707071808254000][127.0.0.1] 08252000dnc_nexxa20170616_064339373.txt
+[201707071808254000][127.0.0.1] ***********
+[201707071808254000][127.0.0.1] about to findPhoneCols
+[201707071808256000][127.0.0.1] ['Phone ']
+[201707071808256000][127.0.0.1] ['Phone ']
+[201707071808260000][127.0.0.1] Failing data is 3009617591 
+[201707071808263000][127.0.0.1] The POTENTIAL phone column list is {0: 331}
+[201707071808263000][127.0.0.1] The 10 Int NON-PHONE column list is {0: 1}
+[201707071808263000][127.0.0.1] Col 0 1 / 331 = 0.003021. Is that less than .101? True
+[201707071808264000][127.0.0.1] The FINAL phone column list is [0]
+[201707071808264000][127.0.0.1] Records in file are 345
+[201707071808269000][127.0.0.1] ['Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 3009617591 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ', 'Column <strong>Phone </strong> has value 266696687 ']
+[201707071809078000][127.0.0.1] File uploaded successfully with 345 records
+[201707071809079000][127.0.0.1] self.phoneColDict is {0: 331}
+[201707071809079000][127.0.0.1] key is 0 and list of keys is [0]
+[201707071809079000][127.0.0.1] Cleanup query is:
+[201707071809081000][127.0.0.1] delete from dnc.`201707071808252000` where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707071809645000][127.0.0.1] there are 273 records left in the table. 72 were removed
+[201707071809971000][127.0.0.1] About to export clean file to files out
+[201707071810219000][127.0.0.1] Data received. About to open static/files_out/1/201707071808252000dnc_nexxa20170616_064339373.txt
+[201707071810219000][127.0.0.1] able to create this file
+[201707071810221000][127.0.0.1] ['id', 'Phone ']
+[201707071810221000][127.0.0.1] headers are in
+[201707071810222000][127.0.0.1] rows are in
+[201707071810222000][127.0.0.1] Successfully exported file!
+[201707071810223000][127.0.0.1] about to delete
+[201707071810545000][127.0.0.1] delete function complete
+[201707071810554000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707071808252000', u'admin': True, u'userid': 1, u'success_message': 'File uploaded successfully with 345 original records<br />\n                We scrubbed 72 out and 273 remain<br />Your data was 20% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '08252000dnc_nexxa20170616_064339373.txt'}>
+[201707071956692000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707071808252000', u'admin': True, u'userid': 1, u'success_message': 'File uploaded successfully with 345 original records<br />\n                We scrubbed 72 out and 273 remain<br />Your data was 20% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '08252000dnc_nexxa20170616_064339373.txt'}>
+[201707071914192000][127.0.0.1] Do we get into the new_user function?
+[201707071914193000][127.0.0.1] <SecureCookieSession {}>
+[201707071945641000][127.0.0.1] Do we get into the new_user function?
+[201707071945642000][127.0.0.1] <SecureCookieSession {}>
+[201707071914958000][127.0.0.1] Do we get into the new_user function?
+[201707071914959000][127.0.0.1] <SecureCookieSession {}>
+[201707071902781000][127.0.0.1] This is an admin
+[201707071902782000][127.0.0.1] session.get(admin) is True
+[201707071902878000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071942049000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071949643000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071955982000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071936189000][127.0.0.1] Do we get into the new_user function?
+[201707071936189000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071936189000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707071936189000][127.0.0.1] sending to registration page
+[201707071942336000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071905242000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071900805000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071906823000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071922607000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071928314000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071957651000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071900197000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071910501000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071929993000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071938768000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071927603000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707071917087000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707072038419000][127.0.0.1] This is an admin
+[201707072038419000][127.0.0.1] session.get(admin) is True
+[201707072038546000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707072052291000][127.0.0.1] Do we get into the new_user function?
+[201707072052291000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707072052292000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707072052292000][127.0.0.1] sending to registration page
+[201707072057754000][127.0.0.1] Do we get into the new_user function?
+[201707072057755000][127.0.0.1] <SecureCookieSession {}>
+[201707072014697000][127.0.0.1] Do we get into the new_user function?
+[201707072014698000][127.0.0.1] <SecureCookieSession {}>
+[201707072009018000][127.0.0.1] Do we get into the new_user function?
+[201707072009018000][127.0.0.1] <SecureCookieSession {}>
+[201707072037355000][127.0.0.1] Do we get into the new_user function?
+[201707072037356000][127.0.0.1] <SecureCookieSession {}>
+[201707072039511000][127.0.0.1] Do we get into the new_user function?
+[201707072039512000][127.0.0.1] <SecureCookieSession {}>
+[201707072045427000][127.0.0.1] Do we get into the new_user function?
+[201707072045427000][127.0.0.1] <SecureCookieSession {}>
+[201707072132346000][127.0.0.1] Do we get into the new_user function?
+[201707072132347000][127.0.0.1] <SecureCookieSession {}>
+[201707101357614000][127.0.0.1] Do we get into the new_user function?
+[201707101357615000][127.0.0.1] <SecureCookieSession {}>
+[201707101430272000][127.0.0.1] Do we get into the new_user function?
+[201707101430273000][127.0.0.1] <SecureCookieSession {}>
+[201707101405939000][127.0.0.1] Do we get into the new_user function?
+[201707101405939000][127.0.0.1] <SecureCookieSession {}>
+[201707101435262000][127.0.0.1] Do we get into the new_user function?
+[201707101435262000][127.0.0.1] <SecureCookieSession {}>
+[201707101456577000][127.0.0.1] Do we get into the new_user function?
+[201707101456577000][127.0.0.1] <SecureCookieSession {}>
+[201707101407614000][127.0.0.1] Do we get into the new_user function?
+[201707101407614000][127.0.0.1] <SecureCookieSession {}>
+[201707101416186000][127.0.0.1] Do we get into the new_user function?
+[201707101416186000][127.0.0.1] <SecureCookieSession {}>
+[201707101423358000][127.0.0.1] Do we get into the new_user function?
+[201707101423358000][127.0.0.1] <SecureCookieSession {}>
+[201707101823300000][127.0.0.1] Do we get into the new_user function?
+[201707101823300000][127.0.0.1] <SecureCookieSession {}>
+[201707101832383000][127.0.0.1] This is an admin
+[201707101832383000][127.0.0.1] session.get(admin) is True
+[201707101832477000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707101809353000][127.0.0.1] Do we get into the new_user function?
+[201707101809353000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707101809353000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707101809354000][127.0.0.1] sending to registration page
+[201707101834853000][127.0.0.1] Do we get into the new_user function?
+[201707101834853000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'_flashes': [('message', 'Sorry your passwords did not match, please try again!')]}>
+[201707101834854000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707101834854000][127.0.0.1] sending to registration page
+[201707101809812000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707101926423000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707101952165000][127.0.0.1] Do we get into the new_user function?
+[201707101952165000][127.0.0.1] <SecureCookieSession {}>
+[201707101907509000][127.0.0.1] Do we get into the new_user function?
+[201707101907510000][127.0.0.1] <SecureCookieSession {}>
+[201707101950134000][127.0.0.1] Do we get into the new_user function?
+[201707101950135000][127.0.0.1] <SecureCookieSession {}>
+[201707102003292000][127.0.0.1] Do we get into the new_user function?
+[201707102003292000][127.0.0.1] <SecureCookieSession {}>
+[201707102015287000][127.0.0.1] This is an admin
+[201707102015287000][127.0.0.1] session.get(admin) is True
+[201707102015381000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102056651000][127.0.0.1] Do we get into the new_user function?
+[201707102056651000][127.0.0.1] <SecureCookieSession {}>
+[201707102059016000][127.0.0.1] Do we get into the new_user function?
+[201707102059016000][127.0.0.1] <SecureCookieSession {}>
+[201707102107119000][127.0.0.1] Do we get into the new_user function?
+[201707102107119000][127.0.0.1] <SecureCookieSession {}>
+[201707102134951000][127.0.0.1] This is an admin
+[201707102134952000][127.0.0.1] session.get(admin) is True
+[201707102135049000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102238444000][127.0.0.1] Do we get into the new_user function?
+[201707102238444000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102238444000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707102238444000][127.0.0.1] sending to registration page
+[201707102218612000][127.0.0.1] Do we get into the new_user function?
+[201707102218612000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102218613000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707102218613000][127.0.0.1] sending to registration page
+[201707102233606000][127.0.0.1] Do we get into the new_user function?
+[201707102233606000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102233606000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707102233607000][127.0.0.1] sending to registration page
+[201707102237777000][127.0.0.1] Do we get into the new_user function?
+[201707102237777000][127.0.0.1] <SecureCookieSession {}>
+[201707102211428000][127.0.0.1] This is an admin
+[201707102211428000][127.0.0.1] session.get(admin) is True
+[201707102211526000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707102220898000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707131551777000][127.0.0.1] This is an admin
+[201707131551778000][127.0.0.1] session.get(admin) is True
+[201707131517184000][127.0.0.1] This is an admin
+[201707131517184000][127.0.0.1] session.get(admin) is True
+[201707131538936000][127.0.0.1] This is an admin
+[201707131538937000][127.0.0.1] session.get(admin) is True
+[201707131532796000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707131543465000][127.0.0.1] This is an admin
+[201707131543465000][127.0.0.1] session.get(admin) is True
+[201707131543562000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1}>
+[201707131515184000][127.0.0.1] <SecureCookieSession {}>
+[201707131523523000][127.0.0.1] This is an admin
+[201707131523524000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'akcnowledged': False}>
+[201707131523617000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'akcnowledged': False}>
+[201707131535800000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'akcnowledged': False}>
+[201707131548001000][127.0.0.1] This is an admin
+[201707131548001000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131548097000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131548356000][127.0.0.1] This is an admin
+[201707131548356000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131548450000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131540088000][127.0.0.1] This is an admin
+[201707131540089000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131540198000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131526916000][127.0.0.1] This is an admin
+[201707131526916000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131527019000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131517559000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131559341000][127.0.0.1] This is an admin
+[201707131559342000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131559439000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131550408000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131502951000][127.0.0.1] This is an admin
+[201707131502951000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131503057000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131559060000][127.0.0.1] update dnc.users set date_acknowledged = '2017-07-13 10:51:59.060000', name_as_typed = 'Karissa Martin', company_as_typed = 'Vista Energy Marketing'
+                where id = 1
+[201707131559399000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': False}>
+[201707131533566000][127.0.0.1] This is an admin
+[201707131533566000][127.0.0.1] 2017-07-13 10:51:59
+[201707131533567000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707131533663000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131538587000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131525552000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131545027000][127.0.0.1] This is an admin
+[201707131545027000][127.0.0.1] 2017-07-13 10:51:59
+[201707131545029000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707131545125000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131558491000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131534919000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131542913000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131513113000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131532608000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131532608000][127.0.0.1] There is a session variable called admin and the value is: True
+[201707131532609000][127.0.0.1] sending to registration page
+[201707131538859000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131612701000][127.0.0.1] This is an admin
+[201707131612704000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': False}>
+[201707131642570000][127.0.0.1] This is not an admin user
+[201707131642571000][127.0.0.1] session is <SecureCookieSession {u'admin': False, u'acknowledged': False}>
+[201707131659397000][127.0.0.1] This is not an admin user
+[201707131659398000][127.0.0.1] session is <SecureCookieSession {u'admin': False, u'acknowledged': False}>
+[201707131659493000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131603874000][127.0.0.1] This is not an admin user
+[201707131603874000][127.0.0.1] session is <SecureCookieSession {'admin': False, 'acknowledged': False}>
+[201707131603975000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131636353000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131659328000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131630069000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131650297000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131654214000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131622812000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131658803000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131654361000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': False}>
+[201707131625668000][127.0.0.1] update dnc.users set date_acknowledged = '2017-07-13 11:57:25.668000', name_as_typed = 'Standard User', company_as_typed = 'Anyone'
+                where id = 10
+[201707131626004000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': True}>
+[201707131600101000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': True}>
+[201707131745819000][127.0.0.1] <SecureCookieSession {u'admin': False, u'username': u'standard', u'userid': 10, u'acknowledged': True}>
+[201707131728215000][127.0.0.1] This is an admin
+[201707131728216000][127.0.0.1] 2017-07-13 10:51:59
+[201707131728216000][127.0.0.1] 0
+[201707131728216000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707131728321000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131806119000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131841611000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131818065000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131821568000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131806707000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131810085000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707131832343000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707141822336000][127.0.0.1] This is an admin
+[201707141822337000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707141822507000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707141840535000][127.0.0.1] <SecureCookieSession {}>
+[201707171537792000][127.0.0.1] This is an admin
+[201707171537816000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707171537971000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171608581000][127.0.0.1] in /process
+[201707171608581000][127.0.0.1] file selected
+[201707171608593000][127.0.0.1] about to save file
+[201707171608612000][127.0.0.1] ***********
+[201707171608612000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707171608612000][127.0.0.1] 201707171608593000
+[201707171608613000][127.0.0.1] 08593000201706152026887830luke_pa_leads2.csv
+[201707171608613000][127.0.0.1] ***********
+[201707171608613000][127.0.0.1] about to findPhoneCols
+[201707171608614000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171608615000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171608618000][127.0.0.1] Failing data is 1127670542
+[201707171608630000][127.0.0.1] The POTENTIAL phone column list is {16: 164}
+[201707171608630000][127.0.0.1] The 10 Int NON-PHONE column list is {16: 10}
+[201707171608631000][127.0.0.1] Col 16 10 / 164 = 0.060976. Is that less than .101? True
+[201707171608631000][127.0.0.1] The FINAL phone column list is [16]
+[201707171608631000][127.0.0.1] Records in file are 176
+[201707171608638000][127.0.0.1] ['Column <strong>Phone Number_some</strong> has value 1127670542', 'Column <strong>Phone Number_some</strong> has value 2884611259', 'Column <strong>Phone Number_some</strong> has value 1577871240', 'Column <strong>Phone Number_some</strong> has value 7943850207', 'Column <strong>Phone Number_some</strong> has value 7222666441', 'Column <strong>Phone Number_some</strong> has value 3714292400', 'Column <strong>Phone Number_some</strong> has value 3748436901', 'Column <strong>Phone Number_some</strong> has value 9613876787', 'Column <strong>Phone Number_some</strong> has value 1922210166', 'Column <strong>Phone Number_some</strong> has value 9942757016']
+[201707171609603000][127.0.0.1] File uploaded successfully with 176 records
+[201707171609603000][127.0.0.1] self.phoneColDict is {16: 164}
+[201707171609604000][127.0.0.1] key is 16 and list of keys is [16]
+[201707171609604000][127.0.0.1] Cleanup query is:
+[201707171609604000][127.0.0.1] update dnc.`201707171608593000` set deleteFlag = 1 where  `Phone Number_some` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number_some`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707171610182000][127.0.0.1] there are 134 records left in the table. 42 were removed
+[201707171610183000][127.0.0.1] About to export clean file to files out
+[201707171610524000][127.0.0.1] Data received. About to open static/files_out/1/201707171608593000201706152026887830luke_pa_leads2.csv
+[201707171610542000][127.0.0.1] able to create this file
+[201707171610542000][127.0.0.1] ['id', 'id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171610542000][127.0.0.1] headers are in
+[201707171610543000][127.0.0.1] rows are in
+[201707171610544000][127.0.0.1] Successfully exported file!
+[201707171610544000][127.0.0.1] about to delete
+[201707171610880000][127.0.0.1] delete function complete
+[201707171610887000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707171608593000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 176 original records<br />\n                We scrubbed 42 out and 134 remain<br />Your data was 23% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '08593000201706152026887830luke_pa_leads2.csv'}>
+[201707171808766000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171834385000][127.0.0.1] in /process
+[201707171834386000][127.0.0.1] file selected
+[201707171834388000][127.0.0.1] about to save file
+[201707171834391000][127.0.0.1] ***********
+[201707171834391000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707171834391000][127.0.0.1] 201707171834387000
+[201707171834391000][127.0.0.1] 34387000201706152026887830luke_pa_leads2.csv
+[201707171834392000][127.0.0.1] ***********
+[201707171834392000][127.0.0.1] about to findPhoneCols
+[201707171834392000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171834393000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171834395000][127.0.0.1] Failing data is 1127670542
+[201707171834406000][127.0.0.1] The POTENTIAL phone column list is {16: 164}
+[201707171834407000][127.0.0.1] The 10 Int NON-PHONE column list is {16: 10}
+[201707171834407000][127.0.0.1] Col 16 10 / 164 = 0.060976. Is that less than .101? True
+[201707171834407000][127.0.0.1] The FINAL phone column list is [16]
+[201707171834407000][127.0.0.1] Records in file are 176
+[201707171834414000][127.0.0.1] ['Column <strong>Phone Number_some</strong> has value 1127670542', 'Column <strong>Phone Number_some</strong> has value 2884611259', 'Column <strong>Phone Number_some</strong> has value 1577871240', 'Column <strong>Phone Number_some</strong> has value 7943850207', 'Column <strong>Phone Number_some</strong> has value 7222666441', 'Column <strong>Phone Number_some</strong> has value 3714292400', 'Column <strong>Phone Number_some</strong> has value 3748436901', 'Column <strong>Phone Number_some</strong> has value 9613876787', 'Column <strong>Phone Number_some</strong> has value 1922210166', 'Column <strong>Phone Number_some</strong> has value 9942757016']
+[201707171835314000][127.0.0.1] File uploaded successfully with 176 records
+[201707171835315000][127.0.0.1] self.phoneColDict is {16: 164}
+[201707171835315000][127.0.0.1] key is 16 and list of keys is [16]
+[201707171835315000][127.0.0.1] Cleanup query is:
+[201707171835316000][127.0.0.1] update dnc.`201707171834387000` set deleteFlag = 1 where  `Phone Number_some` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number_some`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707171835884000][127.0.0.1] there are 134 records left in the table. 42 were removed
+[201707171835885000][127.0.0.1] About to export clean file to files out
+[201707171836231000][127.0.0.1] Data received. About to open static/files_out/1/201707171834387000201706152026887830luke_pa_leads2.csv
+[201707171836231000][127.0.0.1] able to create this file
+[201707171836232000][127.0.0.1] ['id', 'id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171836232000][127.0.0.1] headers are in
+[201707171836233000][127.0.0.1] rows are in
+[201707171836234000][127.0.0.1] Successfully exported file!
+[201707171836234000][127.0.0.1] about to delete
+[201707171836482000][127.0.0.1] able to create the removed file
+[201707171836483000][127.0.0.1] removed file completed
+[201707171836809000][127.0.0.1] delete function complete
+[201707171836818000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707171834387000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 176 original records<br />\n                We scrubbed 42 out and 134 remain<br />Your data was 23% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '34387000201706152026887830luke_pa_leads2.csv'}>
+[201707171853109000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707171834387000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 176 original records<br />\n                We scrubbed 42 out and 134 remain<br />Your data was 23% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '34387000201706152026887830luke_pa_leads2.csv'}>
+[201707171821931000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171828695000][127.0.0.1] 9845
+[201707171815859000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171851889000][127.0.0.1] This is an admin
+[201707171851889000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707171851987000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171839719000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171843862000][127.0.0.1] False
+[201707171804664000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171819345000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171824755000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171828300000][127.0.0.1] skdjhg9wp845t
+[201707171838432000][127.0.0.1] <SecureCookieSession {}>
+[201707171848737000][127.0.0.1] This is an admin
+[201707171848737000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707171848841000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171804988000][127.0.0.1] in /process
+[201707171804988000][127.0.0.1] file selected
+[201707171805015000][127.0.0.1] about to save file
+[201707171805020000][127.0.0.1] ***********
+[201707171805020000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707171805020000][127.0.0.1] 201707171805014000
+[201707171805020000][127.0.0.1] 05014000luke_pa_leads2_3.csv
+[201707171805020000][127.0.0.1] ***********
+[201707171805021000][127.0.0.1] about to findPhoneCols
+[201707171805022000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171805022000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171805034000][127.0.0.1] The POTENTIAL phone column list is {16: 132}
+[201707171805034000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201707171805035000][127.0.0.1] Col 16 1 / 132 = 0.007576. Is that less than .101? True
+[201707171805035000][127.0.0.1] The FINAL phone column list is [16]
+[201707171805035000][127.0.0.1] Records in file are 134
+[201707171805933000][127.0.0.1] File uploaded successfully with 134 records
+[201707171805933000][127.0.0.1] self.phoneColDict is {16: 132}
+[201707171805933000][127.0.0.1] key is 16 and list of keys is [16]
+[201707171805934000][127.0.0.1] Cleanup query is:
+[201707171805934000][127.0.0.1] update dnc.`201707171805014000` set deleteFlag = 1 where  `Phone Number_some` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number_some`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707171806496000][127.0.0.1] there are 134 records left in the table. 0 were removed
+[201707171806496000][127.0.0.1] About to export clean file to files out
+[201707171806835000][127.0.0.1] Data received. About to open static/files_out/1/201707171805014000luke_pa_leads2_3.csv
+[201707171806835000][127.0.0.1] able to create this file
+[201707171806836000][127.0.0.1] ['id', 'id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number_some', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707171806836000][127.0.0.1] headers are in
+[201707171806837000][127.0.0.1] rows are in
+[201707171806837000][127.0.0.1] Successfully exported file!
+[201707171806838000][127.0.0.1] about to delete
+[201707171807077000][127.0.0.1] able to create the removed file
+[201707171807078000][127.0.0.1] removed file completed
+[201707171807402000][127.0.0.1] delete function complete
+[201707171807412000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707171805014000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 134 original records<br />\n                We scrubbed 0 out and 134 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '05014000luke_pa_leads2_3.csv'}>
+[201707171953051000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171936264000][127.0.0.1] False
+[201707171914820000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171918529000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171918530000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 123, This is not a valid phone number)
+[201707171907280000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171907281000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 123, 'This is not a valid phone number')
+[201707171903300000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171903300000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 123, 'This is not a valid phone number')
+[201707171931390000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171937151000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707171937152000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (999, 123, 'This is not a valid phone number')
+[201707171954709000][127.0.0.1] This is an admin
+[201707171954709000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707171954807000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707171900147000][127.0.0.1] False
+[201707171900626000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'Your Subscription does not include this area code')
+[201707241501636000][127.0.0.1] This is an admin
+[201707241501660000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707241502005000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707241508835000][127.0.0.1] False
+[201707241509321000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2812486725, 'This number is Squeaky Clean!')
+[201707311228257000][127.0.0.1] This is an admin
+[201707311228272000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201707311228456000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707311257784000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311257785000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 123, 'This is not a valid phone number')
+[201707311215035000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311230687000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311204441000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311204939000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2183456789, 'Your Subscription does not include this area code')
+[201707311215768000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311216245000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'DO NOT CALL this number')
+[201707311219346000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311352668000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311353147000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'This number is Squeaky Clean!')
+[201707311306922000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311307402000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2098328939, 'DO NOT CALL this number')
+[201707311307667000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311308150000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2098328939, 'DO NOT CALL this number')
+[201707311309740000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311310231000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2098328939, 'DO NOT CALL this number')
+[201707311320512000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311320997000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'DO NOT CALL this number')
+[201707311337793000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311303890000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311304373000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2184567890, 'Your Subscription does not include this area code')
+[201707311317052000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311317536000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'DO NOT CALL this number')
+[201707311329847000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311330332000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2095135137, 'DO NOT CALL this number')
+[201707311338784000][127.0.0.1] skdjhg9wp845tyhzdfbhg
+[201707311339267000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2098328939, 'DO NOT CALL this number')
+[201707311317130000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707311349840000][127.0.0.1] in /process
+[201707311349840000][127.0.0.1] file selected
+[201707311349855000][127.0.0.1] about to save file
+[201707311349943000][127.0.0.1] ***********
+[201707311349943000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707311349943000][127.0.0.1] 201707311349855000
+[201707311349943000][127.0.0.1] 49855000luke_pa_leads.csv
+[201707311349944000][127.0.0.1] ***********
+[201707311349944000][127.0.0.1] about to findPhoneCols
+[201707311349945000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311349946000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311349962000][127.0.0.1] The POTENTIAL phone column list is {16: 174}
+[201707311349962000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201707311349962000][127.0.0.1] Col 16 1 / 174 = 0.005747. Is that less than .101? True
+[201707311349963000][127.0.0.1] The FINAL phone column list is [16]
+[201707311349963000][127.0.0.1] Records in file are 176
+[201707311350919000][127.0.0.1] File uploaded successfully with 176 records
+[201707311350920000][127.0.0.1] self.phoneColDict is {16: 174}
+[201707311350920000][127.0.0.1] key is 16 and list of keys is [16]
+[201707311350920000][127.0.0.1] Cleanup query is:
+[201707311350920000][127.0.0.1] update dnc.`201707311349855000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707311351795000][127.0.0.1] there are 16 records left in the table. 160 were removed
+[201707311351796000][127.0.0.1] About to export clean file to files out
+[201707311352043000][127.0.0.1] Data received. About to open static/files_out/1/201707311349855000luke_pa_leads.csv
+[201707311352059000][127.0.0.1] able to create this file
+[201707311352059000][127.0.0.1] ['id', 'id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311352060000][127.0.0.1] headers are in
+[201707311352060000][127.0.0.1] rows are in
+[201707311352060000][127.0.0.1] Successfully exported file!
+[201707311352061000][127.0.0.1] about to delete
+[201707311352412000][127.0.0.1] able to create the removed file
+[201707311352413000][127.0.0.1] removed file completed
+[201707311352765000][127.0.0.1] delete function complete
+[201707311352774000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707311349855000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 176 original records<br />\n                We scrubbed 160 out and 16 remain<br />Your data was 90% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '49855000luke_pa_leads.csv'}>
+[201707311422270000][127.0.0.1] in /process
+[201707311422270000][127.0.0.1] file selected
+[201707311422849000][127.0.0.1] about to save file
+[201707311422872000][127.0.0.1] ***********
+[201707311422872000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707311422872000][127.0.0.1] 201707311422849000
+[201707311422872000][127.0.0.1] 22849000n705824.csv
+[201707311422872000][127.0.0.1] ***********
+[201707311422873000][127.0.0.1] about to findPhoneCols
+[201707311422874000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311422874000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311429481000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201707311429482000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201707311429482000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201707311429482000][127.0.0.1] The FINAL phone column list is [15]
+[201707311429483000][127.0.0.1] Records in file are 75000
+[201707311541893000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707311551991000][127.0.0.1] in /process
+[201707311551991000][127.0.0.1] file selected
+[201707311552502000][127.0.0.1] about to save file
+[201707311552560000][127.0.0.1] ***********
+[201707311552560000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201707311552560000][127.0.0.1] 201707311552501000
+[201707311552561000][127.0.0.1] 52501000n705824.csv
+[201707311552561000][127.0.0.1] ***********
+[201707311552561000][127.0.0.1] about to findPhoneCols
+[201707311552562000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311552563000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311558929000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201707311558930000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201707311558930000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201707311558930000][127.0.0.1] The FINAL phone column list is [15]
+[201707311558930000][127.0.0.1] Records in file are 75000
+[201707311506713000][127.0.0.1] File uploaded successfully with 75000 records
+[201707311506713000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201707311506714000][127.0.0.1] key is 15 and list of keys is [15]
+[201707311506714000][127.0.0.1] Cleanup query is:
+[201707311506715000][127.0.0.1] update dnc.`201707311552501000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)
+[201707311517872000][127.0.0.1] there are 63754 records left in the table. 11246 were removed
+[201707311517873000][127.0.0.1] About to export clean file to files out
+[201707311529210000][127.0.0.1] Data received. About to open static/files_out/1/201707311552501000n705824.csv
+[201707311529211000][127.0.0.1] able to create this file
+[201707311529211000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201707311529212000][127.0.0.1] headers are in
+[201707311529629000][127.0.0.1] rows are in
+[201707311529679000][127.0.0.1] Successfully exported file!
+[201707311529679000][127.0.0.1] about to delete
+[201707311532286000][127.0.0.1] able to create the removed file
+[201707311532369000][127.0.0.1] removed file completed
+[201707311532730000][127.0.0.1] delete function complete
+[201707311532743000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201707311552501000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11246 out and 63754 remain<br />Your data was 14% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '52501000n705824.csv'}>
+[201707311524389000][127.0.0.1] False
+[201707311524884000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173736061, 'DO NOT CALL this number')
+[201707311708683000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201707311715522000][127.0.0.1] []
+[201707311747019000][127.0.0.1] select 
+        str_to_date(file_in_timestamp,'%Y%m%d') as `Date`,
+        mid(file_in_name,9) as Filename,
+        file_out_record_count/file_in_record_count as CleanPercentage 
+        from dnc.logs 
+        where userid=1 and datediff(CURRENT_DATE(),file_in_timestamp) < 10
+        ORDER BY `Date`desc
+        limit 10
+[201707311747019000][127.0.0.1] []
+[201707311710821000][127.0.0.1] select 
+        str_to_date(file_in_timestamp,'%Y%m%d') as `Date`,
+        mid(file_in_name,9) as Filename,
+        file_out_record_count/file_in_record_count as CleanPercentage 
+        from dnc.logs 
+        where userid=1 and datediff(CURRENT_DATE(),str_to_date(file_in_timestamp,'%Y%m%d')) < 10
+        ORDER BY `Date`desc
+        limit 10
+[201707311710821000][127.0.0.1] [(datetime.date(2017, 7, 31), u'n705824.csv', Decimal('0.8501'))]
+[201708041926075000][127.0.0.1] This is an admin
+[201708041926106000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201708041926353000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708041928758000][127.0.0.1] This is an admin
+[201708041928759000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201708041928856000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708041955445000][127.0.0.1] in /process
+[201708041955446000][127.0.0.1] file selected
+[201708041955970000][127.0.0.1] about to save file
+[201708041955995000][127.0.0.1] ***********
+[201708041955995000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708041955995000][127.0.0.1] 201708041955969000
+[201708041955995000][127.0.0.1] 55969000n705824.csv
+[201708041955996000][127.0.0.1] ***********
+[201708041955996000][127.0.0.1] about to findPhoneCols
+[201708041955997000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041955998000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041902161000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708041902162000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708041902162000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708041902162000][127.0.0.1] The FINAL phone column list is [15]
+[201708041902162000][127.0.0.1] Records in file are 75000
+[201708041909820000][127.0.0.1] File uploaded successfully with 75000 records
+[201708041909820000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708041909820000][127.0.0.1] key is 15 and list of keys is [15]
+[201708041917890000][127.0.0.1] in /process
+[201708041917890000][127.0.0.1] file selected
+[201708041918358000][127.0.0.1] about to save file
+[201708041918385000][127.0.0.1] ***********
+[201708041918386000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708041918386000][127.0.0.1] 201708041918357000
+[201708041918386000][127.0.0.1] 18357000n705824.csv
+[201708041918386000][127.0.0.1] ***********
+[201708041918387000][127.0.0.1] about to findPhoneCols
+[201708041918387000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041918388000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041924850000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708041924850000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708041924851000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708041924851000][127.0.0.1] The FINAL phone column list is [15]
+[201708041924852000][127.0.0.1] Records in file are 75000
+[201708041931845000][127.0.0.1] File uploaded successfully with 75000 records
+[201708041931845000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708041931846000][127.0.0.1] key is 15 and list of keys is [15]
+[201708041931846000][127.0.0.1] Cleanup query is:
+[201708041931846000][127.0.0.1] update dnc.`201708041918357000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or MID(`Phone Number`,1,7) not in (select concat(AreaCode,firstFour) from dnc.carrierPrefixes where do_not_call = 1)
+[201708041934448000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708041943360000][127.0.0.1] in /process
+[201708041943360000][127.0.0.1] file selected
+[201708041943844000][127.0.0.1] about to save file
+[201708041943867000][127.0.0.1] ***********
+[201708041943867000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708041943867000][127.0.0.1] 201708041943844000
+[201708041943867000][127.0.0.1] 43844000n705824.csv
+[201708041943867000][127.0.0.1] ***********
+[201708041943868000][127.0.0.1] about to findPhoneCols
+[201708041943869000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041943870000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708041950342000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708041950342000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708041950343000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708041950343000][127.0.0.1] The FINAL phone column list is [15]
+[201708041950343000][127.0.0.1] Records in file are 75000
+[201708041916650000][127.0.0.1] File uploaded successfully with 75000 records
+[201708041916651000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708041916651000][127.0.0.1] key is 15 and list of keys is [15]
+[201708041916651000][127.0.0.1] Cleanup query is:
+[201708041916651000][127.0.0.1] update dnc.`201708041943844000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or MID(`Phone Number`,1,7) in (select concat(AreaCode,firstFour) from dnc.carrierPrefixes where do_not_call = 1)
+[201708042013985000][127.0.0.1] in /process
+[201708042013985000][127.0.0.1] file selected
+[201708042014422000][127.0.0.1] about to save file
+[201708042014444000][127.0.0.1] ***********
+[201708042014444000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708042014445000][127.0.0.1] 201708042014422000
+[201708042014445000][127.0.0.1] 14422000n705824.csv
+[201708042014445000][127.0.0.1] ***********
+[201708042014445000][127.0.0.1] about to findPhoneCols
+[201708042014446000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708042014447000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708042020389000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708042020389000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708042020390000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708042020390000][127.0.0.1] The FINAL phone column list is [15]
+[201708042020390000][127.0.0.1] Records in file are 75000
+[201708042027720000][127.0.0.1] File uploaded successfully with 75000 records
+[201708042027721000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708042027721000][127.0.0.1] key is 15 and list of keys is [15]
+[201708042027721000][127.0.0.1] Cleanup query is:
+[201708042027721000][127.0.0.1] update dnc.`201708042014422000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or MID(`Phone Number`,1,7) in (select prefix from dnc.carrierPrefixes where do_not_call = 1)
+[201708042031840000][127.0.0.1] there are 63746 records left in the table. 11254 were removed
+[201708042031840000][127.0.0.1] About to export clean file to files out
+[201708042043435000][127.0.0.1] Data received. About to open static/files_out/1/201708042014422000n705824.csv
+[201708042043436000][127.0.0.1] able to create this file
+[201708042043437000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708042043437000][127.0.0.1] headers are in
+[201708042043847000][127.0.0.1] rows are in
+[201708042044338000][127.0.0.1] Successfully exported file!
+[201708042044338000][127.0.0.1] about to delete
+[201708042046832000][127.0.0.1] able to create the removed file
+[201708042046906000][127.0.0.1] removed file completed
+[201708042047253000][127.0.0.1] delete function complete
+[201708042047269000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708042014422000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11254 out and 63746 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '14422000n705824.csv'}>
+[201708042049780000][127.0.0.1] False
+[201708042050259000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173736061, 'DO NOT CALL this number')
+[201708071250912000][127.0.0.1] This is an admin
+[201708071250912000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201708071251016000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071210529000][127.0.0.1] in /process
+[201708071210529000][127.0.0.1] file selected
+[201708071211060000][127.0.0.1] about to save file
+[201708071211082000][127.0.0.1] ***********
+[201708071211083000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071211083000][127.0.0.1] 201708071211060000
+[201708071211083000][127.0.0.1] 11060000n705824.csv
+[201708071211083000][127.0.0.1] ***********
+[201708071211084000][127.0.0.1] about to findPhoneCols
+[201708071211084000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071211085000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071217061000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708071217061000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071217061000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708071217061000][127.0.0.1] The FINAL phone column list is [15]
+[201708071217062000][127.0.0.1] Records in file are 75000
+[201708071227474000][127.0.0.1] File uploaded successfully with 75000 records
+[201708071227474000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708071227475000][127.0.0.1] key is 15 and list of keys is [15]
+[201708071227476000][127.0.0.1] Cleanup query is:
+[201708071227476000][127.0.0.1] update dnc.`201708071211060000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master_noindex`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or MID(`Phone Number`,1,7) in (select prefix from dnc.carrierPrefixes where do_not_call = 1)
+[201708071233900000][127.0.0.1] there are 63746 records left in the table. 11254 were removed
+[201708071233902000][127.0.0.1] About to export clean file to files out
+[201708071244569000][127.0.0.1] Data received. About to open static/files_out/1/201708071211060000n705824.csv
+[201708071244570000][127.0.0.1] able to create this file
+[201708071244570000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071244570000][127.0.0.1] headers are in
+[201708071244949000][127.0.0.1] rows are in
+[201708071244997000][127.0.0.1] Successfully exported file!
+[201708071244998000][127.0.0.1] about to delete
+[201708071247337000][127.0.0.1] able to create the removed file
+[201708071247407000][127.0.0.1] removed file completed
+[201708071247729000][127.0.0.1] delete function complete
+[201708071247742000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071211060000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11254 out and 63746 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '11060000n705824.csv'}>
+[201708071246960000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071211060000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11254 out and 63746 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '11060000n705824.csv'}>
+[201708071256126000][127.0.0.1] in /process
+[201708071256127000][127.0.0.1] file selected
+[201708071256606000][127.0.0.1] about to save file
+[201708071256628000][127.0.0.1] ***********
+[201708071256628000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071256628000][127.0.0.1] 201708071256605000
+[201708071256628000][127.0.0.1] 56605000n705824.csv
+[201708071256629000][127.0.0.1] ***********
+[201708071256629000][127.0.0.1] about to findPhoneCols
+[201708071256629000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071256630000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071202697000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708071202698000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071202698000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708071202698000][127.0.0.1] The FINAL phone column list is [15]
+[201708071202698000][127.0.0.1] Records in file are 75000
+[201708071208969000][127.0.0.1] File uploaded successfully with 75000 records
+[201708071208969000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708071208970000][127.0.0.1] key is 15 and list of keys is [15]
+[201708071208971000][127.0.0.1] Cleanup query is:
+[201708071208971000][127.0.0.1] update dnc.`201708071256605000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or MID(`Phone Number`,1,7) in (select prefix from dnc.carrierPrefixes where do_not_call = 1)
+[201708071302496000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071311830000][127.0.0.1] in /process
+[201708071311831000][127.0.0.1] file selected
+[201708071312351000][127.0.0.1] about to save file
+[201708071312377000][127.0.0.1] ***********
+[201708071312377000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071312378000][127.0.0.1] 201708071312350000
+[201708071312378000][127.0.0.1] 12350000n705824.csv
+[201708071312378000][127.0.0.1] ***********
+[201708071312378000][127.0.0.1] about to findPhoneCols
+[201708071312379000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071312379000][127.0.0.1] ['First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071318610000][127.0.0.1] The POTENTIAL phone column list is {15: 74998}
+[201708071318610000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071318611000][127.0.0.1] Col 15 1 / 74998 = 0.000013. Is that less than .101? True
+[201708071318611000][127.0.0.1] The FINAL phone column list is [15]
+[201708071318611000][127.0.0.1] Records in file are 75000
+[201708071326262000][127.0.0.1] File uploaded successfully with 75000 records
+[201708071326262000][127.0.0.1] self.phoneColDict is {15: 74998}
+[201708071326263000][127.0.0.1] key is 15 and list of keys is [15]
+[201708071326263000][127.0.0.1] Cleanup query is:
+[201708071326263000][127.0.0.1] update dnc.`201708071312350000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone Number`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone Number` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071328579000][127.0.0.1] there are 63740 records left in the table. 11260 were removed
+[201708071328579000][127.0.0.1] About to export clean file to files out
+[201708071339641000][127.0.0.1] Data received. About to open static/files_out/1/201708071312350000n705824.csv
+[201708071339642000][127.0.0.1] able to create this file
+[201708071339642000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071339642000][127.0.0.1] headers are in
+[201708071340023000][127.0.0.1] rows are in
+[201708071340072000][127.0.0.1] Successfully exported file!
+[201708071340072000][127.0.0.1] about to delete
+[201708071342443000][127.0.0.1] able to create the removed file
+[201708071342511000][127.0.0.1] removed file completed
+[201708071342887000][127.0.0.1] delete function complete
+[201708071342896000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071312350000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11260 out and 63740 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '12350000n705824.csv'}>
+[201708071341248000][127.0.0.1] False
+[201708071341733000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173736061, 'DO NOT CALL this number')
+[201708071334851000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071312350000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11260 out and 63740 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '12350000n705824.csv'}>
+[201708071352110000][127.0.0.1] False
+[201708071352768000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173736061, 'DO NOT CALL this wireless number')
+[201708071304057000][127.0.0.1] False
+[201708071304719000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7174294422, 'DO NOT CALL this number')
+[201708071315497000][127.0.0.1] False
+[201708071316153000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173223223, 'DO NOT CALL this number')
+[201708071337028000][127.0.0.1] False
+[201708071337686000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7178621099, 'DO NOT CALL this number')
+[201708071350174000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071312350000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11260 out and 63740 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '12350000n705824.csv'}>
+[201708071353188000][127.0.0.1] False
+[201708071353845000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7178621099, 'DO NOT CALL this number')
+[201708071303875000][127.0.0.1] False
+[201708071304532000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7174565940, 'DO NOT CALL this number')
+[201708071316295000][127.0.0.1] False
+[201708071316951000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7174294233, 'DO NOT CALL this number')
+[201708071333619000][127.0.0.1] False
+[201708071334276000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173824322, 'DO NOT CALL this number')
+[201708071341904000][127.0.0.1] False
+[201708071342563000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7173824838, 'DO NOT CALL this number')
+[201708071349720000][127.0.0.1] False
+[201708071350376000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7174175506, 'DO NOT CALL this wireless number')
+[201708071309521000][127.0.0.1] False
+[201708071310179000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7175014497, 'DO NOT CALL this wireless number')
+[201708071355467000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071312350000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 75000 original records<br />\n                We scrubbed 11260 out and 63740 remain<br />Your data was 15% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '12350000n705824.csv'}>
+[201708071306675000][127.0.0.1] False
+[201708071306676000][127.0.0.1] Queries 1 - 3 are:
+[201708071306676000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 7174294422
+[201708071306677000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 717
+[201708071306677000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 7174294               and carrierPrefixes.do_not_call = 1 AND 7174294422 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071307334000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7174294422, 'DO NOT CALL this number')
+[201708071304944000][127.0.0.1] in /process
+[201708071304944000][127.0.0.1] file selected
+[201708071307223000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071312350000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': '<h3>Only txt and csv files are currently supported - Please try again.</h3>', u'filename': '12350000n705824.csv'}>
+[201708071346170000][127.0.0.1] in /process
+[201708071346170000][127.0.0.1] file selected
+[201708071347115000][127.0.0.1] about to save file
+[201708071347149000][127.0.0.1] ***********
+[201708071347149000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071347149000][127.0.0.1] 201708071347114000
+[201708071347149000][127.0.0.1] 47114000vem_oh_tm_leads_nexxa-clean.csv
+[201708071347150000][127.0.0.1] ***********
+[201708071347150000][127.0.0.1] about to findPhoneCols
+[201708071347151000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE']
+[201708071347151000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE']
+[201708071350899000][127.0.0.1] Failing data is 14464 1/2 STATE ROUTE 511
+[201708071356768000][127.0.0.1] The POTENTIAL phone column list is {9: 184715}
+[201708071356768000][127.0.0.1] The 10 Int NON-PHONE column list is {4: 1}
+[201708071356768000][127.0.0.1] Col 9 1 / 184715 = 0.000005. Is that less than .101? True
+[201708071356768000][127.0.0.1] The FINAL phone column list is [9]
+[201708071356769000][127.0.0.1] Records in file are 184717
+[201708071306820000][127.0.0.1] File uploaded successfully with 184717 records
+[201708071306820000][127.0.0.1] self.phoneColDict is {9: 184715}
+[201708071306820000][127.0.0.1] key is 9 and list of keys is [9]
+[201708071306820000][127.0.0.1] Cleanup query is:
+[201708071306821000][127.0.0.1] update dnc.`201708071347114000` set deleteFlag = 1 where  `PHONE` in (select PhoneNumber from dnc.`master`) or MID(`PHONE`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`PHONE`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `PHONE` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071314419000][127.0.0.1] there are 64954 records left in the table. 119763 were removed
+[201708071314420000][127.0.0.1] About to export clean file to files out
+[201708071321252000][127.0.0.1] Data received. About to open static/files_out/1/201708071347114000vem_oh_tm_leads_nexxa-clean.csv
+[201708071321253000][127.0.0.1] able to create this file
+[201708071321253000][127.0.0.1] ['id', 'PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE']
+[201708071321253000][127.0.0.1] headers are in
+[201708071321531000][127.0.0.1] rows are in
+[201708071321558000][127.0.0.1] Successfully exported file!
+[201708071321559000][127.0.0.1] about to delete
+[201708071334680000][127.0.0.1] able to create the removed file
+[201708071335184000][127.0.0.1] removed file completed
+[201708071335801000][127.0.0.1] delete function complete
+[201708071335814000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071347114000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 184717 original records<br />\n                We scrubbed 119763 out and 64954 remain<br />Your data was 64% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '47114000vem_oh_tm_leads_nexxa-clean.csv'}>
+[201708071317661000][127.0.0.1] False
+[201708071317661000][127.0.0.1] Queries 1 - 3 are:
+[201708071317661000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 7404139004
+[201708071317661000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 740
+[201708071317662000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 7404139               and carrierPrefixes.do_not_call = 1 AND 7404139004 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071318318000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7404139004, 'This number is Squeaky Clean!')
+[201708071356278000][127.0.0.1] False
+[201708071356278000][127.0.0.1] Queries 1 - 3 are:
+[201708071356279000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 7404134129
+[201708071356279000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 740
+[201708071356279000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 7404134               and carrierPrefixes.do_not_call = 1 AND 7404134129 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071356934000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7404134129, 'DO NOT CALL this wireless number')
+[201708071309132000][127.0.0.1] False
+[201708071309133000][127.0.0.1] Queries 1 - 3 are:
+[201708071309133000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 9377387097
+[201708071309133000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 937
+[201708071309133000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 9377387               and carrierPrefixes.do_not_call = 1 AND 9377387097 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071309788000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 9377387097, 'DO NOT CALL this wireless number')
+[201708071322291000][127.0.0.1] False
+[201708071322291000][127.0.0.1] Queries 1 - 3 are:
+[201708071322291000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 9375539197
+[201708071322292000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 937
+[201708071322292000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 9375539               and carrierPrefixes.do_not_call = 1 AND 9375539197 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071322952000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 9375539197, 'DO NOT CALL this wireless number')
+[201708071459791000][127.0.0.1] False
+[201708071459791000][127.0.0.1] Queries 1 - 3 are:
+[201708071459792000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 2162319052
+[201708071459792000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 216
+[201708071459793000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 2162319               and carrierPrefixes.do_not_call = 1 AND 2162319052 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071400450000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2162319052, 'DO NOT CALL this number')
+[201708071438206000][127.0.0.1] False
+[201708071438206000][127.0.0.1] Queries 1 - 3 are:
+[201708071438206000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 2162510251
+[201708071438206000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 216
+[201708071438206000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 2162510               and carrierPrefixes.do_not_call = 1 AND 2162510251 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071438862000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 2162510251, 'DO NOT CALL this number')
+[201708071415224000][127.0.0.1] in /process
+[201708071415225000][127.0.0.1] file selected
+[201708071415241000][127.0.0.1] about to save file
+[201708071415243000][127.0.0.1] ***********
+[201708071415243000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071415243000][127.0.0.1] 201708071415241000
+[201708071415243000][127.0.0.1] 15241000vem_oh_tm_leads_nexxa-dirty.csv
+[201708071415243000][127.0.0.1] ***********
+[201708071415243000][127.0.0.1] about to findPhoneCols
+[201708071415244000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071415244000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071415411000][127.0.0.1] The POTENTIAL phone column list is {9: 2765}
+[201708071415412000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071415412000][127.0.0.1] Col 9 1 / 2765 = 0.000362. Is that less than .101? True
+[201708071415413000][127.0.0.1] The FINAL phone column list is [9]
+[201708071415413000][127.0.0.1] Records in file are 2767
+[201708071416260000][127.0.0.1] File uploaded successfully with 2767 records
+[201708071416260000][127.0.0.1] self.phoneColDict is {9: 2765}
+[201708071416261000][127.0.0.1] key is 9 and list of keys is [9]
+[201708071416261000][127.0.0.1] Cleanup query is:
+[201708071416261000][127.0.0.1] update dnc.`201708071415241000` set deleteFlag = 1 where  `PHONE` in (select PhoneNumber from dnc.`master`) or MID(`PHONE`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`PHONE`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `PHONE` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071416847000][127.0.0.1] there are 99 records left in the table. 2668 were removed
+[201708071416848000][127.0.0.1] About to export clean file to files out
+[201708071417079000][127.0.0.1] Data received. About to open static/files_out/1/201708071415241000vem_oh_tm_leads_nexxa-dirty.csv
+[201708071417080000][127.0.0.1] able to create this file
+[201708071417080000][127.0.0.1] ['id', 'PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071417080000][127.0.0.1] headers are in
+[201708071417081000][127.0.0.1] rows are in
+[201708071417081000][127.0.0.1] Successfully exported file!
+[201708071417081000][127.0.0.1] about to delete
+[201708071417796000][127.0.0.1] able to create the removed file
+[201708071417809000][127.0.0.1] removed file completed
+[201708071418108000][127.0.0.1] delete function complete
+[201708071418114000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071415241000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 2767 original records<br />\n                We scrubbed 2668 out and 99 remain<br />Your data was 96% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '15241000vem_oh_tm_leads_nexxa-dirty.csv'}>
+[201708071442983000][127.0.0.1] False
+[201708071442983000][127.0.0.1] Queries 1 - 3 are:
+[201708071442983000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 7408811108
+[201708071442983000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 740
+[201708071442983000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 7408811               and carrierPrefixes.do_not_call = 1 AND 7408811108 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071443638000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7408811108, 'This number is Squeaky Clean!')
+[201708071433562000][127.0.0.1] False
+[201708071433562000][127.0.0.1] Queries 1 - 3 are:
+[201708071433562000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 7408811108
+[201708071433562000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 740
+[201708071433562000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 7408811               and carrierPrefixes.do_not_call = 1 AND 7408811108 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708071434211000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 7408811108, 'DO NOT CALL this number')
+[201708071400418000][127.0.0.1] in /process
+[201708071400418000][127.0.0.1] file selected
+[201708071400430000][127.0.0.1] about to save file
+[201708071400432000][127.0.0.1] ***********
+[201708071400432000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071400432000][127.0.0.1] 201708071400430000
+[201708071400432000][127.0.0.1] 00430000vem_oh_tm_leads_nexxa-dirty.csv
+[201708071400433000][127.0.0.1] ***********
+[201708071400433000][127.0.0.1] about to findPhoneCols
+[201708071400433000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071400434000][127.0.0.1] ['PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071400602000][127.0.0.1] The POTENTIAL phone column list is {9: 2765}
+[201708071400602000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071400602000][127.0.0.1] Col 9 1 / 2765 = 0.000362. Is that less than .101? True
+[201708071400603000][127.0.0.1] The FINAL phone column list is [9]
+[201708071400603000][127.0.0.1] Records in file are 2767
+[201708071401444000][127.0.0.1] File uploaded successfully with 2767 records
+[201708071401444000][127.0.0.1] self.phoneColDict is {9: 2765}
+[201708071401444000][127.0.0.1] key is 9 and list of keys is [9]
+[201708071401445000][127.0.0.1] Cleanup query is:
+[201708071401445000][127.0.0.1] update dnc.`201708071400430000` set deleteFlag = 1 where  `PHONE` in (select PhoneNumber from dnc.`master`) or MID(`PHONE`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`PHONE`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `PHONE` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071402015000][127.0.0.1] there are 0 records left in the table. 2767 were removed
+[201708071402015000][127.0.0.1] About to export clean file to files out
+[201708071402235000][127.0.0.1] Data received. About to open static/files_out/1/201708071400430000vem_oh_tm_leads_nexxa-dirty.csv
+[201708071402236000][127.0.0.1] able to create this file
+[201708071402236000][127.0.0.1] ['id', 'PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071402236000][127.0.0.1] headers are in
+[201708071402236000][127.0.0.1] rows are in
+[201708071402237000][127.0.0.1] Successfully exported file!
+[201708071402237000][127.0.0.1] about to delete
+[201708071402966000][127.0.0.1] able to create the removed file
+[201708071402978000][127.0.0.1] removed file completed
+[201708071403277000][127.0.0.1] delete function complete
+[201708071403284000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071400430000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 2767 original records<br />\n                We scrubbed 2767 out and 0 remain<br />Your data was 100% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '00430000vem_oh_tm_leads_nexxa-dirty.csv'}>
+[201708071846792000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071816456000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071853655000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071822926000][127.0.0.1] in /process
+[201708071822926000][127.0.0.1] file selected
+[201708071822935000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>'}>
+[201708071836719000][127.0.0.1] in /process
+[201708071836719000][127.0.0.1] file selected
+[201708071837091000][127.0.0.1] about to save file
+[201708071837108000][127.0.0.1] ***********
+[201708071837109000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071837109000][127.0.0.1] 201708071837091000
+[201708071837109000][127.0.0.1] 37091000n705824_3.csv
+[201708071837109000][127.0.0.1] ***********
+[201708071837110000][127.0.0.1] about to findPhoneCols
+[201708071837111000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071837111000][127.0.0.1] ['id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071843071000][127.0.0.1] The POTENTIAL phone column list is {16: 70928}
+[201708071843071000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071843071000][127.0.0.1] Col 16 1 / 70928 = 0.000014. Is that less than .101? True
+[201708071843071000][127.0.0.1] The FINAL phone column list is [16]
+[201708071843072000][127.0.0.1] Records in file are 70930
+[201708071849586000][127.0.0.1] File uploaded successfully with 70930 records
+[201708071849586000][127.0.0.1] self.phoneColDict is {16: 70928}
+[201708071849587000][127.0.0.1] key is 16 and list of keys is [16]
+[201708071849587000][127.0.0.1] Cleanup query is:
+[201708071849587000][127.0.0.1] update dnc.`201708071837091000` set deleteFlag = 1 where  `Phone Number` in (select PhoneNumber from dnc.`master`) or MID(`Phone Number`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone Number`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone Number` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071851275000][127.0.0.1] there are 70930 records left in the table. 0 were removed
+[201708071851276000][127.0.0.1] About to export clean file to files out
+[201708071803667000][127.0.0.1] Data received. About to open static/files_out/1/201708071837091000n705824_3.csv
+[201708071803667000][127.0.0.1] able to create this file
+[201708071803668000][127.0.0.1] ['id', 'id', 'First Name', 'Middle Initial', 'Last Name', 'Address Line 1', 'Address Line 2', 'City', 'State', 'ZIP Code', 'ZIP+4', 'Delivery Point', 'Carrier Route', 'County Code', 'County Name', 'Key Code', 'Segment Number', 'Phone Number', 'Time Zone', 'ZIP+4 Addressed Leads', 'Landline On Suppression File FTC', 'Landline On Suppression File State', 'Landline On Suppression File Private', 'Dwelling Type', 'DSF/dpv']
+[201708071803668000][127.0.0.1] headers are in
+[201708071804136000][127.0.0.1] rows are in
+[201708071804488000][127.0.0.1] Successfully exported file!
+[201708071804489000][127.0.0.1] about to delete
+[201708071804762000][127.0.0.1] able to create the removed file
+[201708071804763000][127.0.0.1] removed file completed
+[201708071805032000][127.0.0.1] delete function complete
+[201708071805055000][127.0.0.1] in /process
+[201708071805055000][127.0.0.1] file selected
+[201708071805071000][127.0.0.1] in /process
+[201708071805072000][127.0.0.1] file selected
+[201708071805076000][127.0.0.1] in /process
+[201708071805077000][127.0.0.1] file selected
+[201708071805082000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>'}>
+[201708071830917000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>'}>
+[201708071804138000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>'}>
+[201708071853258000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>'}>
+[201708071802930000][127.0.0.1] in /process
+[201708071802930000][127.0.0.1] file selected
+[201708071802931000][127.0.0.1] about to save file
+[201708071802935000][127.0.0.1] ***********
+[201708071802935000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071802935000][127.0.0.1] 201708071802931000
+[201708071802936000][127.0.0.1] 02931000201708071530583139vem_oh_tm_leads_nexxa-dirty.csv
+[201708071802936000][127.0.0.1] ***********
+[201708071802936000][127.0.0.1] about to findPhoneCols
+[201708071802937000][127.0.0.1] ['id', 'PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071802937000][127.0.0.1] ['id', 'PREFIXTTL ', 'FIRSTNAME', 'MIDDLENAME ', 'LASTNAME', 'ADDRESS', 'ADDRESS2', 'CITY', 'STATE', 'ZIP', 'PHONE', 'KEYCODE', 'DATABASE', 'what']
+[201708071802937000][127.0.0.1] Less than 10 rows
+[201708071802947000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071802931000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were not enough records in you file or you have empty rows<br />\n            Please use the quick search function to scrub just a few records, or remove empty rows and try again', u'filename': '02931000201708071530583139vem_oh_tm_leads_nexxa-dirty.csv'}>
+[201708071943074000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071950250000][127.0.0.1] in /process
+[201708071950251000][127.0.0.1] file selected
+[201708071953499000][127.0.0.1] about to save file
+[201708071953601000][127.0.0.1] ***********
+[201708071953601000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071953601000][127.0.0.1] 201708071953498000
+[201708071953601000][127.0.0.1] 53498000spark_3rd_july_17.csv
+[201708071953601000][127.0.0.1] ***********
+[201708071953601000][127.0.0.1] about to findPhoneCols
+[201708071953602000][127.0.0.1] ['2036519211', 'BRETT', 'GLADISH', '40496 N SOUTH NEWPORT DR ', 'ANTIOCH', 'IL', '60002']
+[201708071955694000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071953498000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'Your file is missing a header row.<br />\n                                    Please insert a header row and try again', u'filename': '53498000spark_3rd_july_17.csv'}>
+[201708071917010000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071953498000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'Your file is missing a header row.<br />\n                                    Please insert a header row and try again', u'filename': '53498000spark_3rd_july_17.csv'}>
+[201708071921993000][127.0.0.1] in /process
+[201708071921993000][127.0.0.1] file selected
+[201708071921994000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708071931987000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071953498000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'Your file is missing a header row.<br />\n                                    Please insert a header row and try again', u'filename': '53498000spark_3rd_july_17.csv'}>
+[201708071957682000][127.0.0.1] in /process
+[201708071957683000][127.0.0.1] file selected
+[201708071957684000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708071933533000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071939850000][127.0.0.1] in /process
+[201708071939850000][127.0.0.1] file selected
+[201708071939851000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708071952153000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071921614000][127.0.0.1] in /process
+[201708071921615000][127.0.0.1] file selected
+[201708071925263000][127.0.0.1] about to save file
+[201708071925436000][127.0.0.1] ***********
+[201708071925437000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071925437000][127.0.0.1] 201708071925263000
+[201708071925437000][127.0.0.1] 25263000spark_3rd_july_17.csv
+[201708071925437000][127.0.0.1] ***********
+[201708071925437000][127.0.0.1] about to findPhoneCols
+[201708071925439000][127.0.0.1] ['2036519211', 'BRETT', 'GLADISH', '40496 N SOUTH NEWPORT DR ', 'ANTIOCH', 'IL', '60002']
+[201708071925458000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071925263000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'Your file is missing a header row.<br />\n                                    Please insert a header row and try again', u'filename': '25263000spark_3rd_july_17.csv'}>
+[201708071914700000][127.0.0.1] in /process
+[201708071914701000][127.0.0.1] file selected
+[201708071917582000][127.0.0.1] about to save file
+[201708071917652000][127.0.0.1] ***********
+[201708071917652000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071917653000][127.0.0.1] 201708071917582000
+[201708071917653000][127.0.0.1] 17582000spark_3rd_july_17.csv
+[201708071917653000][127.0.0.1] ***********
+[201708071917653000][127.0.0.1] about to findPhoneCols
+[201708071917654000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071917654000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071923583000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708071944058000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708071944059000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708071944059000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708071944059000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708071944059000][127.0.0.1] The FINAL phone column list is [0]
+[201708071944060000][127.0.0.1] Records in file are 670796
+[201708071910929000][127.0.0.1] File uploaded successfully with 670796 records
+[201708071910930000][127.0.0.1] self.phoneColDict is {0: 670794, 3: 414}
+[201708071910930000][127.0.0.1] key is 0 and list of keys is [0]
+[201708071910930000][127.0.0.1] key is 3 and list of keys is [0]
+[201708071910930000][127.0.0.1] Cleanup query is:
+[201708071910930000][127.0.0.1] update dnc.`201708071917582000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')) or `Address` in (select PhoneNumber from dnc.`master`) or MID(`Address`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Address`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Address` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071905401000][127.0.0.1] there are 27543 records left in the table. 643253 were removed
+[201708071905402000][127.0.0.1] About to export clean file to files out
+[201708071907683000][127.0.0.1] Data received. About to open static/files_out/1/201708071917582000spark_3rd_july_17.csv
+[201708071907685000][127.0.0.1] able to create this file
+[201708071907685000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071907686000][127.0.0.1] headers are in
+[201708071907800000][127.0.0.1] rows are in
+[201708071907809000][127.0.0.1] Successfully exported file!
+[201708071907809000][127.0.0.1] about to delete
+[201708071952313000][127.0.0.1] able to create the removed file
+[201708071954281000][127.0.0.1] removed file completed
+[201708071954914000][127.0.0.1] delete function complete
+[201708071954929000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071917582000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 643253 out and 27543 remain<br />Your data was 95% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '17582000spark_3rd_july_17.csv'}>
+[201708071932146000][127.0.0.1] in /process
+[201708071932146000][127.0.0.1] file selected
+[201708071932398000][127.0.0.1] about to save file
+[201708071932404000][127.0.0.1] ***********
+[201708071932405000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708071932405000][127.0.0.1] 201708071932397000
+[201708071932405000][127.0.0.1] 32397000spark_3rd_july_17.csv
+[201708071932405000][127.0.0.1] ***********
+[201708071932406000][127.0.0.1] about to findPhoneCols
+[201708071932407000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071932407000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071933583000][127.0.0.1] The POTENTIAL phone column list is {1: 27541}
+[201708071933583000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708071933583000][127.0.0.1] Col 1 1 / 27541 = 0.000036. Is that less than .101? True
+[201708071933583000][127.0.0.1] The FINAL phone column list is [1]
+[201708071933584000][127.0.0.1] Records in file are 27543
+[201708071935610000][127.0.0.1] File uploaded successfully with 27543 records
+[201708071935610000][127.0.0.1] self.phoneColDict is {1: 27541}
+[201708071935611000][127.0.0.1] key is 1 and list of keys is [1]
+[201708071935611000][127.0.0.1] Cleanup query is:
+[201708071935612000][127.0.0.1] update dnc.`201708071932397000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708071937056000][127.0.0.1] there are 27543 records left in the table. 0 were removed
+[201708071937057000][127.0.0.1] About to export clean file to files out
+[201708071939448000][127.0.0.1] Data received. About to open static/files_out/1/201708071932397000spark_3rd_july_17.csv
+[201708071939449000][127.0.0.1] able to create this file
+[201708071939449000][127.0.0.1] ['id', 'id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708071939449000][127.0.0.1] headers are in
+[201708071939541000][127.0.0.1] rows are in
+[201708071939549000][127.0.0.1] Successfully exported file!
+[201708071939549000][127.0.0.1] about to delete
+[201708071939757000][127.0.0.1] able to create the removed file
+[201708071939759000][127.0.0.1] removed file completed
+[201708071940020000][127.0.0.1] delete function complete
+[201708071940033000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071932397000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 27543 original records<br />\n                We scrubbed 0 out and 27543 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '32397000spark_3rd_july_17.csv'}>
+[201708071951880000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071932397000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 27543 original records<br />\n                We scrubbed 0 out and 27543 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '32397000spark_3rd_july_17.csv'}>
+[201708071958573000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708071932397000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 27543 original records<br />\n                We scrubbed 0 out and 27543 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '32397000spark_3rd_july_17.csv'}>
+[201708071915364000][127.0.0.1] This is an admin
+[201708071915365000][127.0.0.1] session is <SecureCookieSession {'admin': True, 'acknowledged': True}>
+[201708071915467000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071932741000][127.0.0.1] in /process
+[201708071932741000][127.0.0.1] file selected
+[201708071932743000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708071910674000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071915566000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071956304000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708071905464000][127.0.0.1] in /process
+[201708071905464000][127.0.0.1] file selected
+[201708071905465000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708072000191000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708072010456000][127.0.0.1] in /process
+[201708072010456000][127.0.0.1] file selected
+[201708072010457000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708072014603000][127.0.0.1] False
+[201708072014604000][127.0.0.1] Queries 1 - 3 are:
+[201708072014605000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 8478384159
+[201708072014605000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 847
+[201708072014605000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 8478384               and carrierPrefixes.do_not_call = 1 AND 8478384159 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708072015163000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 8478384159, 'This number is Squeaky Clean!')
+[201708072021410000][127.0.0.1] False
+[201708072021411000][127.0.0.1] Queries 1 - 3 are:
+[201708072021413000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 8478384159
+[201708072021413000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 847
+[201708072021413000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 8478384               and carrierPrefixes.do_not_call = 1 AND 8478384159 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708072021962000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 8478384159, 'This number is Squeaky Clean!')
+[201708072024129000][127.0.0.1] False
+[201708072024130000][127.0.0.1] Queries 1 - 3 are:
+[201708072024133000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 8478384159
+[201708072024133000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 847
+[201708072024133000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 8478384               and carrierPrefixes.do_not_call = 1 AND 8478384159 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708072024682000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 8478384159, 'This number is Squeaky Clean!')
+[201708072005819000][127.0.0.1] False
+[201708072005820000][127.0.0.1] Queries 1 - 3 are:
+[201708072005821000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 8478382570
+[201708072005821000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 847
+[201708072005821000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 8478382               and carrierPrefixes.do_not_call = 1 AND 8478382570 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708072006370000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 8478382570, 'This number is Squeaky Clean!')
+[201708072031935000][127.0.0.1] in /process
+[201708072031935000][127.0.0.1] file selected
+[201708072031937000][127.0.0.1] *******ALERT******* Username karissa attempted to upload file over the limit
+[201708072043963000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708072050707000][127.0.0.1] in /process
+[201708072050708000][127.0.0.1] file selected
+[201708072053752000][127.0.0.1] about to save file
+[201708072053829000][127.0.0.1] ***********
+[201708072053830000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708072053830000][127.0.0.1] 201708072053752000
+[201708072053830000][127.0.0.1] 53752000spark_3rd_july_17_notscrubbed.csv
+[201708072053830000][127.0.0.1] ***********
+[201708072053831000][127.0.0.1] about to findPhoneCols
+[201708072053831000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072053832000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072000185000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708072022391000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708072022391000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708072022391000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708072022392000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708072022392000][127.0.0.1] The FINAL phone column list is [0]
+[201708072022392000][127.0.0.1] Records in file are 670796
+[201708072044145000][127.0.0.1] File uploaded successfully with 670796 records
+[201708072044145000][127.0.0.1] self.phoneColDict is {0: 670794, 3: 414}
+[201708072044146000][127.0.0.1] key is 0 and list of keys is [0]
+[201708072044146000][127.0.0.1] key is 3 and list of keys is [0]
+[201708072044146000][127.0.0.1] Cleanup query is:
+[201708072044146000][127.0.0.1] update dnc.`201708072053752000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')) or `Address` in (select PhoneNumber from dnc.`master`) or MID(`Address`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Address`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Address` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708072036661000][127.0.0.1] there are 27543 records left in the table. 643253 were removed
+[201708072036661000][127.0.0.1] About to export clean file to files out
+[201708072038770000][127.0.0.1] Data received. About to open static/files_out/1/201708072053752000spark_3rd_july_17_notscrubbed.csv
+[201708072038771000][127.0.0.1] able to create this file
+[201708072038771000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072038771000][127.0.0.1] headers are in
+[201708072038869000][127.0.0.1] rows are in
+[201708072038878000][127.0.0.1] Successfully exported file!
+[201708072038878000][127.0.0.1] about to delete
+[201708072038895000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708072053752000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 643253 out and 27543 remain<br />Your data was 95% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '53752000spark_3rd_july_17_notscrubbed.csv'}>
+[201708072022307000][127.0.0.1] False
+[201708072022308000][127.0.0.1] Queries 1 - 3 are:
+[201708072022308000][127.0.0.1] select PhoneNumber from dnc.master where master.PhoneNumber = 8032701716
+[201708072022308000][127.0.0.1] select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = 803
+[201708072022308000][127.0.0.1] select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = 8032701               and carrierPrefixes.do_not_call = 1 AND 8032701716 NOT IN               (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')
+[201708072022859000][127.0.0.1] INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (1, 8032701716, 'Your Subscription does not include this area code')
+[201708072143011000][127.0.0.1] in /process
+[201708072143012000][127.0.0.1] file selected
+[201708072146050000][127.0.0.1] about to save file
+[201708072146130000][127.0.0.1] ***********
+[201708072146130000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708072146130000][127.0.0.1] 201708072146049000
+[201708072146130000][127.0.0.1] 46049000spark_3rd_july_17_notscrubbed.csv
+[201708072146130000][127.0.0.1] ***********
+[201708072146130000][127.0.0.1] about to findPhoneCols
+[201708072146130000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072146131000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072152225000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708072112803000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708072112803000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708072112803000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708072112804000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708072112804000][127.0.0.1] The FINAL phone column list is [0]
+[201708072112804000][127.0.0.1] Records in file are 670796
+[201708072136289000][127.0.0.1] File uploaded successfully with 670796 records
+[201708072136290000][127.0.0.1] self.finalPhoneColList is [0]
+[201708072136291000][127.0.0.1] key is 0 and list of keys is [0]
+[201708072136291000][127.0.0.1] Cleanup query is:
+[201708072136291000][127.0.0.1] update dnc.`201708072146049000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708072107378000][127.0.0.1] there are 359785 records left in the table. 311011 were removed
+[201708072107378000][127.0.0.1] About to export clean file to files out
+[201708072130251000][127.0.0.1] Data received. About to open static/files_out/1/201708072146049000spark_3rd_july_17_notscrubbed.csv
+[201708072130251000][127.0.0.1] able to create this file
+[201708072130252000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708072130252000][127.0.0.1] headers are in
+[201708072131451000][127.0.0.1] rows are in
+[201708072131550000][127.0.0.1] Successfully exported file!
+[201708072131550000][127.0.0.1] about to delete
+[201708072131566000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708072146049000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '46049000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081705635000][127.0.0.1] <SecureCookieSession {u'admin': True, u'username': u'karissa', u'userid': 1, u'acknowledged': True}>
+[201708081722088000][127.0.0.1] in /process
+[201708081722088000][127.0.0.1] file selected
+[201708081722096000][127.0.0.1] about to save file
+[201708081722173000][127.0.0.1] ***********
+[201708081722173000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081722173000][127.0.0.1] 201708081722095000
+[201708081722174000][127.0.0.1] 22095000dss080817-0806e.txt
+[201708081722174000][127.0.0.1] ***********
+[201708081722174000][127.0.0.1] about to findPhoneCols
+[201708081722174000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081722175000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081722219000][127.0.0.1] The POTENTIAL phone column list is {}
+[201708081722220000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708081722220000][127.0.0.1] The FINAL phone column list is []
+[201708081722220000][127.0.0.1] Phone numbers not detected
+[201708081722220000][127.0.0.1] redirecting to dashboard
+[201708081722228000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081722095000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were no recognized phone number columns in you file<br />\n                If you have extensions or country codes, please remove those and try again', u'filename': '22095000dss080817-0806e.txt'}>
+[201708081757921000][127.0.0.1] in /process
+[201708081757922000][127.0.0.1] file selected
+[201708081757926000][127.0.0.1] about to save file
+[201708081757927000][127.0.0.1] ***********
+[201708081757927000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081757927000][127.0.0.1] 201708081757926000
+[201708081757927000][127.0.0.1] 57926000dss080817-0806e.txt
+[201708081757927000][127.0.0.1] ***********
+[201708081757928000][127.0.0.1] about to findPhoneCols
+[201708081757928000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081757929000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081757994000][127.0.0.1] The POTENTIAL phone column list is {}
+[201708081757995000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708081757995000][127.0.0.1] The FINAL phone column list is []
+[201708081757995000][127.0.0.1] Phone numbers not detected
+[201708081757995000][127.0.0.1] redirecting to dashboard
+[201708081758009000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081757926000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were no recognized phone number columns in you file<br />\n                If you have extensions or country codes, please remove those and try again', u'filename': '57926000dss080817-0806e.txt'}>
+[201708081758229000][127.0.0.1] in /process
+[201708081758230000][127.0.0.1] file selected
+[201708081706172000][127.0.0.1] about to save file
+[201708081706284000][127.0.0.1] ***********
+[201708081706284000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081706284000][127.0.0.1] 201708081706172000
+[201708081706285000][127.0.0.1] 06171000spark_3rd_july_17_notscrubbed.csv
+[201708081706285000][127.0.0.1] ***********
+[201708081706285000][127.0.0.1] about to findPhoneCols
+[201708081706286000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081706287000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081713479000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708081738489000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708081738489000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708081738489000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708081738489000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708081738489000][127.0.0.1] The FINAL phone column list is [0]
+[201708081738490000][127.0.0.1] Records in file are 670796
+[201708081706799000][127.0.0.1] File uploaded successfully with 670796 records
+[201708081706800000][127.0.0.1] self.finalPhoneColList is [0]
+[201708081706800000][127.0.0.1] key is 0 and list of keys is [0]
+[201708081706800000][127.0.0.1] Cleanup query is:
+[201708081706800000][127.0.0.1] update dnc.`201708081706172000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708081737697000][127.0.0.1] there are 359785 records left in the table. 311011 were removed
+[201708081737698000][127.0.0.1] About to export clean file to files out
+[201708081706043000][127.0.0.1] Data received. About to open static/files_out/1/201708081706172000spark_3rd_july_17_notscrubbed.csv
+[201708081706044000][127.0.0.1] able to create this file
+[201708081706044000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081706044000][127.0.0.1] headers are in
+[201708081707444000][127.0.0.1] rows are in
+[201708081707569000][127.0.0.1] Successfully exported file!
+[201708081707569000][127.0.0.1] about to delete
+[201708081707667000][127.0.0.1] in /process
+[201708081707667000][127.0.0.1] file selected
+[201708081710954000][127.0.0.1] about to save file
+[201708081711058000][127.0.0.1] ***********
+[201708081711059000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081711059000][127.0.0.1] 201708081710953000
+[201708081711059000][127.0.0.1] 10953000spark_3rd_july_17_notscrubbed.csv
+[201708081711059000][127.0.0.1] ***********
+[201708081711059000][127.0.0.1] about to findPhoneCols
+[201708081711060000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081711060000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081717741000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708081742166000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708081742166000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708081742166000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708081742167000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708081742167000][127.0.0.1] The FINAL phone column list is [0]
+[201708081742167000][127.0.0.1] Records in file are 670796
+[201708081717479000][127.0.0.1] File uploaded successfully with 670796 records
+[201708081717479000][127.0.0.1] self.finalPhoneColList is [0]
+[201708081717480000][127.0.0.1] key is 0 and list of keys is [0]
+[201708081717480000][127.0.0.1] Cleanup query is:
+[201708081717480000][127.0.0.1] update dnc.`201708081710953000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708081748288000][127.0.0.1] there are 359785 records left in the table. 311011 were removed
+[201708081748289000][127.0.0.1] About to export clean file to files out
+[201708081718321000][127.0.0.1] Data received. About to open static/files_out/1/201708081710953000spark_3rd_july_17_notscrubbed.csv
+[201708081718321000][127.0.0.1] able to create this file
+[201708081718321000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081718322000][127.0.0.1] headers are in
+[201708081720031000][127.0.0.1] rows are in
+[201708081720602000][127.0.0.1] Successfully exported file!
+[201708081720603000][127.0.0.1] about to delete
+[201708081720623000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081747541000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081748321000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081712109000][127.0.0.1] in /process
+[201708081712109000][127.0.0.1] file selected
+[201708081716455000][127.0.0.1] about to save file
+[201708081716537000][127.0.0.1] ***********
+[201708081716537000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081716537000][127.0.0.1] 201708081716455000
+[201708081716537000][127.0.0.1] 16455000spark_3rd_july_17_notscrubbed.csv
+[201708081716538000][127.0.0.1] ***********
+[201708081716538000][127.0.0.1] about to findPhoneCols
+[201708081716548000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081716548000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081724374000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708081750594000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081707866000][127.0.0.1] in /process
+[201708081707867000][127.0.0.1] file selected
+[201708081720060000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081727743000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081753578000][127.0.0.1] in /process
+[201708081753578000][127.0.0.1] file selected
+[201708081757121000][127.0.0.1] about to save file
+[201708081757235000][127.0.0.1] ***********
+[201708081757236000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081757236000][127.0.0.1] 201708081757121000
+[201708081757236000][127.0.0.1] 57121000spark_3rd_july_17_notscrubbed.csv
+[201708081757236000][127.0.0.1] ***********
+[201708081757237000][127.0.0.1] about to findPhoneCols
+[201708081757237000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081757238000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081704938000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708081731778000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708081731779000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708081731779000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708081731779000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708081731780000][127.0.0.1] The FINAL phone column list is [0]
+[201708081731780000][127.0.0.1] Records in file are 670796
+[201708081712924000][127.0.0.1] in /process
+[201708081744021000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081710953000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 670796 original records<br />\n                We scrubbed 311011 out and 359785 remain<br />Your data was 46% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '10953000spark_3rd_july_17_notscrubbed.csv'}>
+[201708081756230000][127.0.0.1] in /process
+[201708081756230000][127.0.0.1] file selected
+[201708081702198000][127.0.0.1] about to save file
+[201708081702258000][127.0.0.1] ***********
+[201708081702258000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081702259000][127.0.0.1] 201708081702197000
+[201708081702259000][127.0.0.1] 02197000spark_3rd_july_17_clean.csv
+[201708081702259000][127.0.0.1] ***********
+[201708081702259000][127.0.0.1] about to findPhoneCols
+[201708081702260000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081702261000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081708025000][127.0.0.1] Failing data is 9655 WOODS DR UNIT 200406
+[201708081723123000][127.0.0.1] The POTENTIAL phone column list is {1: 359783, 4: 242}
+[201708081723124000][127.0.0.1] The 10 Int NON-PHONE column list is {4: 289}
+[201708081723124000][127.0.0.1] Col 1 1 / 359783 = 0.000003. Is that less than .101? True
+[201708081723124000][127.0.0.1] Col 4 289 / 242 = 1.194215. Is that less than .101? False
+[201708081723124000][127.0.0.1] The FINAL phone column list is [1]
+[201708081723125000][127.0.0.1] Records in file are 359785
+[201708081739869000][127.0.0.1] File uploaded successfully with 359785 records
+[201708081739870000][127.0.0.1] self.finalPhoneColList is [1]
+[201708081739870000][127.0.0.1] key is 1 and list of keys is [1]
+[201708081739871000][127.0.0.1] Cleanup query is:
+[201708081739871000][127.0.0.1] update dnc.`201708081702197000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708081753125000][127.0.0.1] there are 359785 records left in the table. 0 were removed
+[201708081753126000][127.0.0.1] About to export clean file to files out
+[201708081725691000][127.0.0.1] Data received. About to open static/files_out/1/201708081702197000spark_3rd_july_17_clean.csv
+[201708081725720000][127.0.0.1] able to create this file
+[201708081725721000][127.0.0.1] ['id', 'id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081725722000][127.0.0.1] headers are in
+[201708081727431000][127.0.0.1] rows are in
+[201708081727942000][127.0.0.1] Successfully exported file!
+[201708081727943000][127.0.0.1] about to delete
+[201708081727960000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081702197000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 359785 original records<br />\n                We scrubbed 0 out and 359785 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '02197000spark_3rd_july_17_clean.csv'}>
+[201708081718900000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081702197000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 359785 original records<br />\n                We scrubbed 0 out and 359785 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '02197000spark_3rd_july_17_clean.csv'}>
+[201708081729774000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081702197000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'File uploaded successfully with 359785 original records<br />\n                We scrubbed 0 out and 359785 remain<br />Your data was 0% dirty... Now it\'s DataSoap clean! <br /> \n                <a href="/download">Click to download</a> ', u'filename': '02197000spark_3rd_july_17_clean.csv'}>
+[201708081739330000][127.0.0.1] in /process
+[201708081739330000][127.0.0.1] file selected
+[201708081739340000][127.0.0.1] about to save file
+[201708081739344000][127.0.0.1] ***********
+[201708081739344000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081739345000][127.0.0.1] 201708081739340000
+[201708081739345000][127.0.0.1] 39340000dss080717-2000e.txt
+[201708081739345000][127.0.0.1] ***********
+[201708081739345000][127.0.0.1] about to findPhoneCols
+[201708081739346000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081739347000][127.0.0.1] ['ProspectID\tDateCreated\tDateSold\tAgentPhoneNumber\tAccountNumber\tZipCode\tNumberOfTimesQuoted\tPay\tClawback\tAccountStatus\tStatusReason\tStatusSubReason1\tStatusSubReason2\tProduct\tUsageBucket\tAccountClass\tPaymentPercentage\tStatusSubReason3\tStatusSubReason4\tStatusSubReason5\tStatusSubReason6\tStatusSubReason7\tUsageBucketQuantity\tFlow_Start\tRepID\tUtilityResponse\tStatusSubReason_Internal\tStatusDetail\tDaysUntilFlow\tTPV_InitiatedBy\tAddress\tFirstName\tLastName\tSalesChannelSourceType\tSalesChannelSource\tKPI_MissingStatusKeyMap\tMarketer_Correctable\t']
+[201708081739423000][127.0.0.1] The POTENTIAL phone column list is {}
+[201708081739423000][127.0.0.1] The 10 Int NON-PHONE column list is {}
+[201708081739423000][127.0.0.1] The FINAL phone column list is []
+[201708081739423000][127.0.0.1] Phone numbers not detected
+[201708081739424000][127.0.0.1] redirecting to dashboard
+[201708081739435000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were no recognized phone number columns in you file<br />\n                If you have extensions or country codes, please remove those and try again', u'filename': '39340000dss080717-2000e.txt'}>
+[201708081754448000][127.0.0.1] in /process
+[201708081754448000][127.0.0.1] file selected
+[201708081757647000][127.0.0.1] about to save file
+[201708081757737000][127.0.0.1] ***********
+[201708081757737000][127.0.0.1] About to Database.debug time_in and then filename for uploaded file
+[201708081757737000][127.0.0.1] 201708081757647000
+[201708081757737000][127.0.0.1] 57647000spark_3rd_july_17_notscrubbed.csv
+[201708081757737000][127.0.0.1] ***********
+[201708081757738000][127.0.0.1] about to findPhoneCols
+[201708081757738000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081757739000][127.0.0.1] ['Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081704182000][127.0.0.1] Failing data is 1811 MONROE CT APT 171811
+[201708081725971000][127.0.0.1] The POTENTIAL phone column list is {0: 670794, 3: 414}
+[201708081725972000][127.0.0.1] The 10 Int NON-PHONE column list is {3: 436}
+[201708081725974000][127.0.0.1] Col 0 1 / 670794 = 0.000001. Is that less than .101? True
+[201708081725974000][127.0.0.1] Col 3 436 / 414 = 1.053140. Is that less than .101? False
+[201708081725974000][127.0.0.1] The FINAL phone column list is [0]
+[201708081725974000][127.0.0.1] Records in file are 670796
+[201708081751707000][127.0.0.1] File uploaded successfully with 670796 records
+[201708081751707000][127.0.0.1] self.finalPhoneColList is [0]
+[201708081751708000][127.0.0.1] key is 0 and list of keys is [0]
+[201708081751708000][127.0.0.1] Cleanup query is:
+[201708081751708000][127.0.0.1] update dnc.`201708081757647000` set deleteFlag = 1 where  `Phone` in (select PhoneNumber from dnc.`master`) or MID(`Phone`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`)             or (MID(`Phone`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) AND `Phone` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL'))
+[201708081722595000][127.0.0.1] there are 359785 records left in the table. 311011 were removed
+[201708081722595000][127.0.0.1] About to export clean file to files out
+[201708081754800000][127.0.0.1] Data received. About to open static/files_out/1/201708081757647000spark_3rd_july_17_notscrubbed.csv
+[201708081754800000][127.0.0.1] able to create this file
+[201708081754801000][127.0.0.1] ['id', 'Phone', 'First', 'Last', 'Address', 'City', 'State', 'Zip']
+[201708081754801000][127.0.0.1] headers are in
+[201708081756050000][127.0.0.1] rows are in
+[201708081756611000][127.0.0.1] Successfully exported file!
+[201708081756612000][127.0.0.1] about to delete
+[201708081711124000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were no recognized phone number columns in you file<br />\n                If you have extensions or country codes, please remove those and try again', u'filename': '39340000dss080717-2000e.txt'}>
+[201708081858370000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': 'There were no recognized phone number columns in you file<br />\n                If you have extensions or country codes, please remove those and try again', u'filename': '39340000dss080717-2000e.txt'}>
+[201708081813678000][127.0.0.1] in /process
+[201708081813678000][127.0.0.1] file selected
+[201708081813703000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>', u'filename': '39340000dss080717-2000e.txt'}>
+[201708081812758000][127.0.0.1] in /process
+[201708081812758000][127.0.0.1] file selected
+[201708081812771000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>', u'filename': '39340000dss080717-2000e.txt'}>
+[201708081848286000][127.0.0.1] in /process
+[201708081848286000][127.0.0.1] file selected
+[201708081848305000][127.0.0.1] <SecureCookieSession {u'username': u'karissa', u'time_in': '201708081739340000', u'admin': True, u'userid': 1, u'acknowledged': True, u'success_message': '<h3>No File Selected - Please try again.</h3>', u'filename': '39340000dss080717-2000e.txt'}>

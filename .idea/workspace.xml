@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a6ba0c35-656f-444c-9dcf-f92e5aaf1a03" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/DataSoap.iml" afterPath="$PROJECT_DIR$/.idea/DataSoap.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/89b73b59-0c46-4d20-aa0c-5132c13879cc.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/89b73b59-0c46-4d20-aa0c-5132c13879cc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/__init__.py" afterPath="$PROJECT_DIR$/__init__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/debug.log" afterPath="$PROJECT_DIR$/static/debug.log" />
@@ -21,8 +24,10 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/DataSoap$concatCSV.coverage" NAME="concatCSV Coverage Results" MODIFIED="1501009866908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../helper_functions" />
     <SUITE FILE_PATH="coverage/DataSoap$DataSoap.coverage" NAME="DataSoap Coverage Results" MODIFIED="1490642487257" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/DataSoap$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1500910301450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataSoap$datasort.coverage" NAME="datasort Coverage Results" MODIFIED="1500917517032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../helper_functions" />
+    <SUITE FILE_PATH="coverage/DataSoap$__init__.coverage" NAME="__init__ Coverage Results" MODIFIED="1502215674310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -32,115 +37,62 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc@35.166.251.127" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc@35.166.251.127" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc@35.166.251.127" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="master" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc@35.166.251.127" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="dnc" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="log_removed_numbers" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
+    <expand>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="dnc@35.166.251.127" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="dnc@35.166.251.127" type="e3449647:DbNodeDescriptor" />
+        <item name="dnc" type="e3449647:DbNodeDescriptor" />
+      </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="dnc@35.166.251.127" type="e3449647:DbNodeDescriptor" />
+        <item name="dnc" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+      </path>
+    </expand>
+    <select />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7247b56a-8c94-4ef1-88ef-6ea87f3f9042/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+            <state relative-caret-position="119">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="userfile.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/userfile.py">
+      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="214" column="29" lean-forward="true" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
-              <folding>
-                <marker date="1500314875415" expanded="true" signature="7952:7992" ph="update dnc.`... " />
-                <marker date="1500314875415" expanded="true" signature="7958:7992" ph="delete from " />
-                <marker date="1500314875415" expanded="true" signature="8759:8784" ph="select count... missing_value" />
-                <marker date="1500314875415" expanded="true" signature="8759:8809" ph="select count... missing_value" />
-                <marker date="1500314875415" expanded="true" signature="9175:9459" ph="insert into dnc.logs... " />
-                <marker date="1500314875415" expanded="true" signature="9939:9961" ph="SELECT * FRO... missing_value" />
-                <marker date="1500314875415" expanded="true" signature="9939:9986" ph="SELECT * FRO... missing_value" />
-                <marker date="1500314875415" expanded="true" signature="10561:10604" ph="SELECT * FRO... missing_value" />
-                <marker date="1500314875415" expanded="true" signature="11207:11226" ph="DROP TABLE d... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="187">
+              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nav.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/nav.html">
+      <file leaf-file-name="dataSoap_data_management.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataSoap_data_management.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="0">
+              <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="578">
+              <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -149,51 +101,74 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+            <state relative-caret-position="571">
+              <caret line="370" column="23" lean-forward="false" selection-start-line="370" selection-start-column="23" selection-end-line="370" selection-end-column="23" />
               <folding>
-                <marker date="1500910889300" expanded="true" signature="1534:1598" ph="select Phone... master" />
-                <marker date="1500910889300" expanded="true" signature="1646:1720" ph="select AreaC... PurchasedCodes" />
-                <marker date="1500910889300" expanded="true" signature="2266:2345" ph="INSERT INTO dnc.log_removed_numbers... " />
-                <marker date="1500910889300" expanded="true" signature="5358:5449" ph="select id, p... users" />
-                <marker date="1500910889300" expanded="true" signature="8425:8750" ph="select str_t... logs" />
-                <marker date="1500910889300" expanded="true" signature="9089:9397" ph="select file_... logs" />
-                <marker date="1500910889300" expanded="true" signature="9825:9870" ph="select * fro... users" />
+                <marker date="1502219064597" expanded="true" signature="1574:1636" ph="select Phone... master_noindex" />
+                <marker date="1502219064597" expanded="true" signature="1684:1756" ph="select AreaC... PurchasedCodes" />
+                <marker date="1502219064597" expanded="true" signature="1798:1868" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1798:1870" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1798:1871" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1798:1926" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1798:1927" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1798:2016" ph="select prefi... carrierPrefixes" />
+                <marker date="1502219064597" expanded="true" signature="1954:1972" ph="SELECT Phone... " />
+                <marker date="1502219064597" expanded="true" signature="1954:2015" ph="SELECT Phone... wireless_convert" />
+                <marker date="1502219064597" expanded="true" signature="2844:2923" ph="INSERT INTO dnc.log_removed_numbers... " />
+                <marker date="1502219064597" expanded="true" signature="5936:6027" ph="select id, p... users" />
+                <marker date="1502219064597" expanded="true" signature="9003:9353" ph="select str_t... logs" />
+                <marker date="1502219064597" expanded="true" signature="9724:10032" ph="select file_... logs" />
+                <marker date="1502219064597" expanded="true" signature="10460:10505" ph="select * fro... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
+      <file leaf-file-name="userfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/userfile.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state relative-caret-position="231">
+              <caret line="152" column="41" lean-forward="false" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
+              <folding>
+                <marker date="1502139934944" expanded="true" signature="7957:7997" ph="update dnc.`... " />
+                <marker date="1502139934944" expanded="true" signature="7963:7997" ph="delete from " />
+                <marker date="1502139934944" expanded="true" signature="9087:9112" ph="select count... missing_value" />
+                <marker date="1502139934944" expanded="true" signature="9087:9137" ph="select count... missing_value" />
+                <marker date="1502139934944" expanded="true" signature="9503:9787" ph="insert into dnc.logs... " />
+                <marker date="1502139934944" expanded="true" signature="10267:10289" ph="SELECT * FRO... missing_value" />
+                <marker date="1502139934944" expanded="true" signature="10267:10314" ph="SELECT * FRO... missing_value" />
+                <marker date="1502139934944" expanded="true" signature="10889:10932" ph="SELECT * FRO... missing_value" />
+                <marker date="1502139934944" expanded="true" signature="11535:11554" ph="DROP TABLE d... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="84" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="84" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dnc.master" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/a907e958/89b73b59-0c46-4d20-aa0c-5132c13879cc/dnc.master">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="debug.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/debug.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="1700" column="80" lean-forward="false" selection-start-line="1700" selection-start-column="80" selection-end-line="1700" selection-end-column="80" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main3.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/assets/css/main3.css">
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
+            <state relative-caret-position="830">
+              <caret line="114" column="57" lean-forward="true" selection-start-line="114" selection-start-column="57" selection-end-line="114" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -205,23 +180,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>fa-check-cir</find>
-      <find>fa-sear</find>
-      <find>fa-globe</find>
-      <find>fa-mobile</find>
-      <find>fa-remove</find>
-      <find>fa-legal</find>
-      <find>fa-user</find>
-      <find>fa-buil</find>
-      <find>.js</find>
-      <find>active</find>
-      <find>value</find>
-      <find>a id</find>
       <find>redirect</find>
       <find>ackn</find>
       <find>offset</find>
@@ -240,6 +204,18 @@
       <find>session.get(</find>
       <find>graph</find>
       <find>search</find>
+      <find>report</find>
+      <find>doq</find>
+      <find>limi</find>
+      <find>flash</find>
+      <find>alert</find>
+      <find>RequestEntityTooLarge</find>
+      <find>413</find>
+      <find>exce</find>
+      <find>master</find>
+      <find>1024</find>
+      <find>mb</find>
+      <find>final</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -260,7 +236,6 @@
         <option value="$PROJECT_DIR$/templates/reports.html" />
         <option value="$PROJECT_DIR$/static/assets/css/style.css" />
         <option value="$PROJECT_DIR$/templates/alerts.html" />
-        <option value="$PROJECT_DIR$/database.py" />
         <option value="$PROJECT_DIR$/static/assets/css/font-awesome-used.css" />
         <option value="$PROJECT_DIR$/static/assets/css/bootstrap.css" />
         <option value="$PROJECT_DIR$/templates/header.html" />
@@ -268,16 +243,24 @@
         <option value="$PROJECT_DIR$/templates/login.html" />
         <option value="$PROJECT_DIR$/users.py" />
         <option value="$PROJECT_DIR$/templates/TOS.html" />
-        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/templates/nav.html" />
         <option value="$PROJECT_DIR$/static/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/static/assets/css/bootstrap3.css" />
         <option value="$PROJECT_DIR$/static/assets/css/main3.css" />
-        <option value="$PROJECT_DIR$/userfile.py" />
         <option value="$PROJECT_DIR$/settings.py" />
-        <option value="$PROJECT_DIR$/static/debug.log" />
+        <option value="$PROJECT_DIR$/../helper_functions/vista_internal_dnc_update.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/7247b56a-8c94-4ef1-88ef-6ea87f3f9042/console.sql" />
+        <option value="$PROJECT_DIR$/../helper_functions/datasort.py" />
+        <option value="$PROJECT_DIR$/../helper_functions/concatCSV.py" />
+        <option value="$PROJECT_DIR$/database.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console_1.sql" />
+        <option value="X:/Vista Energy Marketing/Karissa/dnc_com/dnc_wireless_convert.sql" />
+        <option value="$PROJECT_DIR$/dnc_incremental_updates.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql" />
+        <option value="$PROJECT_DIR$/userfile.py" />
+        <option value="$PROJECT_DIR$/static/debug.log" />
+        <option value="$PROJECT_DIR$/templates/dashboard.html" />
         <option value="$PROJECT_DIR$/__init__.py" />
       </list>
     </option>
@@ -299,10 +282,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1685" />
-    <option name="y" value="87" />
-    <option name="width" value="1403" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1784" />
+    <option name="y" value="36" />
+    <option name="width" value="1405" />
     <option name="height" value="900" />
   </component>
   <component name="ProjectView">
@@ -320,61 +303,40 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DataSoap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="DataSoap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataSoap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataSoap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataSoap" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataSoap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DataSoap" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DataSoap" type="b2602c69:ProjectViewProjectNode" />
+              <item name="helper_functions" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="X:/Vista Energy Marketing/Karissa/dnc_com/WirelessFull/WirelessFull.txt" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="X:/Vista Energy Marketing/Karissa/dnc_com" />
+    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (Microsoft)&#10;MySQL" />
     <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="node.js.selected.package.stylelint" value="" />
@@ -393,9 +355,11 @@
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="database.data.extractors.current" value="Comma-separated (CSV)" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kmartin\Documents\Web Projects\helper_functions" />
       <recent name="C:\Users\kmartin\Documents\Web Projects\DataSoap" />
     </key>
   </component>
@@ -412,10 +376,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.__init__">
-    <configuration default="false" name="dashboard.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DataSoap/templates/dashboard.html">
-      <method />
+    <configuration name="DataSoap" type="PythonConfigurationType" factoryName="Python" singleton="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Python27\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataSoap" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newuser.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="true" />
     </configuration>
-    <configuration default="false" name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="__init__" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -432,7 +411,19 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
-      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataSoap" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -452,99 +443,6 @@
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataSoap" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataSoap" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataSoap" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <module name="DataSoap" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -564,6 +462,79 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataSoap" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataSoap" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <module name="DataSoap" />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -582,34 +553,56 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <configuration default="false" name="DataSoap" type="PythonConfigurationType" factoryName="Python" singleton="true">
+    <configuration name="concatCSV" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Python27\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../helper_functions" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataSoap" />
+      <module name="helper_functions" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newuser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../helper_functions/concatCSV.py" />
       <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <method />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="3">
+    <configuration name="dashboard.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/DataSoap/templates/dashboard.html" />
+    <configuration name="datasort" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../helper_functions" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="helper_functions" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../helper_functions/datasort.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.DataSoap" />
       <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dashboard.html" />
       <item index="2" class="java.lang.String" itemvalue="Python.__init__" />
+      <item index="3" class="java.lang.String" itemvalue="Python.datasort" />
+      <item index="4" class="java.lang.String" itemvalue="Python.concatCSV" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.__init__" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.dashboard.html" />
+        <item index="1" class="java.lang.String" itemvalue="Python.concatCSV" />
+        <item index="2" class="java.lang.String" itemvalue="Python.datasort" />
+        <item index="3" class="java.lang.String" itemvalue="JavaScript Debug.dashboard.html" />
       </list>
     </recent_temporary>
   </component>
@@ -651,19 +644,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1685" y="87" width="1403" height="900" extended-state="0" />
+    <frame x="-1928" y="-8" width="1661" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27180785" sideWeight="0.26099494" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27180785" sideWeight="0.739005" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27152988" sideWeight="0.28085107" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27152988" sideWeight="0.71914893" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25301206" sideWeight="0.48855507" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.4913295" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.49421966" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4096081" sideWeight="0.48449892" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18096611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19826965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.4899527" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.408308" sideWeight="0.3349544" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18054712" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16534954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56071806" sideWeight="0.49710983" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -674,33 +666,35 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.49763593" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.4899527" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35041717" sideWeight="0.2249408" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27180785" sideWeight="0.26099494" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34950495" sideWeight="0.7750592" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25346535" sideWeight="0.49723756" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27180785" sideWeight="0.739005" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25301206" sideWeight="0.48855507" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.4913295" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970297" sideWeight="0.49421966" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.4940805" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12992546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4096081" sideWeight="0.48449892" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18096611" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0394633" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896304" sideWeight="0.49723756" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928064" sideWeight="0.49763593" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19826965" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32826748" sideWeight="0.4899527" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56071806" sideWeight="0.49710983" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -748,64 +742,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500910889300" expanded="true" signature="1534:1598" ph="select Phone... master" />
-            <marker date="1500910889300" expanded="true" signature="1646:1720" ph="select AreaC... PurchasedCodes" />
-            <marker date="1500910889300" expanded="true" signature="2266:2345" ph="INSERT INTO dnc.log_removed_numbers... " />
-            <marker date="1500910889300" expanded="true" signature="5358:5449" ph="select id, p... users" />
-            <marker date="1500910889300" expanded="true" signature="8425:8750" ph="select str_t... logs" />
-            <marker date="1500910889300" expanded="true" signature="9089:9397" ph="select file_... logs" />
-            <marker date="1500910889300" expanded="true" signature="9825:9870" ph="select * fro... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql" />
-    <entry file="file://$PROJECT_DIR$/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500910889300" expanded="true" signature="1534:1598" ph="select Phone... master" />
-            <marker date="1500910889300" expanded="true" signature="1646:1720" ph="select AreaC... PurchasedCodes" />
-            <marker date="1500910889300" expanded="true" signature="2266:2345" ph="INSERT INTO dnc.log_removed_numbers... " />
-            <marker date="1500910889300" expanded="true" signature="5358:5449" ph="select id, p... users" />
-            <marker date="1500910889300" expanded="true" signature="8425:8750" ph="select str_t... logs" />
-            <marker date="1500910889300" expanded="true" signature="9089:9397" ph="select file_... logs" />
-            <marker date="1500910889300" expanded="true" signature="9825:9870" ph="select * fro... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/.idea/DataSoap.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/git_screens/Screen Shot 2017-01-15 at 10.02.43 PM.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/assets/git_screens/pandas.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/assets/git_screens/census_logo.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -911,13 +847,6 @@
     <entry file="file://$PROJECT_DIR$/static/assets/css/bootstrap2.css" />
     <entry file="file://$PROJECT_DIR$/static/assets/css/bootstrap.css" />
     <entry file="file://$PROJECT_DIR$/static/assets/js/bootstrap1.min.js" />
-    <entry file="file://$PROJECT_DIR$/templates/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -932,19 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="35" lean-forward="false" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/nav.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,24 +889,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="3" column="25" lean-forward="false" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/users.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="38" column="64" lean-forward="false" selection-start-line="38" selection-start-column="64" selection-end-line="38" selection-end-column="64" />
-          <folding>
-            <element signature="e#15#44#0" expanded="false" />
-            <marker date="1499961111233" expanded="true" signature="476:609" ph="insert into dnc.users... " />
-            <marker date="1499961111233" expanded="true" signature="932:1060" ph="update dnc.u... " />
-            <marker date="1499961111233" expanded="true" signature="1375:1495" ph="update dnc.u... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,84 +900,163 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2380">
           <caret line="140" column="19" lean-forward="false" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="890" column="37" lean-forward="true" selection-start-line="890" selection-start-column="37" selection-end-line="890" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/a907e958/89b73b59-0c46-4d20-aa0c-5132c13879cc/dnc.master">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
-          <caret line="24" column="25" lean-forward="true" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="19" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/a907e958/89b73b59-0c46-4d20-aa0c-5132c13879cc/dnc.master" />
+    <entry file="file://$PROJECT_DIR$/../helper_functions/concatCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../helper_functions/vista_internal_dnc_update.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="57" column="24" lean-forward="true" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/area_codes_logsbackup.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://X:/Vista Energy Marketing/Karissa/dnc_com/dnc_wireless_convert.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console_1.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/7247b56a-8c94-4ef1-88ef-6ea87f3f9042/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="39" column="43" lean-forward="false" selection-start-line="39" selection-start-column="43" selection-end-line="39" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataSoap_data_management.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="60" lean-forward="false" selection-start-line="0" selection-start-column="60" selection-end-line="0" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/89b73b59-0c46-4d20-aa0c-5132c13879cc/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../helper_functions/datasort.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="11" column="20" lean-forward="false" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/userfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="214" column="29" lean-forward="true" selection-start-line="214" selection-start-column="29" selection-end-line="214" selection-end-column="29" />
+        <state relative-caret-position="231">
+          <caret line="152" column="41" lean-forward="false" selection-start-line="152" selection-start-column="41" selection-end-line="152" selection-end-column="41" />
           <folding>
-            <marker date="1500314875415" expanded="true" signature="7952:7992" ph="update dnc.`... " />
-            <marker date="1500314875415" expanded="true" signature="7958:7992" ph="delete from " />
-            <marker date="1500314875415" expanded="true" signature="8759:8784" ph="select count... missing_value" />
-            <marker date="1500314875415" expanded="true" signature="8759:8809" ph="select count... missing_value" />
-            <marker date="1500314875415" expanded="true" signature="9175:9459" ph="insert into dnc.logs... " />
-            <marker date="1500314875415" expanded="true" signature="9939:9961" ph="SELECT * FRO... missing_value" />
-            <marker date="1500314875415" expanded="true" signature="9939:9986" ph="SELECT * FRO... missing_value" />
-            <marker date="1500314875415" expanded="true" signature="10561:10604" ph="SELECT * FRO... missing_value" />
-            <marker date="1500314875415" expanded="true" signature="11207:11226" ph="DROP TABLE d... " />
+            <marker date="1502139934944" expanded="true" signature="7957:7997" ph="update dnc.`... " />
+            <marker date="1502139934944" expanded="true" signature="7963:7997" ph="delete from " />
+            <marker date="1502139934944" expanded="true" signature="9087:9112" ph="select count... missing_value" />
+            <marker date="1502139934944" expanded="true" signature="9087:9137" ph="select count... missing_value" />
+            <marker date="1502139934944" expanded="true" signature="9503:9787" ph="insert into dnc.logs... " />
+            <marker date="1502139934944" expanded="true" signature="10267:10289" ph="SELECT * FRO... missing_value" />
+            <marker date="1502139934944" expanded="true" signature="10267:10314" ph="SELECT * FRO... missing_value" />
+            <marker date="1502139934944" expanded="true" signature="10889:10932" ph="SELECT * FRO... missing_value" />
+            <marker date="1502139934944" expanded="true" signature="11535:11554" ph="DROP TABLE d... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="1700" column="80" lean-forward="false" selection-start-line="1700" selection-start-column="80" selection-end-line="1700" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="84" lean-forward="false" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="830">
+          <caret line="114" column="57" lean-forward="true" selection-start-line="114" selection-start-column="57" selection-end-line="114" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="55" column="17" lean-forward="true" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
+        <state relative-caret-position="571">
+          <caret line="370" column="23" lean-forward="false" selection-start-line="370" selection-start-column="23" selection-end-line="370" selection-end-column="23" />
           <folding>
-            <marker date="1500910889300" expanded="true" signature="1534:1598" ph="select Phone... master" />
-            <marker date="1500910889300" expanded="true" signature="1646:1720" ph="select AreaC... PurchasedCodes" />
-            <marker date="1500910889300" expanded="true" signature="2266:2345" ph="INSERT INTO dnc.log_removed_numbers... " />
-            <marker date="1500910889300" expanded="true" signature="5358:5449" ph="select id, p... users" />
-            <marker date="1500910889300" expanded="true" signature="8425:8750" ph="select str_t... logs" />
-            <marker date="1500910889300" expanded="true" signature="9089:9397" ph="select file_... logs" />
-            <marker date="1500910889300" expanded="true" signature="9825:9870" ph="select * fro... users" />
+            <marker date="1502219064597" expanded="true" signature="1574:1636" ph="select Phone... master_noindex" />
+            <marker date="1502219064597" expanded="true" signature="1684:1756" ph="select AreaC... PurchasedCodes" />
+            <marker date="1502219064597" expanded="true" signature="1798:1868" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1798:1870" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1798:1871" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1798:1926" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1798:1927" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1798:2016" ph="select prefi... carrierPrefixes" />
+            <marker date="1502219064597" expanded="true" signature="1954:1972" ph="SELECT Phone... " />
+            <marker date="1502219064597" expanded="true" signature="1954:2015" ph="SELECT Phone... wireless_convert" />
+            <marker date="1502219064597" expanded="true" signature="2844:2923" ph="INSERT INTO dnc.log_removed_numbers... " />
+            <marker date="1502219064597" expanded="true" signature="5936:6027" ph="select id, p... users" />
+            <marker date="1502219064597" expanded="true" signature="9003:9353" ph="select str_t... logs" />
+            <marker date="1502219064597" expanded="true" signature="9724:10032" ph="select file_... logs" />
+            <marker date="1502219064597" expanded="true" signature="10460:10505" ph="select * fro... users" />
           </folding>
         </state>
       </provider>

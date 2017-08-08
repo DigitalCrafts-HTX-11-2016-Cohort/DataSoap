@@ -16,5 +16,11 @@
         <property name="yearIsDateType" value="false" />
       </driver-properties>
     </data-source>
+    <data-source source="LOCAL" name="Staging" read-only="true" uuid="7247b56a-8c94-4ef1-88ef-6ea87f3f9042">
+      <driver-ref>sqlserver.ms</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.microsoft.sqlserver.jdbc.SQLServerDriver</jdbc-driver>
+      <jdbc-url>jdbc:sqlserver://VistaDev-2\STG;databaseName=VIP</jdbc-url>
+    </data-source>
   </component>
 </project>

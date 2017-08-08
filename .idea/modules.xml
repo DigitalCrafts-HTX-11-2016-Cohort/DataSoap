@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DataSoap.iml" filepath="$PROJECT_DIR$/.idea/DataSoap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../helper_functions/.idea/helper_functions.iml" filepath="$PROJECT_DIR$/../helper_functions/.idea/helper_functions.iml" />
     </modules>
   </component>
 </project>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="dnc@35.166.251.127">
-  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.2">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.3">
     <root id="1"/>
     <schema id="2" parent="1" name="dnc">
       <Current>1</Current>
@@ -14,232 +14,361 @@
     <schema id="8" parent="1" name="sys"/>
     <schema id="9" parent="1" name="#mysql50#mysql.old"/>
     <table id="10" parent="2" name="PurchasedCodes"/>
-    <table id="11" parent="2" name="litigator"/>
-    <table id="12" parent="2" name="log_removed_numbers"/>
-    <table id="13" parent="2" name="logs"/>
-    <table id="14" parent="2" name="master"/>
-    <table id="15" parent="2" name="users"/>
-    <table id="16" parent="2" name="wireless_convert"/>
-    <column id="17" parent="10" name="AreaCode">
+    <table id="11" parent="2" name="carrierPrefixes"/>
+    <table id="12" parent="2" name="dnc_delta"/>
+    <table id="13" parent="2" name="litigator"/>
+    <table id="14" parent="2" name="log_removed_numbers"/>
+    <table id="15" parent="2" name="logs"/>
+    <table id="16" parent="2" name="master_noindex"/>
+    <table id="17" parent="2" name="users"/>
+    <table id="18" parent="2" name="wireless_convert"/>
+    <routine id="19" parent="2" name="deleteOneByOne">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="20" parent="2" name="GetFilteredData">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <routine id="21" parent="2" name="insertBetween">
+      <RoutineKind>procedure</RoutineKind>
+    </routine>
+    <column id="22" parent="10" name="AreaCode">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
     </column>
-    <column id="18" parent="11" name="AreaCode">
+    <column id="23" parent="11" name="areaCode">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="19" parent="11" name="PhoneNumber">
+    <column id="24" parent="11" name="firstFour">
+      <Position>2</Position>
+      <DataType>varchar(4)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="11" name="prefix">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="26" parent="11" name="source">
+      <Position>4</Position>
+      <DataType>enum(&apos;w&apos;, &apos;i&apos;, &apos;&apos;)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="lineType">
+      <Position>5</Position>
+      <DataType>enum(&apos;S&apos;, &apos;C&apos;, &apos;P&apos;, &apos;M&apos;, &apos;V&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="11" name="tier">
+      <Position>6</Position>
+      <DataType>char(1)|0</DataType>
+    </column>
+    <column id="29" parent="11" name="zip">
+      <Position>7</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="30" parent="11" name="newAreacode">
+      <Position>8</Position>
+      <DataType>varchar(5)|0</DataType>
+    </column>
+    <column id="31" parent="11" name="tzCode">
+      <Position>9</Position>
+      <DataType>varchar(3)|0</DataType>
+    </column>
+    <column id="32" parent="11" name="region">
+      <Position>10</Position>
+      <DataType>varchar(2)|0</DataType>
+    </column>
+    <column id="33" parent="11" name="ocn_type">
+      <Position>11</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="34" parent="11" name="company_long">
+      <Position>12</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="35" parent="11" name="company">
+      <Position>13</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="36" parent="11" name="dba">
+      <Position>14</Position>
+      <DataType>varchar(100)|0</DataType>
+    </column>
+    <column id="37" parent="11" name="ocn">
+      <Position>15</Position>
+      <DataType>varchar(4)|0</DataType>
+    </column>
+    <column id="38" parent="11" name="do_not_call">
+      <Position>16</Position>
+      <DataType>bit(1)|0</DataType>
+    </column>
+    <index id="39" parent="11" name="prefix">
+      <ColNames>prefix</ColNames>
+    </index>
+    <column id="40" parent="12" name="PhoneNumber">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="41" parent="12" name="changeDate">
+      <Position>2</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="42" parent="12" name="changeType">
+      <Position>3</Position>
+      <DataType>enum(&apos;A&apos;, &apos;D&apos;)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="43" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>PhoneNumber</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="13" name="AreaCode">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="13" name="PhoneNumber">
       <Position>2</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="20" parent="11" name="Source">
+    <column id="46" parent="13" name="Source">
       <Position>3</Position>
       <DataType>varchar(15)|0</DataType>
       <DefaultExpression>&apos;Litigator_List&apos;</DefaultExpression>
     </column>
-    <index id="21" parent="11" name="PhoneNumber_UNIQUE">
+    <index id="47" parent="13" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="22" parent="11" name="PhoneNumber_UNIQUE">
+    <key id="48" parent="13" name="PhoneNumber_UNIQUE">
       <ColNames>PhoneNumber</ColNames>
       <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="23" parent="12" name="id">
+    <column id="49" parent="14" name="id">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="24" parent="12" name="userid">
+    <column id="50" parent="14" name="userid">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="25" parent="12" name="timestamp">
+    <column id="51" parent="14" name="timestamp">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
     </column>
-    <column id="26" parent="12" name="phone">
+    <column id="52" parent="14" name="phone">
       <Position>4</Position>
       <DataType>varchar(50)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="27" parent="12" name="result">
+    <column id="53" parent="14" name="result">
       <Position>5</Position>
       <DataType>varchar(50)|0</DataType>
     </column>
-    <index id="28" parent="12" name="id">
+    <index id="54" parent="14" name="id">
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="29" parent="12" name="PRIMARY">
+    <key id="55" parent="14" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="30" parent="12" name="id">
+    <key id="56" parent="14" name="id">
       <ColNames>id</ColNames>
       <UnderlyingIndexName>id</UnderlyingIndexName>
     </key>
-    <column id="31" parent="13" name="id">
+    <column id="57" parent="15" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="32" parent="13" name="userid">
+    <column id="58" parent="15" name="userid">
       <Position>2</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="33" parent="13" name="file_in_name">
+    <column id="59" parent="15" name="file_in_name">
       <Position>3</Position>
       <DataType>varchar(80)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="34" parent="13" name="file_in_record_count">
+    <column id="60" parent="15" name="file_in_record_count">
       <Position>4</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="35" parent="13" name="file_in_timestamp">
+    <column id="61" parent="15" name="file_in_timestamp">
       <Position>5</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="13" name="file_out_name">
+    <column id="62" parent="15" name="file_out_name">
       <Position>6</Position>
       <DataType>varchar(80)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="37" parent="13" name="file_out_record_count">
+    <column id="63" parent="15" name="file_out_record_count">
       <Position>7</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="38" parent="13" name="file_out_timestamp">
+    <column id="64" parent="15" name="file_out_timestamp">
       <Position>8</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="39" parent="13" name="PRIMARY">
+    <key id="65" parent="15" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="40" parent="14" name="dncinternalid">
+    <column id="66" parent="16" name="PhoneNumber">
       <Position>1</Position>
-      <DataType>int(11)|0</DataType>
+      <DataType>bigint(10)|0</DataType>
       <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="41" parent="14" name="PhoneNumber">
+    <column id="67" parent="16" name="wireless">
       <Position>2</Position>
-      <DataType>bigint(20)|0</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="42" parent="14" name="wireless">
-      <Position>3</Position>
       <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
     </column>
-    <key id="43" parent="14" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>dncinternalid</ColNames>
-      <Primary>1</Primary>
+    <column id="68" parent="16" name="litigator">
+      <Position>3</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="69" parent="16" name="dnc">
+      <Position>4</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <column id="70" parent="16" name="vista_dnc">
+      <Position>5</Position>
+      <DataType>bit(1)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>b&apos;0&apos;</DefaultExpression>
+    </column>
+    <index id="71" parent="16" name="allCol">
+      <ColNames>PhoneNumber
+wireless
+litigator
+dnc
+vista_dnc</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="16" name="allCol">
+      <ColNames>PhoneNumber
+wireless
+litigator
+dnc
+vista_dnc</ColNames>
+      <UnderlyingIndexName>allCol</UnderlyingIndexName>
     </key>
-    <column id="44" parent="15" name="id">
+    <column id="73" parent="17" name="id">
       <Position>1</Position>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
     </column>
-    <column id="45" parent="15" name="firstname">
+    <column id="74" parent="17" name="firstname">
       <Position>2</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="46" parent="15" name="lastname">
+    <column id="75" parent="17" name="lastname">
       <Position>3</Position>
       <DataType>varchar(45)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="47" parent="15" name="company">
+    <column id="76" parent="17" name="company">
       <Position>4</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="48" parent="15" name="email">
+    <column id="77" parent="17" name="email">
       <Position>5</Position>
       <DataType>varchar(60)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="49" parent="15" name="username">
+    <column id="78" parent="17" name="username">
       <Position>6</Position>
       <DataType>varchar(15)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="50" parent="15" name="password">
+    <column id="79" parent="17" name="password">
       <Position>7</Position>
       <DataType>text|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="51" parent="15" name="admin">
+    <column id="80" parent="17" name="admin">
       <Position>8</Position>
       <DataType>bit(1)|0</DataType>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="52" parent="15" name="Deleted">
+    <column id="81" parent="17" name="Deleted">
       <Position>9</Position>
       <DataType>bit(1)|0</DataType>
       <DefaultExpression>b&apos;0&apos;</DefaultExpression>
     </column>
-    <column id="53" parent="15" name="date_acknowledged">
+    <column id="82" parent="17" name="date_acknowledged">
       <Position>10</Position>
       <DataType>datetime|0</DataType>
     </column>
-    <column id="54" parent="15" name="name_as_typed">
+    <column id="83" parent="17" name="name_as_typed">
       <Position>11</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <column id="55" parent="15" name="company_as_typed">
+    <column id="84" parent="17" name="company_as_typed">
       <Position>12</Position>
       <DataType>varchar(45)|0</DataType>
     </column>
-    <index id="56" parent="15" name="username_UNIQUE">
+    <index id="85" parent="17" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="57" parent="15" name="PRIMARY">
+    <key id="86" parent="17" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <key id="58" parent="15" name="username_UNIQUE">
+    <key id="87" parent="17" name="username_UNIQUE">
       <ColNames>username</ColNames>
       <UnderlyingIndexName>username_UNIQUE</UnderlyingIndexName>
     </key>
-    <column id="59" parent="16" name="PhoneNumber">
+    <column id="88" parent="18" name="PhoneNumber">
       <Position>1</Position>
       <DataType>bigint(20)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="60" parent="16" name="Source">
+    <column id="89" parent="18" name="source">
       <Position>2</Position>
       <DataType>varchar(15)|0</DataType>
-      <DefaultExpression>&apos;Wireless_switch&apos;</DefaultExpression>
     </column>
-    <index id="61" parent="16" name="PhoneNumber_UNIQUE">
+    <key id="90" parent="18" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
       <ColNames>PhoneNumber</ColNames>
-      <Unique>1</Unique>
-    </index>
-    <key id="62" parent="16" name="PhoneNumber_UNIQUE">
-      <ColNames>PhoneNumber</ColNames>
-      <UnderlyingIndexName>PhoneNumber_UNIQUE</UnderlyingIndexName>
+      <Primary>1</Primary>
     </key>
+    <argument id="91" parent="19" name="earliestChangeDate">
+      <DataType>date|0</DataType>
+    </argument>
+    <argument id="92" parent="21" name="var1">
+      <DataType>bigint(20)|0</DataType>
+    </argument>
+    <argument id="93" parent="21" name="var2">
+      <DataType>bigint(20)|0</DataType>
+    </argument>
   </database-model>
 </dataSource>
