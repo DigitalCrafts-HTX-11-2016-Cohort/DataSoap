@@ -73,6 +73,8 @@ class Database:
                 return False
             elif data_i[:2] == "96":
                 return False
+            elif len(data_i) != 10:
+                return False
             else:
                 return True
         except ValueError:
