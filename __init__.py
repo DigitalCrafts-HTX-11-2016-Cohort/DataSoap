@@ -384,7 +384,7 @@ def upload_file():
 def download():
     # Database.debug("Sending the file to user side")
     return send_file(settings.download+str(session.get('userid'))+"/"+session.get('time_in')
-                     + session.get('filename')[8:], as_attachment=True, attachment_filename=session.get('filename')[8:])
+                     + session.get('filename')[8:], as_attachment=True, attachment_filename='CLEAN_' + session.get('filename')[8:])
 
 
 @app.after_request

@@ -211,13 +211,31 @@ class Userfile:
         return True
 
     def delete(self):
-        query = "SELECT * FROM dnc.`%s` where deleteFlag = 1" % self.time_in
+        colToCheck = self.headers[self.finalPhoneColList[0]+1];
+        query = '''
+        SELECT leads.*
+        ,CASE
+        WHEN (wireless = 1 or carrierPrefixes.do_not_call = 1) 
+          and (wireless_convert.source = 'LTW' or wireless_convert.source is null) THEN 'wireless'
+        WHEN litigator = 1 THEN 'litigator'
+        WHEN dnc = 1 THEN 'DNC'
+        WHEN vista_dnc = 1 THEN 'vista_dnc'
+        ELSE 'other' END as scrubReason
+        FROM dnc.`%s` leads
+        left join master on leads.%s = master.PhoneNumber
+        left join wireless_convert on wireless_convert.PhoneNumber = leads.%s
+        left join carrierPrefixes on mid(leads.%s,1,7) = carrierPrefixes.prefix
+        where deleteFlag = 1 
+        ''' % (self.time_in, colToCheck, colToCheck, colToCheck)
+        Database.debug(query)
         result_tuple = Database.getResult(query)
         # Database.debug("Data received. About to open %s" % self.path_out + ".RMVD")
         writer = csv.writer(open(self.path_out + ".RMVD", "wb"))
         Database.debug("able to create the removed file")
         toprow = self.headers
-        toprow.insert(0, 'id')
+        toprow.append('deleteFlag')
+        toprow.append('scrubReason')
+        # toprow.insert(0, 'id')  # this is already done
         # Database.debug(toprow)
         writer.writerow(toprow)
         # Database.debug("headers are in")
