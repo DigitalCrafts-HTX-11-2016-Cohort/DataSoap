@@ -206,12 +206,15 @@ class Userfile:
         writer.writerow(toprow)
         Database.debug("headers are in")
         for row in result_tuple:
-            writer.writerow(row)
+            try:
+                writer.writerow(row)
+            except:
+                Database.debug(row)
         Database.debug("rows are in")
         return True
 
     def delete(self):
-        colToCheck = self.headers[self.finalPhoneColList[0]+1];
+        colToCheck = self.headers[self.finalPhoneColList[0] + 1]
         query = '''
         SELECT leads.*
         ,CASE
@@ -240,7 +243,10 @@ class Userfile:
         writer.writerow(toprow)
         # Database.debug("headers are in")
         for row in result_tuple:
-            writer.writerow(row)
+            try:
+                writer.writerow(row)
+            except:
+                Database.debug(row)
         Database.debug("removed file completed")
         # if self.time_in:
         query = "DROP TABLE dnc.`%s`" % self.time_in
