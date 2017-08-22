@@ -218,18 +218,18 @@ class Userfile:
         query = '''
         SELECT leads.*
         ,CASE
-        WHEN (wireless = 1 or carrierPrefixes.do_not_call = 1) 
-          and (wireless_convert.source = 'LTW' or wireless_convert.source is null) THEN 'wireless'
         WHEN litigator = 1 THEN 'litigator'
         WHEN dnc = 1 THEN 'DNC'
         WHEN vista_dnc = 1 THEN 'vista_dnc'
+        WHEN (wireless = 1 or carrierPrefixes.do_not_call = 1) 
+          and (wireless_convert.source = 'LTW' or wireless_convert.source is null) THEN 'wireless'
         ELSE 'other' END as scrubReason
         FROM dnc.`%s` leads
         left join master on leads.%s = master.PhoneNumber
         left join wireless_convert on wireless_convert.PhoneNumber = leads.%s
         left join carrierPrefixes on mid(leads.%s,1,7) = carrierPrefixes.prefix
         where deleteFlag = 1 
-        ''' % (self.time_in, colToCheck, colToCheck, colToCheck)
+        ''' % (self.time_in, "`" + colToCheck + "`", "`" + colToCheck + "`", "`" + colToCheck + "`")
         Database.debug(query)
         result_tuple = Database.getResult(query)
         # Database.debug("Data received. About to open %s" % self.path_out + ".RMVD")
