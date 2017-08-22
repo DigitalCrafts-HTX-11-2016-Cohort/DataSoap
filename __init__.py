@@ -40,31 +40,43 @@ def searchResult():
     # Database.debug("searchResult function initiated")
     numberSearched = Database.scrub(request.args.get('number'))
     auth_code = request.args.get('auth', False)
+    source = request.args.get('source', 'Tele')
     Database.debug(auth_code)
     if auth_code == 'skdjhg9wp845tyhzdfbhg' or session.get('userid'):
         if Database.is_phone(numberSearched):
             areaCode = numberSearched[:3]
             prefix = numberSearched[:7]
-            query = "select PhoneNumber from dnc.master where master.PhoneNumber = %d" % int(numberSearched)
-            query2 = "select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
-            query3 = "select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = %d \
-              and carrierPrefixes.do_not_call = 1 AND %d NOT IN \
-              (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" % (int(prefix), int(numberSearched))
-            Database.debug("Queries 1 - 3 are:")
-            Database.debug(query)
-            Database.debug(query2)
-            Database.debug(query3)
-            query_result = Database.getResult(query, True)
-            query2_result = Database.getResult(query2, True)
-            query3_result = Database.getResult(query3, True)
-            if not query2_result:
-                result = "Your Subscription does not include this area code"
-            elif query_result:
-                result = "DO NOT CALL this number"
-            elif query3_result:
-                result = "DO NOT CALL this wireless number"
+            if source == 'Tele':
+                query = "select PhoneNumber from dnc.master where master.PhoneNumber = %d" % int(numberSearched)
+                query2 = "select AreaCode from dnc.PurchasedCodes WHERE PurchasedCodes.AreaCode = %d" % int(areaCode)
+                query3 = "select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = %d \
+                  and carrierPrefixes.do_not_call = 1 AND %d NOT IN \
+                  (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" % (int(prefix), int(numberSearched))
+                Database.debug("Queries 1 - 3 are:")
+                Database.debug(query)
+                Database.debug(query2)
+                Database.debug(query3)
+                query_result = Database.getResult(query, True)
+                query2_result = Database.getResult(query2, True)
+                query3_result = Database.getResult(query3, True)
+                if not query2_result:
+                    result = "Your Subscription does not include this area code"
+                elif query_result:
+                    result = "DO NOT CALL this number"
+                elif query3_result:
+                    result = "DO NOT CALL this wireless number"
+                else:
+                    result = "This number is Squeaky Clean!"
+            elif source == 'D2D':
+                query = "select PhoneNumber from dnc.master where master.PhoneNumber = %d and (master.litigator = 1 or master.vista_dnc = 1)" % int(numberSearched)
+                Database.debug(query)
+                query_result = Database.getResult(query, True)
+                if query_result:
+                    result = "D2D Sale not approved"
+                else:
+                    result = "D2D Sale is approved"
             else:
-                result = "This number is Squeaky Clean!"
+                result = "Unauthorized Request"
         else:
             result = "This is not a valid phone number"
         query_to_post = "INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (%d, %d, %s)" \
