@@ -157,11 +157,18 @@ class Userfile:
                 query += " `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
             else:
                 query += " or `%s` in (select PhoneNumber from dnc.`master`)" % self.headers[key].strip()
-            query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`) \
-            or (" \
-                     "MID(`%s`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) " \
-                     "AND `%s` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" \
-                ")" % (self.headers[key].strip(), self.headers[key].strip(), self.headers[key].strip())
+            if session['voipOk']:
+                query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`) \
+                            or (" \
+                         "MID(`%s`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1 AND lineType != 'V') " \
+                         "AND `%s` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" \
+                         ")" % (self.headers[key].strip(), self.headers[key].strip(), self.headers[key].strip())
+            else:
+                query += " or MID(`%s`,1,3) not in (select AreaCode from dnc.`PurchasedCodes`) \
+                or (" \
+                         "MID(`%s`,1,7) in (SELECT prefix FROM dnc.carrierPrefixes WHERE do_not_call = 1) " \
+                         "AND `%s` NOT IN (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" \
+                    ")" % (self.headers[key].strip(), self.headers[key].strip(), self.headers[key].strip())
         Database.debug("Cleanup query is:")
         Database.debug(query)
         Database.doQuery(query)

@@ -52,6 +52,12 @@ def searchResult():
                 query3 = "select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = %d \
                   and carrierPrefixes.do_not_call = 1 AND %d NOT IN \
                   (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" % (int(prefix), int(numberSearched))
+                if 'voipOk' in session:
+                    if session.get('voipOk'):
+                        query3 = "select prefix from dnc.carrierPrefixes WHERE carrierPrefixes.prefix = %d \
+                                    and carrierPrefixes.do_not_call = 1 AND lineType != 'V' AND %d NOT IN \
+                                    (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" % \
+                                    (int(prefix), int(numberSearched))
                 Database.debug("Queries 1 - 3 are:")
                 Database.debug(query)
                 Database.debug(query2)
@@ -159,7 +165,7 @@ def submit_login():
     user = Users(id)
     user.username = request.form.get('username')
     user.password = request.form.get('password')
-    query = "select id, password, admin, Deleted, date_acknowledged from dnc.users where username = '%s'" % user.username
+    query = "select id, password, admin, Deleted, date_acknowledged, voip_ok from dnc.users where username = '%s'" % user.username
     # Database.debug(query)
     foo = Database.getResult(query, True)
     try:
@@ -180,6 +186,10 @@ def submit_login():
                     session['acknowledged'] = True
             else:
                 session['acknowledged'] = False
+            if foo[5]:
+                session['voipOk'] = True
+            else:
+                session['voipOk'] = False
             Database.debug('session is %s' % session)
             # Database.debug("User exists")
             pass_to_hash = str(request.form.get('password'))
