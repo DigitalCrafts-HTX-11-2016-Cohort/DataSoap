@@ -110,10 +110,10 @@ class Userfile:
                 cleanfile.write(','.join(newrow) + '\n')
             if len(phone_errors):
                 limit = min(9, len(phone_errors) - 1)
-                Database.debug(phone_errors)
                 message = """There were %d items in you file which are not valid phone numbers<br />
                 Please correct and try again. Examples below:<br />""" % phone_errors_count
                 for error in range(0, limit):
+                    Database.debug(phone_errors[error])
                     message += phone_errors[error] + "<br />"
                 session['success_message'] = message
                 self.keep_processing = True
